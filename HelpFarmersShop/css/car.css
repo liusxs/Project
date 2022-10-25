@@ -1,0 +1,99 @@
+.w .cart-filter-bar{
+    font-size: 24px;
+    color: red;
+}
+.cart-thead{
+    display: flex;
+    justify-content: space-around;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #0bdd0b;
+}
+.cart-item-list{
+    margin-top: 10px;
+}
+.cart-item{
+    display: flex;
+    justify-content: space-around;
+    height: 180px;
+    line-height: 180px;
+    border-top: 1px solid green;
+}
+.p-goods{
+    display: flex;
+    justify-content: space-around;
+    margin-left: -80px;
+}
+.p-img img{
+    width: 120px;
+    height: 120px;
+    margin-top: 25px;
+    border: 1px solid black;
+}
+.p-msg{
+    margin-left: 20px;
+}
+.p-msg a:hover{
+    color: red;
+}
+.p-price{
+    margin-left: -50px;
+}
+.quantity-form input{
+    width: 25px;
+    height: 18px;
+}
+.quantity-form a{
+    color: black;
+    height: 12px;
+    line-height: 12px;
+    padding: 0 5px;
+    border: 1px solid black;
+    margin: -4px;
+}
+.quantity-form a:hover{
+    color: red;
+}
+.p-action a{
+    color: black;
+}
+.p-action a:hover{
+    color: red;
+}
+.cart-floatbar{
+    display: flex;
+    justify-content: space-around;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    border:1px solid #0bdd0b;
+    margin-bottom: 5px;
+}
+.select-all{
+    width: 200px;
+    margin-left: 75px;
+}
+.operation{
+    width: 400px;
+}
+.operation a{
+    margin: 0 5px;
+    color: rgb(115, 115, 115);
+}
+.operation a:hover{
+    color: black;
+}
+.toolbar-right{
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+}
+.btn-area{
+    width: 80px;
+    height: 59px;
+    line-height: 59px;
+    text-align: center;
+    background-color: #0bdd0b;
+    cursor: pointer;
+}

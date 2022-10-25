@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国际租车</title>
+    <link rel="stylesheet" href="../css/intercar.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+</head>
+<body>
+    <!-- header模块 -->
+    <div class="header">
+        <div class="h-words contain">
+            <div class="h-logo">
+                <a href="../www/index.html"></a>
+            </div>
+        <ul class="h-title">
+            <li><a href="../www/index.html">首页</a></li>
+            <li><a href="../www/intercar.html">国际租车</a></li>
+            <li><a href="../www/carFlash.html">闪租</a></li>
+            <li><a href="../www/carService.html">服务项目</a></li>
+            <li><a href="../www/about.html">关于我们</a></li>
+        </ul>
+            <div class="h-login">
+                <div class="login">登录 / 注册</div>
+        <div class="login-phon">
+        <i class="fa fa-phone"></i>
+        <span class="h-pnum">400-088-800</span>
+        </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner模块 -->
+    <div class="banner">
+        <img src="../images/banner.png" alt="">
+    </div>
+    <!-- 取还时间 -->
+    <div class="time">
+        <div class="t-date contain">
+            <!-- 取车的地点 -->
+            <div class="td-position">
+                <div class="p-pick-car">
+                    <div class="pick-car">取车</div>
+                    <select id="city" onchange="move()">
+                    <!-- 根据id获取value, onchange() 触发函数move（）修改二级select的text值实现联动 -->
+                    <option selected value="city">--租车的城市--</option>
+                    <!-- 默认选中 -->
+                    <option value="成都">成都</option>
+                    </select>
+                    <select id="county">
+                        <option selected>--租车地点--</option>
+                        <!-- 默认选中，动态生成option -->
+                    </select>
+                </div>
+                <div class="p-pick-car">
+                    <div class="pick-car">还车</div>
+                    <select id="city" onchange="move()">
+                    <!-- 根据id获取value,onchange()触发函数move（）修改二级的text值实现联动 -->
+                    <option selected value="city">--租车的城市--</option>
+                    <!-- 默认选中 -->
+                    <option value="成都">成都</option>
+                    </select>
+                    <select id="county">
+                        <option selected>--租车地点--</option>
+                        <!-- 默认选中，动态生成option -->
+                    </select>
+                </div>
+            </div>
+            <!-- 取车的时间 -->
+            <div class="td-time">
+                <div class="td-time-pick">
+                    <div class="td-time-car">取车时间</div>
+                    <input type="date" class="inputdate">
+                    <select id="clock">
+                        <option value="9">09:00</option>
+                        <option value="10">10:00</option>
+                    </select>
+                </div>
+                <div class="td-time-back">
+                    <div class="td-time-car">取车时间</div>
+                    <input type="date" class="inputdate">
+                    <select id="clock">
+                        <option value="15">15:00</option>
+                        <option value="16">16:00</option>
+                    </select>
+                </div>
+            </div>
+            <!-- 是否租车 -->
+            <div class="td-term">
+                <h4>短期: <span>2天</span>,不限里程</h4>
+                <div class="td-term-car">立即选车</div>
+            </div>
+        </div>
+    </div>
+    <!-- 车型组 -->
+    <div class="car-style contain">
+        <span class="cs-words">
+            车型组
+        </span>
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="img"></div>
+                    <span>热门车型</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img"></div>
+                    <span>越野车</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img"></div>
+                    <span>大客车</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img"></div>
+                    <span>商务车</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img"></div>
+                    <span>跑车</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img"></div>
+                    <span>个性车</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 车辆座位 -->
+    <div class="car-seats contain">
+        <ul>
+            <li>
+                车辆座位
+            </li>
+            <li>
+                <label  class="c-seats"  for="seacts1">
+                    <input type="checkbox" id="seacts1">
+                    <span>不限</span>
+                </label>
+            </li>
+            <li>
+                <label class="c-seats" for="seacts2">
+                    <input type="checkbox" id="seacts2">
+                    <span>五座及以下</span>
+                </label>
+            </li>
+            <li>
+                <label class="c-seats"  for="seacts3">
+                    <input type="checkbox" id="seacts3">
+                    <span>五座及以上</span>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <!-- 品牌 -->
+    <div class="car-brand contain">
+        <span class="check-brand">指定品牌</span>
+        <label class="cb-brand" for="no-brand">
+            <input type="checkbox" id="no-brand" class="hw">
+            <span>不限</span>
+        </label>
+        <ul class="dif-brand">
+            <li>
+                <ul class="first">
+                    <li>
+                        <label class="cb-brand" for="brand1">
+                            <input type="checkbox" id="brand1" class="hw">
+                            <span>宝马</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="cb-brand" for="brand2">
+                            <input type="checkbox" id="brand2" class="hw">
+                            <span>奥迪</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="cb-brand" for="brand3">
+                            <input type="checkbox" id="brand3" class="hw">
+                            <span>特斯拉</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="cb-brand" for="brand4">
+                            <input type="checkbox" id="brand4" class="hw">
+                            <span>法拉利</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="cb-brand" for="brand5">
+                            <input type="checkbox" id="brand5" class="hw">
+                            <span>奔驰</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="cb-brand" for="brand6">
+                            <input type="checkbox" id="brand6" class="hw">
+                            <span>保时捷</span>
+                        </label>
+                    </li>
+                </ul>
+            </li>
+            <ul class="second">
+                <li>
+                    <label class="cb-brand" for="brand7">
+                        <input type="checkbox" id="brand7" class="hw">
+                        <span>宝马</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="cb-brand" for="brand8">
+                        <input type="checkbox" id="brand8" class="hw">
+                        <span>奥迪</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="cb-brand" for="brand9">
+                        <input type="checkbox" id="brand9" class="hw">
+                        <span>特斯拉</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="cb-brand" for="brand10">
+                        <input type="checkbox" id="brand10" class="hw">
+                        <span>法拉利</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="cb-brand" for="brand11">
+                        <input type="checkbox" id="brand11" class="hw">
+                        <span>奔驰</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="cb-brand" for="brand12">
+                        <input type="checkbox" id="brand12" class="hw">
+                        <span>保时捷</span>
+                    </label>
+                </li>
+            </ul>
+        </ul>
+    </div>
+    <!-- 综合排序 -->
+    <div class="ordering contain">
+        <ul class="sort">
+            <li>
+                <label class="cb-brand" for="sort1">
+                    <input type="checkbox" id="sort1" class="hw">
+                    <span>综合排序</span>
+                </label>
+            </li>
+            <li>
+                <label class="cb-brand" for="sort2">
+                    <input type="checkbox" id="sort2" class="hw">
+                    <span>价格由高到底</span>
+                </label>
+            </li>
+            <li>
+                <label class="cb-brand" for="sort3">
+                    <input type="checkbox" id="sort3" class="hw">
+                    <span>免押金</span>
+                </label>
+            </li>
+            <li>
+                <label class="cb-brand" for="sort4">
+                    <input type="checkbox" id="sort4" class="hw">
+                    <span>不无忧租限</span>
+                </label>
+            </li>
+            <li>
+                <label class="cb-brand" for="sort5">
+                    <input type="checkbox" id="sort5" class="hw">
+                    <span>自动挡</span>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <!-- 内容 商品展示 车 -->
+    <div class="content contain">
+        <div class="content-car box">
+            <!-- 左边模块 -->
+            <div class="ccar-left">
+                <img src="../images/red-car.png" alt="">
+            </div>
+            <!-- 中间模块 -->
+            <div class="ccar-center">
+                <h4>小型轿车 | 奥迪A6L</h4>
+                <div class="icon-words">
+                    <div class="car-type">
+                        <i class="fa fa-car"></i>
+                        <span>小型车</span>
+                    </div>
+                    <div class="car-seat">
+                        <i class="fa fa-wheelchair"></i>
+                        <span>4门5座</span>
+                    </div>
+                    <div class="car-type">
+                        <i class="fa fa-clock-o"></i>
+                        <span>1.4L</span>
+                    </div>
+                    <div class="space">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <span>空间较大，乘坐舒适</span>
+                    </div>
+                    <span></span>
+                </div>
+                <p>空间：空间较大，建议乘坐5人+3行李箱</p>
+                <span class="browse">30人正在浏览该车 | 最新预定：1分钟前</span>
+            </div>
+            <!-- 右边模块 -->
+            <div class="ccar-right">
+                <span class="day">￥<h5>317</h5>/天</span>
+                <span class="total">总价：636天</span>
+                <div class="reserve">
+                    <a href="../www/carDetails.html" class="button">预定</a>
+                </div>
+            </div>
+        </div>
+        <div class="content-car box">
+            <!-- 左边模块 -->
+            <div class="ccar-left">
+                <img src="../images/car4.png" alt="">
+            </div>
+            <!-- 中间模块 -->
+            <div class="ccar-center">
+                <h4>小型轿车 | 奥迪A6L</h4>
+                <div class="icon-words">
+                    <div class="car-type">
+                        <i class="fa fa-car"></i>
+                        <span>小型车</span>
+                    </div>
+                    <div class="car-seat">
+                        <i class="fa fa-wheelchair"></i>
+                        <span>4门5座</span>
+                    </div>
+                    <div class="car-type">
+                        <i class="fa fa-clock-o"></i>
+                        <span>1.4L</span>
+                    </div>
+                    <div class="space">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <span>空间较大，乘坐舒适</span>
+                    </div>
+                    <span></span>
+                </div>
+                <p>空间：空间较大，建议乘坐5人+3行李箱</p>
+                <span class="browse">30人正在浏览该车 | 最新预定：1分钟前</span>
+            </div>
+            <!-- 右边模块 -->
+            <div class="ccar-right">
+                <span class="day">￥<h5>317</h5>/天</span>
+                <span class="total">总价：636天</span>
+                <div class="reserve">
+                    <a href="../www/carDetails.html" class="button">预定</a>
+                </div>
+            </div>
+        </div>
+        <div class="content-car box">
+            <!-- 左边模块 -->
+            <div class="ccar-left">
+                <img src="../images/car2.png" alt="">
+            </div>
+            <!-- 中间模块 -->
+            <div class="ccar-center">
+                <h4>小型轿车 | 奥迪A6L</h4>
+                <div class="icon-words">
+                    <div class="car-type">
+                        <i class="fa fa-car"></i>
+                        <span>小型车</span>
+                    </div>
+                    <div class="car-seat">
+                        <i class="fa fa-wheelchair"></i>
+                        <span>4门5座</span>
+                    </div>
+                    <div class="car-type">
+                        <i class="fa fa-clock-o"></i>
+                        <span>1.4L</span>
+                    </div>
+                    <div class="space">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <span>空间较大，乘坐舒适</span>
+                    </div>
+                    <span></span>
+                </div>
+                <p>空间：空间较大，建议乘坐5人+3行李箱</p>
+                <span class="browse">30人正在浏览该车 | 最新预定：1分钟前</span>
+            </div>
+            <!-- 右边模块 -->
+            <div class="ccar-right">
+                <span class="day">￥<h5>317</h5>/天</span>
+                <span class="total">总价：636天</span>
+                <div class="reserve">
+                    <a href="../www/carDetails.html" class="button">预定</a>
+                </div>
+            </div>
+        </div>
+        <div class="content-car box">
+            <!-- 左边模块 -->
+            <div class="ccar-left">
+                <img src="../images/car3.png" alt="">
+            </div>
+            <!-- 中间模块 -->
+            <div class="ccar-center">
+                <h4>小型轿车 | 奥迪A6L</h4>
+                <div class="icon-words">
+                    <div class="car-type">
+                        <i class="fa fa-car"></i>
+                        <span>小型车</span>
+                    </div>
+                    <div class="car-seat">
+                        <i class="fa fa-wheelchair"></i>
+                        <span>4门5座</span>
+                    </div>
+                    <div class="car-type">
+                        <i class="fa fa-clock-o"></i>
+                        <span>1.4L</span>
+                    </div>
+                    <div class="space">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <span>空间较大，乘坐舒适</span>
+                    </div>
+                    <span></span>
+                </div>
+                <p>空间：空间较大，建议乘坐5人+3行李箱</p>
+                <span class="browse">30人正在浏览该车 | 最新预定：1分钟前</span>
+            </div>
+            <!-- 右边模块 -->
+            <div class="ccar-right">
+                <span class="day">￥<h5>317</h5>/天</span>
+                <span class="total">总价：636天</span>
+                <div class="reserve">
+                    <a href="../www/carDetails.html" class="button">预定</a>
+                </div>
+            </div>
+        </div>
+        <div class="content-car box">
+            <!-- 左边模块 -->
+            <div class="ccar-left">
+                <img src="../images/car4.png" alt="">
+            </div>
+            <!-- 中间模块 -->
+            <div class="ccar-center">
+                <h4>小型轿车 | 奥迪A6L</h4>
+                <div class="icon-words">
+                    <div class="car-type">
+                        <i class="fa fa-car"></i>
+                        <span>小型车</span>
+                    </div>
+                    <div class="car-seat">
+                        <i class="fa fa-wheelchair"></i>
+                        <span>4门5座</span>
+                    </div>
+                    <div class="car-type">
+                        <i class="fa fa-clock-o"></i>
+                        <span>1.4L</span>
+                    </div>
+                    <div class="space">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <span>空间较大，乘坐舒适</span>
+                    </div>
+                    <span></span>
+                </div>
+                <p>空间：空间较大，建议乘坐5人+3行李箱</p>
+                <span class="browse">30人正在浏览该车 | 最新预定：1分钟前</span>
+            </div>
+            <!-- 右边模块 -->
+            <div class="ccar-right">
+                <span class="day">￥<h5>317</h5>/天</span>
+                <span class="total">总价：636天</span>
+                <div class="reserve">
+                    <a href="../www/carDetails.html" class="button">预定</a>
+                </div>
+            </div>
+        </div>
+        <div class="content-car box">
+            <!-- 左边模块 -->
+            <div class="ccar-left">
+                <img src="../images/car5.png" alt="">
+            </div>
+            <!-- 中间模块 -->
+            <div class="ccar-center">
+                <h4>小型轿车 | 奥迪A6L</h4>
+                <div class="icon-words">
+                    <div class="car-type">
+                        <i class="fa fa-car"></i>
+                        <span>小型车</span>
+                    </div>
+                    <div class="car-seat">
+                        <i class="fa fa-wheelchair"></i>
+                        <span>4门5座</span>
+                    </div>
+                    <div class="car-type">
+                        <i class="fa fa-clock-o"></i>
+                        <span>1.4L</span>
+                    </div>
+                    <div class="space">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <span>空间较大，乘坐舒适</span>
+                    </div>
+                    <span></span>
+                </div>
+                <p>空间：空间较大，建议乘坐5人+3行李箱</p>
+                <span class="browse">30人正在浏览该车 | 最新预定：1分钟前</span>
+            </div>
+            <!-- 右边模块 -->
+            <div class="ccar-right">
+                <span class="day">￥<h5>317</h5>/天</span>
+                <span class="total">总价：636天</span>
+                <div class="reserve">
+                    <a href="../www/carDetails.html" class="button">预定</a>
+                </div>
+            </div>
+        </div>
+        <div class="content-car box">
+            <!-- 左边模块 -->
+            <div class="ccar-left">
+                <img src="../images/car6.png" alt="">
+            </div>
+            <!-- 中间模块 -->
+            <div class="ccar-center">
+                <h4>小型轿车 | 奥迪A6L</h4>
+                <div class="icon-words">
+                    <div class="car-type">
+                        <i class="fa fa-car"></i>
+                        <span>小型车</span>
+                    </div>
+                    <div class="car-seat">
+                        <i class="fa fa-wheelchair"></i>
+                        <span>4门5座</span>
+                    </div>
+                    <div class="car-type">
+                        <i class="fa fa-clock-o"></i>
+                        <span>1.4L</span>
+                    </div>
+                    <div class="space">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <span>空间较大，乘坐舒适</span>
+                    </div>
+                    <span></span>
+                </div>
+                <p>空间：空间较大，建议乘坐5人+3行李箱</p>
+                <span class="browse">30人正在浏览该车 | 最新预定：1分钟前</span>
+            </div>
+            <!-- 右边模块 -->
+            <div class="ccar-right">
+                <span class="day">￥<h5>317</h5>/天</span>
+                <span class="total">总价：636天</span>
+                <div class="reserve">
+                    <a href="../www/carDetails.html" class="button">预定</a>
+                </div>
+            </div>
+        </div>
+        <div class="content-car box">
+            <!-- 左边模块 -->
+            <div class="ccar-left">
+                <img src="../images/car7.png" alt="">
+            </div>
+            <!-- 中间模块 -->
+            <div class="ccar-center">
+                <h4>小型轿车 | 奥迪A6L</h4>
+                <div class="icon-words">
+                    <div class="car-type">
+                        <i class="fa fa-car"></i>
+                        <span>小型车</span>
+                    </div>
+                    <div class="car-seat">
+                        <i class="fa fa-wheelchair"></i>
+                        <span>4门5座</span>
+                    </div>
+                    <div class="car-type">
+                        <i class="fa fa-clock-o"></i>
+                        <span>1.4L</span>
+                    </div>
+                    <div class="space">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <span>空间较大，乘坐舒适</span>
+                    </div>
+                    <span></span>
+                </div>
+                <p>空间：空间较大，建议乘坐5人+3行李箱</p>
+                <span class="browse">30人正在浏览该车 | 最新预定：1分钟前</span>
+            </div>
+            <!-- 右边模块 -->
+            <div class="ccar-right">
+                <span class="day">￥<h5>317</h5>/天</span>
+                <span class="total">总价：636天</span>
+                <div class="reserve">
+                    <a href="../www/carDetails.html" class="button">预定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 换页 -->
+    <div class="skip">
+        <ul class="ul">
+            <li>
+                <a href="">
+                    上一页
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    1
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    2
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    3
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    下一页
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 回到顶部 -->
+    <div class="back-top">
+        <a href="./intercar.html">回顶部</a>
+    </div>
+    <!-- 脚部 -->
+    <div class="footer">
+        <div class="f-about contain">
+            <!-- 关于卡卡租车 -->
+            <ul class="footer-about">
+                <li>关于卡卡租车</li>
+                <li><a href="../www/about.html">关于我们</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">加入我们</a></li>
+                <li><a href="#">媒体报道</a></li>
+            </ul>
+            <ul>
+                <li>条款</li>
+                <li><a href="">隐私条款</a></li>
+                <li><a href="">用户协议</a></li>
+            </ul>
+            <ul>
+                <li>帮助</li>
+                <li><a href="">客服中心</a></li>
+                <li><a href="">互问互答</a></li>
+                <li><a href="">常见问题</a></li>
+                <li><a href="">出游安全提示</a></li>
+            </ul>
+            <ul>
+                <li>关于服务</li>
+                <li><a href="">服务时间</a></li>
+                <li><a href="">短租及可选服务</a></li>
+            </ul>
+            <ul>
+                <li>微信公众号</li>
+                <li><img src="../images/wechrt.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

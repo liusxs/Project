@@ -1,0 +1,197 @@
+/* banner部分*/
+.banner-box{
+    background: url(../images/闪租banner-bg.png);
+    margin-bottom: 30px;
+}
+.fast-banner{
+    height: 322px;
+}
+/* 闪租-车*/
+.fast-car{
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fastc-title{
+    font-size: 22px;
+    font-weight: 700;
+    color: #343434;
+}
+.fastc-title span:nth-child(2){
+    font-weight: 400;
+    color: #cf9257;
+    font-size: 20px;
+}
+.fastc-content{
+    display: flex;
+    justify-content: space-between;
+    height: 355px;
+    width: 100%;
+}
+.fast-left{
+    overflow: hidden;
+    height: 100%;
+    width: 365px;
+}
+/* 第一部分*/
+.fast-left{
+    position: relative;
+}
+.shou-words{
+    padding: 10px;
+    position: absolute;
+    top: 70%;
+    left: 6%;
+    color: #ffffff;
+    box-shadow: inset 0px -48px 21px -11px rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    transition: all 0.5s;
+}
+.shou-words span{
+    font-size: 30px;
+    font-weight: 700;
+}
+.shou-words p{
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #eb8525;
+    opacity: 1;
+}
+.fast-left img{
+    height: 100%;
+    position: absolute;
+    left: -15%;
+}
+.fast-left .img-shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0000009a;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.img-words{
+    position: absolute;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.img-words span{
+    display: inline-block;
+    padding: 30px 20px 10px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    border-width: blod;
+}
+.img-words p{
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 20px;
+    color: #eb8525;
+}
+.fast-left:hover .img-shadow{
+    opacity: 1;
+}
+.fast-left:hover .shou-words{
+    opacity: 0;
+}
+.fast-left:hover .img-words{
+    transition-delay: 0.5s;
+    opacity: 1;
+}
+/* 第二部分 */
+.fast-center{
+    width: 365px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+}
+.fast-car-move{
+    width: 100%;
+    height: 170px;
+    overflow:hidden ;
+    position: relative;
+    background-color: #fff;
+    box-shadow: -2px 7px 10px 0px rgba(98, 98, 98, 0.11);
+}
+.fast-car-move img{
+    position: absolute;
+    height: 155px;
+    transform: translateX(100px);
+    transition: all 0.5s;
+}
+.fast-car-move:hover img{
+    transform: translateX(-6px);
+}
+.fast-car-move .fc-words-left{
+    position: absolute;
+    top: 20%;
+    transition: all 0.5s;
+}
+.fc-words-left span{
+    font-family: "SourceHanSansCN-Bold";
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #b87721;
+}
+.fc-words-left div{
+    width: 108px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 42px;
+    background-color: #ffa42c;
+    margin-top: 20px;
+}
+/* 左边文字被hover的状态 */
+.fast-car-move:hover .fc-words-left{
+    transform: translateX(-200px);
+}
+/* 右边文字 */
+.fast-car-move .fc-words-right{
+    position: absolute;
+    transition: all 0.5s;
+    transform: translateX(200px);
+    top: 20%;
+}
+.fc-words-right span{
+    font-family: "SourceHanSansCN-Bold";
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #b87721;
+}
+.fc-words-right div{
+    width: 108px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 42px;
+    background-color: #ffa42c;
+    margin-top: 20px;
+}
+.fast-car-move:hover .fc-words-right{
+    transform: translateX(-10px);
+}
+.fc-words-right div:hover{
+    background-color: #c57b19;
+}
+.fast-car-move .fc-words-right{
+    position: absolute;
+    right: 0;
+}
+.h-title li:nth-child(3) a {
+    color: #cf9257;
+    font-size: 20px;
+    text-shadow: 0 0 10px #cf9257,
+    0 0 20px #cf9257,
+    0 0 60px #cf9257;
+    border-top: 2px solid #cf9257;
+    border-bottom: 2px solid #cf9257;
+}

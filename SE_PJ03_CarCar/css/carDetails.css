@@ -1,0 +1,802 @@
+/* 详情页导航标题 */
+.details-title{
+    height: 58px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    font-family: "SourceHanSansCN-Medium";
+    font-size: 12px;
+    color: #676767;
+}
+.details-title a{
+    color: #ce9a46;
+}
+/* 详情页内容 */
+.details-contain{
+    height: 1250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* 第一部分，选购 */
+.details-choose{
+    background-color: #fff;
+    height: 1182px;
+    display: flex;
+}
+/* 左边部分 */
+.dc-left{
+    height: 100%;
+    width: 402px;
+    padding-top: 26px;
+    padding-left: 26px;
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+.dc-left .dcl-img{
+    height: 260px;
+    overflow: hidden;
+}
+.dcl-img img{
+    height: 260px;
+}
+.icon-words{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+.dc-left .trunk{
+    margin: 30px 0;
+}
+/* 取还驾照支持 */
+.pick-back{
+    display: flex;
+    justify-content: left;
+}
+.left-icon{
+    width: 62px;
+    height: 306px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.left-icon .pick{
+    background-color: #30bf8a;
+}
+.left-icon .back{
+    background-color: #ff8f50;
+}
+.left-icon .red{
+    background-color: red;
+}
+/* 左边-右边文字 */
+.right-words{
+    width: 340px;
+}
+.dc-left{
+    height: 100%;
+    /* width: 748px; */
+}
+.right-words .pic{
+    height: 102px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 34px;
+}
+.words-time{
+    font-size: 16px;
+    font-family:"SourceHanSansCN-Medium" ;
+}
+.words-time span a{
+    font-family: "SourceHanSansCN-Normal";
+    color: #3789f7;
+    float: right;
+    font-size: 14px;
+}
+.right-words p{
+    font-family: "SourceHanSansCN-Normal";
+    color: #666666;
+    float: right;
+    font-size: 14px;
+}
+.driving-license div{
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+.driving-license p{
+    font-size: 14px;
+}
+/* 右边部分 */
+.dc-right{
+    background-color: #fff;
+    width: 748px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* 右边第一部分-上面标题 */
+.dcr-title{
+    height: 58px;
+    margin-top: 37px;
+}
+.dcr-title h4{
+    font-family: "SourceHanSansCN-Bold";
+    font-size: 24px;
+    margin-bottom: 18px;
+    color: #646464;
+}
+.dcr-title p{
+    color: #f46f70;
+    font-family: "SourceHanSansCN-Medium";
+    font-size: 16px;
+}
+/* 右边第二部分-中间介绍 */
+.dcr-introduce{
+    height: 648px;
+    box-sizing: border-box;
+    padding-top: 36px;
+    padding-left: 20px;
+    background-color: #f3f3f3;
+}
+/* 右边第二部分上面 */
+.introduce-top{
+    font-family: "SourceHanSansCN-Medium";
+    font-size: 16px;
+    color: #323230;
+}
+.introduce-top p{
+    margin-bottom: 16px;
+}
+.introduce-top span{
+    color: #f86d0e;
+}
+.introduce-top span span{
+    font-size: 40px;
+    font-weight: 600;
+}
+/* 中间下面部分 */
+.introduce-bottom{
+    height: 500px;
+    display: flex;
+}
+.introduce-bottom span{
+    margin-right: 12px;
+}
+.ib-combo{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.ib-standard{
+    box-sizing: border-box;
+    width: 580px;
+    height: 114px;
+    border: 1px solid #646464;
+    display: flex;
+}
+.ibs-left{
+    font-family: "SourceHanSansCN-Heavy";
+    font-size: 20px;
+    color: #696866;
+    font-weight: 700;
+    margin: 16px;
+    height: 30px;
+    border-bottom: 1px dashed #696866;
+}
+.ibs-right{
+    font-family: "SourceHanSansCN-Regular";
+    font-size: 18px;
+    color: #323334;
+    margin: 16px;
+}
+.ibs-right p:last-child{
+    color: #666666;
+    margin: 16px 0;
+}
+.ib-standard:first-child{
+    border: solid #f86d0e 3px;
+}
+.ib-standard:hover{
+    border: solid #f86d0e 3px;
+}
+/* 右边第三部分-下面补充说明 */
+.dcr-supplement{
+    height: 398px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.ib-driver{
+    display: flex;
+    font-family: "SourceHanSansCN-Regular";
+    font-size: 18px;
+}
+.driver-name{
+    margin: 0 20px;
+    width: 100px;
+    line-height: 36px;
+}
+.if-name{
+    margin: 0 20px;
+    line-height: 36px;
+    padding: 0 8px;
+}
+.ib-driver .if-name:nth-child(2){
+    border: solid #ffa32c 3px;
+}
+.ib-driver .if-name:hover{
+    border: solid #ffa32c 3px;
+}
+.driver-now{
+    background-color: #ffa32c;
+    width: 220px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: rgb(240, 240, 240);
+    border-radius: 10px;
+    margin: 0 auto 10px;
+}
+.driver-now:hover{
+    background-color: #d68a26;
+    color: #ffffff;
+}
+/* 第二部分，套餐包含 */
+.details-content{
+    height: 1670px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+/* 套餐包含分为左右两部分 */
+/* 套餐左部分 */
+.dcontent-left{
+    width: 859px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+/* 套餐左-上面部分 */
+.dcontentl-top{
+    width: 859px;
+    height: 62px;
+    background-color: #ffffff;
+    box-shadow: -16px 9px 12px 0px rgba(98, 98, 98, 0.11);
+    margin-bottom: 10px;
+}
+.dcontentl-top ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.dcontentl-top a{
+    font-family: "SourceHanSansCN-Normal";
+    font-size: 20px;
+    color: #343434;
+    padding: 38px;
+    line-height: 62px;
+}
+.dcontentl-top li:first-child{
+    border-bottom: 4px solid #ddbe87;
+}
+.dcontentl-top li:hover{
+    border-bottom: 4px solid #ddbe87;
+}
+/* 套餐包含左-下面部分 */
+.dcontentl-bottom{
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    height: 1586px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.dcontentl-bottom p{
+    font-family:"SourceHanSansCN-Normal" ;
+    font-size: 30px;
+}
+/* 套餐租金服务 */
+.dcontentl-rent{
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+/* 左边租金及服务费用 */
+.tent-headline{
+    width: 190px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+.tent-headline .circle{
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    border: solid 6px #f9d876;
+    color: #fdc376;
+    font-family: "SourceHanSansCN-Normal";
+    font-size: 50px;
+    line-height: 66px;
+    text-align: center;
+}
+/* 右边内容 */
+.tent-content{
+    width: 607px;
+    height: 150px;
+    background-color: #fafafe;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.tcontent-rent span{
+    font-family: "SourceHanSansCN-Regular";
+    font-size: 20px;
+    color: #767775;
+}
+.tcontent-rent .fa{
+    color: #a4d38a;
+    font-size: 20px;
+    padding: 4px;
+}
+/* 套餐保险 */
+.dcontentl-insurance{
+    height: 993px;
+    display: flex;
+    justify-content: space-between;
+}
+.di-left{
+    height: 100%;
+    width: 190px;
+    background-color: #fafafe;
+}
+.di-right{
+    height: 100%;
+    /* width: 150px; */
+    background-color: #fafafe;
+}
+/* 左边保险明细圆 */
+.dil-headline{
+    width: 190px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: #fafafe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+.dil-headline .circle{
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    border: solid 6px #f9d876;
+    color: #fdc376;
+    font-family: "SourceHanSansCN-Normal";
+    font-size: 40px;
+    line-height: 66px;
+    text-align: center;
+}
+/* 右边险种介绍 */
+.di-right{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0 42px;
+    box-sizing: border-box;
+}
+/* 碰撞险-保护自己 */
+.selfcar{
+    width: 100%;
+    height: 311px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.selfcar-top .fa{
+    color: #a4d38a;
+    font-size: 20px;
+    padding: 4px;
+}
+.selfcar-top span{
+    font-family: "SourceHanSansCN-Normal";
+    font-size: 18px;
+    color: #8a8a8b;
+}
+.selfcar-top span:nth-child(3){
+    font-family: "SourceHanSansCN-Normal";
+    font-size: 18px;
+    color: #9fb1f1;
+}
+.selfcar-bottom{
+    width: 515px;
+    height: 260px;
+    background-color: #edf2fd;
+    border-radius: 10px;
+}
+.selfcarbb-cotain{
+    height: 130px;
+    display: flex;
+    padding: 16px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.selfcarbb-cotain span{
+    font-family: "SourceHanSansCN-Bold";
+    font-size: 18px;
+    font-weight: 600;
+    color: #6b6f6c;
+}
+.selfcarbb-cotain span:nth-child(2){
+    font-family: "SourceHanSansCN-Regular";
+    font-size: 18px;
+    font-weight: 400;
+    color: #878889;
+}
+/* 三者险-保护他人 */
+.other{
+    width: 100%;
+    height: 208px;
+}
+/* 三者险-保护他人 */
+.di-right .other{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* 三者险-上面部分（标题） */
+.other-top .fa{
+    color: #a4d38a;
+    font-size: 20px;
+    padding: 4px;
+}
+.other-top span{
+    font-family: "SourceHanSansCN-Normal";
+    font-size: 18px;
+    color: #8a8a8b;
+}
+.other-top span:nth-child(3){
+    font-family: "SourceHanSansCN-Regular";
+    font-size: 18px;
+    color: #9fb1f1;
+}
+/* 三者险-下面部分（内容） */
+.other-bottom{
+    height: 160px;
+    background-color: #edf2fd;
+}
+.other-cotain{
+    height: 130px;
+    display: flex;
+    padding: 16px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #878889;
+}
+.other-cotain span:first-child{
+    font-family: "SourceHanSansCN-Bold";
+    font-size: 18px;
+    font-weight: 600;
+    color: #6b6f6c;
+    margin-bottom: 20px;
+}
+/* 三者险补充说明 */
+.supplement-other{
+    width: 100%;
+    height: 322px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+/* 三者险补充说明-上面标题 */
+.supother-top{
+    display: flex;
+}
+.supother-top .fa{
+    color: #a4d38a;
+    font-size: 20px;
+    padding: 4px;
+}
+.supother-top span{
+    font-family: "SourceHanSansCN-Normal";
+    font-size: 18px;
+    color: #8a8a8b;
+}
+.supother-top span:nth-child(3){
+    color: #ff8ba0;
+}
+/* 三者险补充说明-中间内容 */
+.supother-center{
+    height: 188px;
+    background-color: #edf2fd;
+    display: flex;
+    justify-content: space-around;
+}
+/* 中间内容-左边 */
+.scenter-introduce{
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.scenter-introduce span:nth-child(1){
+    font-family: "SourceHanSansCN-Bold";
+    font-size: 18px;
+    font-weight: 600;
+    color: #6b6f6c;
+    margin-bottom: 20px;
+}
+.scenter-introduce span:nth-child(2){
+    font-family: "SourceHanSansCN-Regular";
+    font-size: 18px;
+    font-weight: 400;
+    color: #878889;
+}
+/* 中间内容-右边 */
+.scenter-but{
+    width: 104px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.scenter-botton a{
+    display: inline-block;
+    width: 104px;
+    height: 28px;
+    background-color: #5c86df;
+    border-radius: 10px;
+    color: #fff;
+    line-height: 28px;
+    text-align: center;
+    font-size: 16px;
+}
+.scenter-words{
+    border-bottom: 1px dashed #fe7c84;
+    color: #fe7c84;
+    text-align: center;
+    padding-top: 10px;
+}
+/* 三者险补充说明-下面补充 */
+.supother-footer{
+    color: #6e706d;
+    padding-left: 10px;
+}
+/* 套餐油费说明 */
+.dcontentl-oil{
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 0 30px;
+}
+/* 油费说明-左边图标 */
+.dclo-left{
+    width: 190px;
+    background-color: #fafafe;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.dclo-left .fa{
+    font-size: 50px;
+    color: #f9d876;
+}
+.dclo-left span{
+    font-family: "SourceHanSansCN-Heavy";
+    font-size: 20px;
+    color: #767775;
+    margin-top: 10px;
+}
+/* 油费说明-右边内容 */
+.dclo-right{
+    width: 607px;
+    background-color: #fafafe;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.dclo-right span{
+    font-family: "SourceHanSansCN-Bold";
+    font-size: 18px;
+    font-weight: 600;
+    color: #6b6f6c;
+    margin-bottom: 20px;
+}
+.dclo-bottom{
+    background-color: #edf2fd;
+    height: 140px;
+    font-family: "SourceHanSansCN-Regular";
+    font-size: 18px;
+    font-weight: 400;
+    color: #878889;
+    padding: 30px 10px;
+    line-height: 28px;
+}
+.dclo-bottom span{
+    color: #fe7c84;
+    font-family: "SourceHanSansCN-Regular";
+    font-size: 18px;
+    font-weight: 400;
+}
+/* 套餐右部分 */
+.dcontent-right{
+    width: 273px;
+    height: 664px;
+    letter-spacing: 2px;
+    color: #9c9c9c;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+/* 订单费用 */
+.order-pay{
+    height: 320px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+/* 订单费用-上 */
+.opay-top{
+    background-color: #a4afc1;
+    width: 100%;
+    height: 60px;
+    font-size: 30px;
+    padding: 0 20px;
+    color: #ffffff;
+    line-height: 60px;
+    box-sizing: border-box;
+}
+/* 订单费用-中 */
+.opay-center{
+    padding: 0 20px;
+    box-sizing: border-box;
+    height: 122px;
+}
+.opc-day{
+    height: 66px;
+    line-height: 66px;
+    display: flex;
+    justify-content: space-between;
+}
+.opc-day span{
+    font-size: 16px;
+    color: #5c5c5c;
+    font-weight: 400;
+    font-family: "SourceHanSansCN-Regular";
+}
+.opc-day span:nth-child(2){
+    font-size: 22px;
+    color: #5a5a5a;
+    font-weight: 600;
+    font-family: "SourceHanSansCN-Regular";
+}
+.opc-money{
+    line-height: 66px;
+    display: flex;
+    justify-content: space-between;
+}
+.opc-money span{
+    font-size: 22px;
+    color: #f98034;
+    font-weight: 500;
+    font-family: "SourceHanSansCN-Regular";
+}
+.opc-money span:nth-child(2){
+    font-size: 22px;
+    color: #f98034;
+    font-weight: 700;
+    font-family: "SourceHanSansCN-Regular";
+}
+/* 订单费用-下 */
+.opay-boottom{
+    height: 118px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+.oboottom-box{
+    width: 238px;
+    height: 98px;
+    background-color: #f8f9fd;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.oboottom-box .pay-line{
+    display: flex;
+    justify-content: space-between;
+}
+.oboottom-box .pay-line span{
+    font-size: 16px;
+    color: #5c5c5c;
+    font-weight: 400;
+    font-family: "SourceHanSansCN-Regular";
+}
+.oboottom-box .pay-line span:nth-child(2){
+    font-size: 16px;
+    color: #5a5a5a;
+    font-weight: 600;
+    font-family: "SourceHanSansCN-Regular";
+}
+.pay-about{
+    text-align: right;
+}
+/* 限时活动 */
+.activity{
+    height: 92px;
+    background-color: #ffffff;
+}
+.activity-title{
+    width: 90px;
+    background-color: #ff7487;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 0 0 50% 0;
+}
+.activity-words span:first-child{
+    margin-top: 20px;
+    display: inline-block;
+    width: 20px;
+    border-radius: 50%;
+    background:#ff7487;
+    color: white;
+    line-height: 20px;
+    text-align: center;
+}
+/* 取车前免费取消 */
+.free-cancel{
+    background-color: #fff;
+    height: 206px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.freec-title{
+    display: flex;
+    color: #878889;
+    font-size: 20px;
+}
+.freec-title{
+    display: flex;
+    color: #878889;
+    font-size: 20px;
+}
+.fct-icon{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #40cf76;
+    color: white;
+    border-radius: 50%;
+    line-height: 24px;
+    margin-right: 10px;
+    text-align: center;
+}
+.freec-contentl{
+    font-size: 18px;
+}

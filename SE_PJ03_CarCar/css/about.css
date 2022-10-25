@@ -1,0 +1,105 @@
+/* banner部分 */
+.about-banner{
+    height: 411px;
+    background: url(../images/bg_about.jpg) no-repeat;
+    background-size: cover;
+}
+.about-banner p{
+    display: flex;
+    justify-content: center;
+    padding: 120px 30px 30px 30px;
+    font-size: 36px;
+    color: #fff;
+    font-weight: bold;
+}
+.about-banner span{
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    color: #fff;
+}
+.about-banner a{
+    padding: 14px 32px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+.car-button{
+    display: flex;
+    justify-content: center;
+    padding: 30px 30px 30px 30px;
+}
+.about-banner a:hover{
+    background: #fff;
+    color: #000;
+}
+/* 关于我们部分 */
+.about-content{
+    height:450px ;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.about-idea{
+    margin-top: 30px;
+    height: 100%;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.about-idea .abput-icons{
+    width: 151px;
+    height: 151px;
+    overflow: hidden;
+}
+.abput-icons .fa{
+    width: 151px;
+    height: 151px;
+    border-radius: 50%;
+    background-color: #202020;
+    color: #ffffff;
+    font-size: 100px;
+    line-height: 151px;
+    text-align: center;
+    transition: all 0.5s;
+}
+.abput-icons .fa:nth-child(2){
+    background-color: #ffa42c;
+}
+.abput-icons:hover .fa{
+    transform: translateY(-151px);
+}
+.about-idea p{
+    margin-bottom: 18px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.about-idea .muchwords{
+    height: 180px;
+    line-height: 30px;
+    overflow: hidden;
+    color: #666;
+}
+.about-idea .redmore{
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 9px 34px;
+    border: 1px solid #9c9c9c;
+}
+.about-idea .redmore:hover{
+    background-color: #ffa42c;
+    color: #ffffff;
+    border: 1px solid #ffa42c;
+}
+.h-title li:nth-child(5) a {
+    color: #cf9257;
+    font-size: 20px;
+    text-shadow: 0 0 10px #cf9257,
+    0 0 20px #cf9257,
+    0 0 60px #cf9257;
+    border-top: 2px solid #cf9257;
+    border-bottom: 2px solid #cf9257;
+}

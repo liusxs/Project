@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/car.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+        <!-- 头部导航栏 -->
+        <div class="container one">
+            <div class="dl">
+                <!-- javascript:void(0);   链接不发生跳转 -->
+                <a href="javascript:void(0);">亲，请登录</a>
+                <a href="javascript:void(0);">免费注册</a>
+            </div>
+            <div class="dl-l">
+                <a href="javascript:void(0);"><i class="fa fa-github-alt"></i></a>
+                <a href="../www/logistics.html"><i class="fa fa-shopping-cart"></i></a>
+                <a href="javascript:void(0);">个人中心</a>
+                <a href="javascript:void(0);">切换账号</a>
+                <a href="javascript:void(0);">退出账号</a>
+            </div>
+        </div>
+        <header class="container two">
+            <div class="logo">
+                <img src="../images/public/logo.png" alt="">
+            </div>
+            <div class="form">
+                <input type="text" required>
+                <div class="suosou">
+                    <i class="fa fa-search"></i>
+                    <span>安岳黄柠檬</span>
+                </div>
+                <a href="javascript:void(0);" class="al">搜索</a>
+                <div class="form-l">
+                    <a href="">正宗土鸡蛋</a>
+                    <a href="javascript:void(0);">山东大白菜</a>
+                    <a href="javascript:void(0);">福建红心蜜柚</a>
+                    <a href="javascript:void(0);">四川猕猴桃</a>
+                    <a href="javascript:void(0);">新疆哈密瓜</a>
+                    <a href="javascript:void(0);">云南金凤梨</a>
+                </div>
+            </div>
+            <div class="scan">
+                <i class="fa fa-qrcode"></i>
+                <a href="javascript:void(0);">扫一扫</a>
+                <div class="img"></div>
+            </div>
+        </header>
+        <div class="navigation-tent">
+            <div class="container navigation">
+                <div class="navigation-left" id="navigation-img">
+                    <a href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a href="javascript:void(0);">货品分类</a>
+                </div>
+                <div class="navigation-right">
+                    <a href="../www/index.html">首页</a>  
+                    <a href="../www/purchasing.html">采购大厅</a>
+                    <a href="../www/helpsFarmers.html">爱心助农</a>
+                    <a href="../www/consulting.html">农业咨询</a>
+                    <a href="../www/about.html">关于我们</a>
+                </div>                
+            </div>
+        </div>
+            <div class="c-container container">
+                <div class="w">
+                    <div class="cart-filter-bar">
+                        <em>全部商品</em>
+                    </div>
+                    <!-- 购物车主要核心区域 -->
+                    <div class="cart-warp">
+                        <!-- 头部全选模块 -->
+                        <div class="cart-thead">
+                            <div class="t-checkbox">
+                                <input type="checkbox" name="" id="" class="checkall"> 全选
+                            </div>
+                            <div class="t-goods">商品</div>
+                            <div class="t-price">单价</div>
+                            <div class="t-num">数量</div>
+                            <div class="t-sum">小计</div>
+                            <div class="t-action">操作</div>
+                        </div>
+                        <!-- 商品详细模块 -->
+                        <div class="cart-item-list">
+                            <div class="cart-item ">
+                                <div class="p-checkbox">
+                                    <input type="checkbox" name="cart" id="" class="j-checkbox">
+                                </div>
+                                <div class="p-goods">
+                                    <div class="p-img">
+                                        <img src="../images/zjsp/四川白萝卜.jpg" alt="">
+                                    </div>
+                                    <div class="p-msg"><a>四川白萝卜</a></div>
+                                </div>
+                                <div class="p-price">￥12.60</div>
+                                <div class="p-num">
+                                    <div class="quantity-form">
+                                        <a href="javascript:;" class="decrement">-</a>
+                                        <input type="text" class="itxt" value="1">
+                                        <a href="javascript:;" class="increment">+</a>
+                                    </div>
+                                </div>
+                                <div class="p-sum">￥12.60</div>
+                                <div class="p-action"><a href="javascript:;">删除</a></div>
+                            </div>
+                            <div class="cart-item">
+                                <div class="p-checkbox">
+                                    <input type="checkbox" name="" id="" class="j-checkbox">
+                                </div>
+                                <div class="p-goods">
+                                    <div class="p-img">
+                                        <img src="../images/zjsp/重庆西红柿.jpg" alt="">
+                                    </div>
+                                    <div class="p-msg"><a>重庆西红柿</a></div>
+                                </div>
+                                <div class="p-price">￥24.80</div>
+                                <div class="p-num">
+                                    <div class="quantity-form">
+                                        <a href="javascript:;" class="decrement">-</a>
+                                        <input type="text" class="itxt" value="1">
+                                        <a href="javascript:;" class="increment">+</a>
+                                    </div>
+                                </div>
+                                <div class="p-sum">￥24.80</div>
+                                <div class="p-action"><a href="javascript:;">删除</a></div>
+                            </div>
+                            <div class="cart-item">
+                                <div class="p-checkbox">
+                                    <input type="checkbox" name="" id="" class="j-checkbox">
+                                </div>
+                                <div class="p-goods">
+                                    <div class="p-img">
+                                        <img src="../images/zjsp/长岛海米金钩.jpg" alt="">
+                                    </div>
+                                    <div class="p-msg"><a>长岛海米金钩</a></div>
+                                </div>
+                                <div class="p-price">￥29.80</div>
+                                <div class="p-num">
+                                    <div class="quantity-form">
+                                        <a href="javascript:;" class="decrement">-</a>
+                                        <input type="text" class="itxt" value="1">
+                                        <a href="javascript:;" class="increment">+</a>
+                                    </div>
+                                </div>
+                                <div class="p-sum">￥29.80</div>
+                                <div class="p-action"><a href="javascript:;">删除</a></div>
+                            </div>
+                            <div class="cart-item">
+                                <div class="p-checkbox">
+                                    <input type="checkbox" name="" id="" class="j-checkbox">
+                                </div>
+                                <div class="p-goods">
+                                    <div class="p-img">
+                                        <img src="../images/zjsp/长岛海米金钩.jpg" alt="">
+                                    </div>
+                                    <div class="p-msg"><a>长岛海米金钩</a></div>
+                                </div>
+                                <div class="p-price">￥29.80</div>
+                                <div class="p-num">
+                                    <div class="quantity-form">
+                                        <a href="javascript:;" class="decrement">-</a>
+                                        <input type="text" class="itxt" value="1">
+                                        <a href="javascript:;" class="increment">+</a>
+                                    </div>
+                                </div>
+                                <div class="p-sum">￥29.80</div>
+                                <div class="p-action"><a href="javascript:;">删除</a></div>
+                            </div>
+                            <div class="cart-item">
+                                <div class="p-checkbox">
+                                    <input type="checkbox" name="" id="" class="j-checkbox">
+                                </div>
+                                <div class="p-goods">
+                                    <div class="p-img">
+                                        <img src="../images/zjsp/长岛海米金钩.jpg" alt="">
+                                    </div>
+                                    <div class="p-msg"><a>长岛海米金钩</a></div>
+                                </div>
+                                <div class="p-price">￥29.80</div>
+                                <div class="p-num">
+                                    <div class="quantity-form">
+                                        <a href="javascript:;" class="decrement">-</a>
+                                        <input type="text" class="itxt" value="1">
+                                        <a href="javascript:;" class="increment">+</a>
+                                    </div>
+                                </div>
+                                <div class="p-sum">￥29.80</div>
+                                <div class="p-action"><a href="javascript:;">删除</a></div>
+                            </div>
+                            <div class="cart-item">
+                                <div class="p-checkbox">
+                                    <input type="checkbox" name="" id="" class="j-checkbox">
+                                </div>
+                                <div class="p-goods">
+                                    <div class="p-img">
+                                        <img src="../images/zjsp/长岛海米金钩.jpg" alt="">
+                                    </div>
+                                    <div class="p-msg"><a>长岛海米金钩</a></div>
+                                </div>
+                                <div class="p-price">￥29.80</div>
+                                <div class="p-num">
+                                    <div class="quantity-form">
+                                        <a href="javascript:;" class="decrement">-</a>
+                                        <input type="text" class="itxt" value="1">
+                                        <a href="javascript:;" class="increment">+</a>
+                                    </div>
+                                </div>
+                                <div class="p-sum">￥29.80</div>
+                                <div class="p-action"><a href="javascript:;">删除</a></div>
+                            </div>
+                        </div>
+        
+                        <!-- 结算模块 -->
+                        <div class="cart-floatbar container">
+                            <div class="select-all">
+                                <input type="checkbox" name="" id="" class="checkall">全选
+                            </div>
+                            <div class="operation">
+                                <a href="javascript:;" class="remove-batch"> 删除选中的商品</a>
+                                <a href="javascript:;" class="clear-all">清理购物车</a>
+                            </div>
+                            <div class="toolbar-right">
+                                <div class="amount-sum">已经选<em>0</em>件商品</div>
+                                <div class="price-sum">总价： <em>￥0</em></div>
+                                <div class="btn-area">去结算</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+                <!-- 绿色脚部 -->
+                <footer>
+                    <div class="green">
+                        <div class="container green-info">
+                            <div class="green-l">
+                                <div class="top-green">
+                                    <div class="brand">
+                                        <i class="fa fa-leaf"></i>
+                                        <p class="font">绿色</p>
+                                    </div>
+                                </div>
+                                <div class="text-info">
+                                    <p class="green-text">xx农产网是一家专注于绿色有机农产品的专业服务网</p>
+                                </div>
+                            </div>
+                            <div class="green-l">
+                                <div class="top-green">
+                                    <div class="brand">
+                                        <i class="fa fa-cloud"></i>
+                                        <p class="font">智能</p>
+                                    </div>
+                                </div>
+                                <div class="text-info">
+                                    <p class="green-text">xx专注于满足市场需求不断拓展服务区域</p>
+                                </div>
+                            </div>
+                            <div class="green-l">
+                                <div class="top-green">
+                                    <div class="brand">
+                                        <i class="fa fa-hand-pointer-o"></i>
+                                        <p class="font">实惠</p>
+                                    </div>
+                                </div>
+                                <div class="text-info">
+                                    <p class="green-text">没有中间商，免除差价让交易更加简单</p>
+                                </div>
+                            </div>
+                            <div class="green-l">
+                                <div class="top-green">
+                                    <div class="brand">
+                                        <i class="fa fa-check-square"></i>
+                                        <p class="font">安全</p>
+                                    </div>
+                                </div>
+                                <div class="text-info">
+                                    <p class="green-text">实名认证登录，注册专业渠道让交易更加有保障</p>
+                                </div>
+                            </div>
+                            <div class="green-l">
+                                <div class="top-green">
+                                    <div class="brand">
+                                        <i class="fa fa-desktop"></i>
+                                        <p class="font">便捷</p>
+                                    </div>
+                                </div>
+                                <div class="text-info">
+                                    <p class="green-text">快速稳定的销往全国各地经销商和个体户</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 底部声明 -->
+                    <div class="footer">
+                        <div class="footer-content">
+                            <ul class="footer-nav">
+                                <li class="footer-nav-l"><a href="javascriipt:void(0)">关于我们</a></li>
+                                <li class="footer-nav-l">|</li>
+                                <li class="footer-nav-l"><a href="javascriipt:void(0)">法律声明</a></li>
+                                <li class="footer-nav-l">|</li>
+                                <li class="footer-nav-l"><a href="javascriipt:void(0)">使用协议</a></li>
+                                <li class="footer-nav-l">|</li>
+                                <li class="footer-nav-l"><a href="javascriipt:void(0)">版权隐私</a></li>
+                                <li class="footer-nav-l">|</li>
+                                <li class="footer-nav-l"><a href="javascriipt:void(0)">友情链接</a></li>
+                                <li class="footer-nav-l">|</li>
+                                <li class="footer-nav-l"><a href="javascriipt:void(0)">成功案列</a></li>
+                                <li class="footer-nav-l">|</li>
+                                <li class="footer-nav-l"><a href="javascriipt:void(0)">xx大事件</a></li>
+                                <li class="footer-nav-l">|</li>
+                                <li class="footer-nav-l"><a href="javascriipt:void(0)">产品库</a></li>
+                                <li class="footer-nav-l">|</li>
+                                <li class="footer-nav-l"><a href="javascriipt:void(0)">品种库</a></li>
+                                <li class="footer-nav-l">|</li>
+                                <li class="footer-nav-l"><a href="javascriipt:void(0)">产品价格大全</a></li>
+                                <li class="footer-nav-l">|</li>
+                                <li class="footer-nav-l"><a href="javascriipt:void(0)">产品地图</a></li>
+                            </ul>
+                            <p class="footer-font">蜀ICP备案12345678号-1 服务热线：400-008-8888</p>
+                            <p class="footer-font">互联网农产品信息服务资格证书：（蜀）-经营性-2019-0001 四川xx农产品网营业执照</p>
+                            <p class="footer-font">&copy;-2019 Cnhnb B2B SYSTEN ALL Rights Reserved</p>
+                        </div>
+                    </div>
+                </footer>
+            
+</body>
+<script src="../js/car.js"></script>
+</html>

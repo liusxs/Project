@@ -1,0 +1,75 @@
+/* banner部分 */
+.servce-banner{
+    overflow: hidden;
+    margin-bottom: 50px;
+    width: 1150px;
+    margin: auto;
+}
+.servce-banner img{
+    width: 100%;
+}
+/* 服务项目部分 */
+.servce{
+    height: 259px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+.servce-project{
+    padding: 10px;
+    width: 181px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.servce-project p{
+    font-size: 18px;
+    color: #333333;
+    font-weight: 900;
+}
+.servce-project span{
+    font-size: 14px;
+    color: #333333;
+    text-align: center;
+}
+.servce-project .need{
+    width: 96px;
+    height: 32px;
+    background-color: #f3f3f3;
+    border-radius: 6px;
+    border: solid 1px #e5e5e5;
+    text-align: center;
+    line-height: 32px;
+}
+.servce-project:hover p{
+    color: #ca9b44;
+}
+.servce-project:hover span{
+    color: #ca9b44;
+}
+.servce-project:hover .need{
+    background-color: #ca9b44;
+    color: #fff;
+}
+/* 脚部背景模块 */
+.footer_bg{
+    width: 1150px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    margin: auto;
+}
+.footer_bg img{
+    height: 260px;
+}
+.h-title li:nth-child(4) a {
+    color: #cf9257;
+    font-size: 20px;
+    text-shadow: 0 0 10px #cf9257,
+    0 0 20px #cf9257,
+    0 0 60px #cf9257;
+    border-top: 2px solid #cf9257;
+    border-bottom: 2px solid #cf9257;
+}

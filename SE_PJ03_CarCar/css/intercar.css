@@ -1,0 +1,584 @@
+/* banner部分 */
+.banner{
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+        /* 取还时间 */
+.time{
+    height: 168px;
+    margin-bottom: 30px;
+    box-shadow: -16px 9px 12px 0px rgba(98, 98, 98, 0.11);
+}
+.t-date{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+/* 分三块，地点时间和取车 */
+.td-position{
+    width: 428px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.td-time{
+    width: 486px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.td-term{
+    width: 156px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* 取车地点 */
+.p-pick-car{
+    display: flex;
+    width: 100%;
+    height: 54px;
+    font-size: 16px;
+}
+.pick-car{
+    background-color: #fff;
+    width: 70px;
+    height: 100%;
+    text-align: center;
+    line-height: 54px;
+    border: 2px solid #e7e7e7;
+    color: #525252;
+    font-family: "SourceHanSansCN-Medium";
+    box-sizing: border-box;
+    font-size: 16px;
+}
+#city{
+    font-family: "SourceHanSansCN-Medium";
+    font-size: 16px;
+    width: 168px;
+    border: none;
+    border: 2px solid #e7e7e7;
+    height: 100%;
+    box-sizing: border-box;
+    color: #989898;
+    border-left: none;
+}
+#county{
+    box-sizing: border-box;
+    width: 190px;
+    height: 100%;
+    border: none;
+    border: 2px solid #e7e7e7;
+    color: #989898;
+    border-left: none;
+}
+/* 取车的时间 */
+.td-time-pick{
+    height: 54px;
+    display: flex;
+    font-size: 16px;
+}
+.td-time-car{
+    background-color: #fff;
+    width: 100px;
+    border: none;
+    height: 100%;
+    border: 2px solid #e7e7e7;
+    line-height: 54px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.inputdate{
+    width: 230px;
+    border: none;
+    border: 2px solid #e7e7e7;
+    box-sizing: border-box;
+    height: 100%;
+    border-left: none;
+    text-align: center;
+    color: #989898;
+    line-height: 54px;
+}
+.inputdate::-webkit-inner-spin-button{
+    visibility: hidden;
+}
+.inputdate::-webkit-calendar-picker-indicator{
+    font-size: 16px;
+    padding: 16px;
+}
+#clock{
+    width: 156px;
+    border: none;
+    border: 2px solid #e7e7e7;
+    box-sizing: border-box;
+    height: 100%;
+    border-left: none;
+    text-align: center;
+    color: #989898;
+    height: 54px;
+}
+.td-time-back{
+    height: 54px;
+    display: flex;
+    font-size: 16px;
+}
+/* 是否租车 */
+.td-term h4{
+    color: #636363;
+    font-weight: 400;
+    font-size: 18px;
+}
+.td-term h4 span{
+    color: #f88349;
+}
+.td-term-car{
+    width: 156px;
+    height: 58px;
+    border-radius: 6px;
+    background-color: #ca9b44;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    line-height: 58px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+            /* 车型组 */
+.car-style{
+    height: 138px;
+    border-bottom: dashed 1px #ddd;
+    background-color: #fff;
+    font-family: "SourceHanSansCN-Medium";
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+.car-style .cs-words{
+    margin: 0 52px 0 26px;
+    width: 60px;
+}
+.car-style ul {
+    width: 1012px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-right: 38px;
+    list-style: none;
+}
+.car-style ul a{
+    height: 80px;
+    width: 122px;
+    box-sizing: border-box;
+    border: solid 1px #e6e6e6;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    color: #525252;
+}
+.car-style ul li:nth-child(1) .img{
+    width: 46px;
+    height: 40px;
+    background: url(../images/雪碧图.png);
+}
+.car-style ul li:nth-child(2) .img{
+    width: 60px;
+    height: 34px;
+    background: url(../images/雪碧图.png);
+    background-position: 0 -44px;
+}
+.car-style ul li:nth-child(3) .img{
+    width: 68px;
+    height:40px;
+    background: url(../images/雪碧图.png);
+    background-position: 0 -78px ;
+}
+.car-style ul li:nth-child(4) .img{
+    width: 60px;
+    height: 40px;
+    background: url(../images/雪碧图.png);
+    background-position: 0  -118px ;
+}
+.car-style ul li:nth-child(5) .img{
+    width: 70px;
+    height: 40px;
+    background: url(../images/雪碧图.png);
+    background-position: 0  -160px;
+}
+.car-style ul li:nth-child(6) .img{
+    width: 60px;
+    height: 40px;
+    background: url(../images/雪碧图.png);
+    background-position: 0;
+}
+.car-style ul a:hover{
+    border-color: #fed201;
+}
+/* 车辆座位 */
+.car-seats{
+    height: 70px;
+    border-bottom: dashed 1px #ddd;
+    background-color: #fff;
+}
+.car-seats ul{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+    height: 100%;
+}
+.car-seats ul li {
+    margin: 0 26px;
+    border: none;
+}
+#seacts1,#seacts2,#seacts3{
+    width: 18px;
+    height: 15px;
+}
+/* 品牌 */
+.car-brand{
+    height: 106px;
+    margin-bottom: 16px;
+    background-color: #fff;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.car-brand .check-brand{
+    margin: 0 52px 0 26px;
+}
+.cb-brand{
+    margin-right: 26px;
+}
+.dif-brand{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.dif-brand li {
+    list-style: none;
+}
+.dif-brand .first{
+    display: flex;
+    justify-content: space-between;
+}
+.dif-brand .second{
+    display: flex;
+    justify-content: space-between;
+}
+.cb-brand span{
+    height: 22px;
+}
+.first li:first-child span::before{
+    content: "";
+    display: inline-block;
+    width: 26px;
+    height: 20px;
+    background: url(../images/雪碧图.png) ;
+    background-position: 0 -249px;
+    vertical-align:middle;
+    margin: 2px;
+}
+.first li:nth-child(2) span::before{
+    content: "";
+    display: inline-block;
+    width: 57px;
+    height: 22px;
+    background: url(../images/雪碧图.png) ;
+    background-position: 0 -272px;
+    vertical-align:middle;
+    margin: 2px;
+}
+.first li:nth-child(3) span::before{
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 22px;
+    background: url(../images/雪碧图.png) ;
+    background-position: 0 -296px;
+    vertical-align:middle;
+    margin: 2px;
+}
+.first li:nth-child(4) span::before{
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(../images/雪碧图.png) ;
+    background-position: 0 -319px;
+    vertical-align:middle;
+    margin: 2px;
+}
+.first li:nth-child(5) span::before{
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(../images/雪碧图.png) ;
+    background-position: 0 -342px;
+    vertical-align:middle;
+    margin: 2px;
+}
+.first li:nth-child(6) span::before{
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+    background: url(../images/雪碧图.png) ;
+    background-position: 0 -365px;
+    vertical-align:middle;
+    margin: 2px;
+}
+.second li:first-child span::before{
+    content: "";
+    display: inline-block;
+    width: 26px;
+    height: 20px;
+    background: url(../images/雪碧图.png) ;
+    background-position: 0 -249px;
+    vertical-align:middle;
+    margin: 2px;
+}
+.second li:nth-child(2) span::before{
+    content: "";
+    display: inline-block;
+    width: 57px;
+    height: 22px;
+    background: url(../images/雪碧图.png) ;
+    background-position: 0 -272px;
+    vertical-align:middle;
+    margin: 2px;
+}
+.second li:nth-child(3) span::before{
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 22px;
+    background: url(../images/雪碧图.png) ;
+    background-position: 0 -296px;
+    vertical-align:middle;
+    margin: 2px;
+}
+.second li:nth-child(4) span::before{
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(../images/雪碧图.png) ;
+    background-position: 0 -319px;
+    vertical-align:middle;
+    margin: 2px;
+}
+.second li:nth-child(5) span::before{
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(../images/雪碧图.png) ;
+    background-position: 0 -342px;
+    vertical-align:middle;
+    margin: 2px;
+}
+.second li:nth-child(6) span::before{
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+    background: url(../images/雪碧图.png) ;
+    background-position: 0 -365px;
+    vertical-align:middle;
+    margin: 2px;
+}
+/* 综合排序 */
+.ordering{
+    height: 52px;
+    border:1px solid #d2d2d2;
+    margin-bottom: 24px;
+}
+.sort{
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    align-content: center;
+}
+.sort li{
+    padding: 16px;
+    border-left: 1px solid #dbdbdb;
+    color: #535353;
+    font-family:"SourceHanSansCN-Normal" ;
+    list-style: none;
+}
+/* 内容 商品展示 车 */
+.content{
+    height: 2078px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content-car{
+    padding: 8px;
+    height: 240px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+/* 左边部分 */
+.ccar-left{
+    width: 346px;
+    height: 224px;
+    float: left;
+    margin-right: 20px;
+}
+/* 中间部分 */
+.ccar-center{
+    float: left;
+    width: 492px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: left;
+    align-content: left;
+}
+.ccar-center h4{
+    font-family: "SourceHanSansCN-Bold";
+    font-size: 24px;
+    color: #646464;
+}
+.icon-words{
+    display: flex;
+    justify-content: space-between;
+    color: #6b6b6b;
+    letter-spacing: 1px;
+    font-family: "SourceHanSansCN-Medium";
+    font-size: 18px;
+}
+.space{
+    color: #cb9e4c;
+}
+.ccar-center p{
+    letter-spacing: 1px;
+    font-family: "SourceHanSansCN-Medium";
+    color: #6b6b6b;
+    font-size: 18px;
+}
+.ccar-center .browse{
+    color: #969696;
+    font-family: "SourceHanSansCN-Medium";
+    font-size: 18px;
+}
+/* 右边部分 */
+.ccar-right{
+    float: left;
+    height: 100%;
+    width: 209px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+.ccar-right .day{
+    font-family: "SourceHanSansCN-Regular";
+    font-size: 18px;
+    color: #fd640e;
+    margin-bottom: 10px;
+}
+.ccar-right .day h5{
+    font-family: "SourceHanSansCN-Heavy";
+    font-size: 30px;
+    color: #fd640e;
+    display: inline-block;
+}
+.ccar-right .total{
+    color: #969696;
+    font-family: "SourceHanSansCN-Medium";
+    margin-bottom: 44px;
+    font-size: 18px;
+}
+.ccar-right .reserve a{
+    display: inline;
+    width: 108px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 42px;
+}
+/* 换页 */
+.skip{
+    width: 402px;
+    height: 130px;
+    margin: 42px auto;
+    display: flex;
+    align-items: center;
+}
+.skip ul{
+    display: flex;
+    list-style: none;
+}
+.skip li a{
+    display: inline-block;
+    border: 1px solid #d3d3d3;
+    width: 40px;
+    color: #9b9b9b;
+    font-size: 18px;
+    margin-right: 26px;
+    box-sizing: border-box;
+    line-height: 42px;
+    text-align: center;
+}
+.skip li:first-child a{
+    width: 88px;
+}
+.skip li:last-child a{
+    width: 88px;
+}
+.skip li:nth-child(2) a{
+    background-color: #fff;
+}
+.skip li a:hover{
+    background-color: #fff;
+}
+/* 回到顶部 */
+.back-top{
+    position: fixed;
+    bottom: 10%;
+    right: 0;
+}
+.back-top a{
+    display: inline-block;
+    width: 66px;
+    border-radius: 50%;
+    line-height: 66px;
+    color: rgb(104, 104, 104);
+    font-size: 12px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: -8px 3px 7px 0px rgba(98, 98, 98, 0.5);
+}
+.back-top a:hover{
+    width: 90px;
+    height: 90px;
+    font-size: 20px;
+    line-height: 90px;
+}
+.h-title li:nth-child(2) a {
+    color: #cf9257;
+    font-size: 20px;
+    text-shadow: 0 0 10px #cf9257,
+    0 0 20px #cf9257,
+    0 0 60px #cf9257;
+    border-top: 2px solid #cf9257;
+    border-bottom: 2px solid #cf9257;
+}

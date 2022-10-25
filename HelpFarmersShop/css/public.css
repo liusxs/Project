@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 99%;
+    background-color: #f5f4f4;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.head{
+    height: 41px;
+    background-color: #eeeeee;
+}
+.one{
+    display: flex;
+    justify-content: space-between;
+}
+.dl{
+    height: 41px;
+    line-height: 41px;
+    font-size: 14px;
+}
+.dl a{
+    padding-right: 30px;
+    color: #959595;
+}
+.dl-l{
+    display: flex;
+    width: 350px;
+    height: 15px;
+    font-size: 14px;
+    color: #959595;
+    line-height: 41px;
+    justify-content: space-between;
+}
+.dl-l a{
+    color: #959595;
+}
+.dl-l a:not(:last-child){
+    margin-right: 30px;
+}
+/* 搜索 */
+.two{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form{
+    display: flex;
+    position: relative;
+}
+.form input{
+    width: 545px;
+    height: 41px;
+    border: 1px solid #009900;
+    border-radius: 41px 0 0 41px;
+    line-height: 41px;
+    padding-left: 10px;
+    position: relative;
+}
+.form input+.suosou{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #cacaca;
+}
+.form input:focus~.suosou,
+.form input:valid~.suosou{
+    display: none;
+}
+.form .al{
+    width: 90px;
+    height: 41px;
+    background-color: #3a880e;
+    border-radius: 0 41px 41px 0;
+    text-align: center;
+    line-height: 41px;
+    font-size: 18px;
+    color: white;
+}
+.form-l{
+    position: absolute;
+    top: 45px;
+    left: 20px;
+}
+.form-l a{
+    color: #5e5e5e;
+    font-size: 12px;
+    margin-right: 20px;
+}
+.scan{
+    width: 283px;
+    height: 41px;
+    background-color: #3a880e;
+    border-radius: 41px;
+    text-align: center;
+    line-height: 41px;
+    color: white;
+}
+.scan a{
+    font-size: 22px;
+    color: white;
+}
+.scan .fa{
+    font-size: 20px;
+    height: 41px;
+    line-height: 41px;
+}
+.logo img{
+    width: 80px;
+}
+.navigation-tent{
+    width: 100%;
+    background: linear-gradient(to bottom,#2b7301,#0bdd0b);
+}
+.navigation{
+    display: flex;
+    height: 50px;
+    background: linear-gradient(to bottom,#2b7301,#0bdd0b);
+    font-size: 18px;
+    margin-top: 20px;
+}
+.navigation-left{
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    margin-left: 69px;
+}
+.navigation-left a{
+    color: black;
+}
+.navigation-right{
+    height: 50px;
+    line-height: 50px;
+}
+.navigation-right a{
+    width: 100px;
+    float: left;
+    margin-left: 50px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.navigation-right a:hover{
+    background-color: rgb(227, 226, 226);
+    color: #009900;
+}
+/* .navigation-right a:nth-child(1){
+    background-color: rgb(227, 226, 226);
+    color: #009900;
+} */
+/* 绿色脚部 */
+.green{
+    height: 220px;
+    background-color: #3a880e;
+    margin: 0 auto;
+}
+.green-info{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.green .green-l{
+    width: 184px;
+    height: 153px;
+}
+.top-green{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.top-green .brand{
+    width: 106px;
+    height: 106px;
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+}
+.brand >.fa{
+    font-size: 54px;
+    color: white;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+.brand > .font{
+    position: absolute;
+    right: -30px;
+    top: 20px;
+    padding: 10px 10px;
+    background-color: #3a880e;
+    color: white;
+}
+.text-info{
+    width: 100%;
+    height: 34px;
+}
+.text-info .green-text{
+    font-family: 'MicrosoftYaHeiLight';
+    font-size: 4px;
+    color: #ffffff;
+}
+/* 底部声明 */
+.footer{
+    height: 116px;
+    background-color: #343c3c;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-content{
+    width: 956px;
+    height: 84px;
+    text-align: center;
+}
+.footer-nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.footer-nav-l>a{
+    font-size: 15px;
+    color: white;
+}
+.footer-nav~.footer-font{
+    font-family: 'MicrosoftYaHeiLight';
+    font-size: 6px;
+    letter-spacing: 1px;
+    color: #dcdcdc;
+}

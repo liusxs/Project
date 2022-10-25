@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* ----------------版心设置---------------- */
+.contain{
+    width: 1150px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f3f3f3;
+}
+.hw{
+    height: 16px;
+    width: 16px;
+}
+/*---------------- head部分---------------- */
+.header {
+    height: 100px;
+    background-color: #202020;
+}
+.h-words {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+/* logo部分 */
+.h-logo {
+    width: 144px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.h-logo a {
+    display: inline-block;
+    width: 144px;
+    height: 56px;
+    background: url(../images/logo.png) no-repeat center;
+}
+/* 标题部分 */
+.h-title {
+    width: 555px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.h-title li {
+    list-style: none;
+}
+.h-title a {
+    font-size: 16px;
+    padding: 10px 10px;
+    color: #f7f7f7;
+}
+.h-title a:hover {
+    color: #cf9257;
+}
+/* 登录注册部分 */
+.h-login {
+    width: 199px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.login {
+    display: inline-block;
+    padding: 6px 10px;
+    width: 92px;
+    height: 24px;
+    background-color: #ca9b44;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 24px;
+    color: #fff;
+}
+.login-phon {
+    font-family: "FZZDHJW--GB1-0";
+    font-size: 22px;
+    color: #ffffff;
+}
+.login-phon i {
+    color: #ca9b44;
+    padding: 0 4px;
+}
+/*---------------- 脚部---------------- */
+.footer{
+    height: 310px;
+    background-color: #eee;
+}
+.f-about{
+    display: flex;
+    justify-content: space-between;
+}
+.f-about ul li{
+    font-family: "SourceHanSansCN-Normal";
+    font-size: 20px;
+    letter-spacing: -2px;
+    color: #343434;
+    margin-bottom: 20px;
+    list-style: none;
+}
+.f-about ul li:first-child{
+    font-family: "SourceHanSansCN-Bold";
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: #343434;
+    margin-bottom: 42px;
+    margin-top: 52px;
+}
+.f-about ul li a:hover{
+    color: #ca9a45;
+}
+/* 小圆圈的公共类 取还驾照 */
+.circle{
+    width: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: #ffffff;
+    font-size: 12px;
+}
+/* 盒子阴影大小 */
+.box{
+    box-shadow: -2px 7px 10px 0px rgba(98, 98, 98, 0.11);
+    transition: all 0.5s;
+}
+.box:hover{
+    cursor:pointer;
+    transform: translateY(-10px);
+}
+.button{
+    background-color: #ffa42c;
+}
+.button:hover{
+    cursor:pointer;
+    background-color: #c57b19;
+}
+a{
+    text-decoration: none;
+}
+.footer a{
+    color: #333;
+}    

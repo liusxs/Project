@@ -1,0 +1,234 @@
+.navigation-right a:nth-child(3){
+    background-color: rgb(227, 226, 226);
+    color: #009900;
+}
+/* banner */
+.picture{
+    overflow: hidden;
+    margin-bottom: 50px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.picture img{
+    width: 100%;
+    transition: all 1s;
+}
+.picture img:hover{
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+/* 爱心助力 */
+.lovef-title{
+    width: 260px;
+    height: 77px;
+    margin-bottom: 50px;
+}
+.lovef-title h2{
+    font-size: 40px;
+    color: #3a880e;
+    text-align: center;
+}
+.lovef-title span{
+    font-size: 14px;
+    color: #999999;
+}
+.slideshow{
+    width: 1200px;
+    height: 461px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.details{
+    width: 370px;
+    height: 446px;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 60px 0px 
+    rgba(0, 0, 0, 0.1);
+    border: solid 1px #eeeeee;
+    padding: 20px;
+}
+.details img{
+    margin-bottom: 25px;
+    transition: all 1s;
+}
+.details img:hover{
+    transform: scale(1.1);
+}
+.details img+p{
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: 900;
+    text-align: center;
+}
+.details img+p+p{
+    font-size: 13px;
+    color: #999999;
+    margin-bottom: 30px;
+}
+.details .d-plan{
+    width: 330px;
+    height: 15px;
+    background-color: #f6f6f6;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.details .d-plan div{
+    width: 165px;
+    height: 15px;
+    background-color: #3a880e;
+    border-radius: 15px;
+}
+.details .d-data{
+    height: 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.details .d-data .d-d-text{
+    text-align: center;
+}
+/* 滞销产品 */
+.finally{
+    background-color: #f6f6f6;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+.finally .f-content{
+    display: flex;
+    justify-content: center;
+}
+.finally .f-content .fc-picture{
+    width: 638px;
+    height: 400px;
+}
+.finally .f-content .fc-text{
+    width: 510px;
+    padding-top: 10px;
+}
+.finally .f-content .fc-text .fct-one{
+    font-size: 14px;
+    color: #f75e61;
+    margin-bottom: 20px;
+}
+.finally .f-content .fc-text .fct-two{
+    font-size: 24px;
+    color: #000000;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+.finally .f-content .fc-text .fct-three{
+    font-size: 14px;
+    color: #999999;
+    margin-bottom: 30px;
+}
+.finally .f-content .fc-plan{
+    width: 510px;
+    height: 15px;
+    background-color: #eeeeee;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.finally .f-content .fc-plan div{
+    width: 100px;
+    height: 15px;
+    background-color: #3a880e;
+    border-radius: 15px;
+}
+.finally .f-content .fc-text .fct-data{
+    width: 510px;
+    height: 38px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.finally .f-content .fc-text .fct-data .fctd-text{
+    text-align: center;
+}
+.f-content .fc-button{
+    width: 480px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+.f-content .fc-button .fcb-a a{
+    display: block;
+    width: 180px;
+    height: 53px;
+    background-color: #3a880e;
+    border-radius: 53px;
+    text-align: center;
+    line-height: 53px;
+    color: #ffffff;
+}
+.f-content .fc-button .fcb-a-1 a{
+    display: block;
+    width: 180px;
+    height: 53px;
+    border: solid 5px #d2d4d3;
+    border-radius: 53px;
+    text-align: center;
+    line-height: 46px;
+}
+.flow{
+    height: 309px;
+    background-color: #222222;
+    background-image: url(../images/lovetofarmer/main_bg_03.png);
+}
+.flow h2{
+    font-size: 40px;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 45px;
+}
+.flow .flow-icon{
+    width: 1100px;
+    height: 65px;
+    display: flex;
+    justify-content: space-around;
+}
+.flow .flow-icon img{
+    margin-top: 26px;
+}
+.map{
+    width: 100%;
+    height: 600px;
+    background-color: #f6f6f6;
+    padding: 50px;
+    margin-bottom: 10px;
+}
+.map .map-case{
+    width: 1172px;
+    height: 502px;
+    display: flex;
+    justify-content: space-between;
+}
+.map .map-case .map-text h3{
+    font-size: 40px;
+    color: #3a880e;
+    margin-top: 180px;
+    margin-bottom: 20px;
+}
+.map .map-case .map-text h3+p{
+    font-size: 15px;
+    color: #2b2b2b;
+}
+/* 合照图片 */
+.tupian{
+    width: 1187px;
+    height: 546px;
+    margin-bottom: 42px;
+}
+.t-background{
+    height: 39px;
+    background-image: url(../images/public/leaf1.png);
+    text-align: center;
+    background-repeat: no-repeat;
+    margin-bottom: 47px;
+}
+.t-background p{
+    font-size: 30px;
+    color: #3a880e;
+}
