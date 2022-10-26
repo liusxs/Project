@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../fonts/font-awesome.min.css">
     <link rel="stylesheet" href="../css/index.css">
     <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/vue.min.js"></script>
 </head>
 <body>
     <div class="scroll_text">
@@ -25,13 +26,25 @@
                 <a href="../www/register.html">亲，请登录</a>
                 <a href="javascript:void(0);">免费注册</a>
             </div>
-            <div class="dl-l">
+            <div class="dl-l" id="dl-l">
                 <a href="javascript:void(0);"><i class="fa fa-github-alt"></i></a>
-                <a href="../www/car.html"><i class="fa fa-shopping-cart"></i></a>
+                <!-- 在这里 href 是参数，告知 v-bind 指令将该元素的 href 属性与表达式 url 的值绑定 
+                 v-bind 指令被用来响应地更新 HTML 属性：-->
+                <a v-bind:href="url"><i class="fa fa-shopping-cart"></i></a>
                 <a href="javascript:void(0);">个人中心</a>
                 <a href="javascript:void(0);">切换账号</a>
                 <a href="javascript:void(0);">退出账号</a>
             </div>
+            <script>
+                new Vue({
+                    // 引用id
+                   el: '#dl-l',
+                   data: {
+                    // 绑定上述href
+                        url: '../www/car.html'
+                }
+            })
+            </script>
         </div>
         <div class="two-tan">
             <header class="container two">
