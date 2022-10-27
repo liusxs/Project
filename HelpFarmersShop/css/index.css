@@ -755,3 +755,15 @@ body{
     letter-spacing: 1px;
     color: #dcdcdc;
 }
+
+/* 鼠标点击动画 结合index.js的window.onclick = function (ev) 使用 */
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(0, -350%, 0);
+    }
+}
