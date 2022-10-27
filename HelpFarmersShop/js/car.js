@@ -15,20 +15,20 @@ $(function(){
         }
         getSum();
     })
-    // 被单选中的商品添加背景色
-    $('.j-checkbox').click(function(){
-        if($('.j-checkbox:checked').length==3){
-            $('.checkall').prop('checked',true)
-        }else{
-            $('.checkall').prop('checked',false)
-        }
-        if($(this).prop('checked')){
-            $(this).parent().parent('.cart-item').addClass('check-cart-item')
-        }else{
-            $(this).parent().parent('.cart-item').removeClass('check-cart-item')
-        }
-        getSum();
-    })
+    // 被单选中的商品添加背景色      -------目前没有实现效果-------
+    // $('.j-checkbox').click(function(){
+    //     if($('.j-checkbox:checked').length==3){
+    //         $('.checkall').prop('checked',true)
+    //     }else{
+    //         $('.checkall').prop('checked',false)
+    //     }
+    //     if($(this).prop('checked')){
+    //         $(this).parent().parent('.cart-item').addClass('check-cart-item')
+    //     }else{
+    //         $(this).parent().parent('.cart-item').removeClass('check-cart-item')
+    //     }
+    //     getSum();
+    // })
     // 商品数量的增加与单价的增加
     $('.increment').click(function(){
         var n=$(this).siblings('.itxt').val();
