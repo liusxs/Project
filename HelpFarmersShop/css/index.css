@@ -261,13 +261,13 @@ body{
 /* banner轮播图 */
 .banner-left{
     width: 1505px;
-    height: 540px;
+    height: 525px;
     position: relative;
     cursor: pointer;
 }
 .banner-left img{
     width: 1505px;
-    height: 540px;
+    height: 525px;
     position: absolute;
     left: 0;
     top: 0;
@@ -309,7 +309,7 @@ body{
 .bannerNav{
     position: absolute;
     left: 670px;
-    bottom: 10px;
+    bottom: 28px;
 }
 .bannerNav li{
     width: 30px;
