@@ -662,8 +662,10 @@ body{
     right: 30px;
     border: 1px solid #009900;
     background-color: #009900;
-    width: 80px;
-    height: 20px;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
     text-align: center;
     color: white;
 }
