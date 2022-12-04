@@ -38,6 +38,12 @@ body{
 .dl-l a{
     color: #959595;
 }
+.dl a:hover{
+    color: #0bdd0b;
+}
+.dl-l a:hover{
+    color: #0bdd0b;
+}
 .dl-l a:not(:last-child){
     margin-right: 30px;
 }
