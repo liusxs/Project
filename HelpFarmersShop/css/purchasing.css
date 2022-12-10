@@ -35,6 +35,13 @@
 .right-img-3-1 .img-3{
     margin: 0 12px;
 }
+.right-img-3-1 .star{
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    margin-top: 5px;
+    color: #a0a0a0;
+}
 .img-nuber{
     display: flex;
     flex-wrap: nowrap;
