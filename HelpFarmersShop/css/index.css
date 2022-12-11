@@ -562,7 +562,6 @@ body{
 }
 /* 农业咨询 */
 .far_question{
-    margin-top: 400px;
     background: url(../images/index/footer/footer.png) no-repeat center;
     height: 350px;
 }
@@ -774,4 +773,59 @@ body{
         opacity: 0;
         transform: translate3d(0, -350%, 0);
     }
+}
+.tab {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	/* 火狐 */
+	-webkit-box-sizing: border-box;
+	/* 苹果 */
+	width: 1200px;
+	height: 400px;
+	margin: 50px auto;
+	border: 1px solid #E0E0E0;
+	overflow: hidden;
+	background: #FFF;
+    margin-top: 400px;
+}
+
+ul.tab-nav,
+ul.tab-item {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 50px;
+	list-style: none;
+	position: relative;
+}
+
+ul.tab-nav>li {
+	width: 20%;
+	height: 50px;
+	display: block;
+	line-height: 50px;
+	text-align: center;
+	float: left;
+	border-bottom: 1px solid #E0E0E0;
+	border-top: none;
+	cursor: pointer;
+}
+
+ul.tab-nav>li:last-child {
+	border-right: none;
+}
+
+ul.tab-item>li {
+	width: 100%;
+	height: 150px;
+	/*保证li里边的字体居中*/
+	line-height: 150px;
+	text-align: center;
+	font-size: 56px;
+	color: #999;
+}
+
+.btn-active {
+	color: #212121;
+	background: #F0F0F0;
 }
