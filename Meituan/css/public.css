@@ -8,7 +8,7 @@
     margin: 0 auto;
 }
 .head{
-    background-color: rgba(225, 225, 225, 0.903);
+	background-color: #ffffff;
 }
 .header{
     /* 弹性布局 */
@@ -16,6 +16,9 @@
     justify-content: space-between;
     height: 52px;
     line-height: 52px;
+}
+.backcolor{
+	background-color: rgba(241, 241, 241, 0.903);
 }
 .header-left a{
     padding: 0 5px;
@@ -66,4 +69,56 @@
 .nav>li>ul>li:hover {
 	color: orange;
 	cursor: pointer;
+}
+.submenu{
+	width: 1200px;
+	background-color: aquamarine;
+	position: fixed;
+	left: 145px;
+	display: flex;
+	justify-content: space-evenly;
+	height: 300px;
+}
+.hotel{
+	width: 300px;
+}
+.logo{
+	display: flex;
+}
+.logo-img{
+	width: 350px;
+}
+.logo-img img{
+	width: 126px;
+	height: 46px;
+	padding: 36px 0;
+}
+.sousuo{
+	padding: 36px 0;
+}
+.sousuo input{
+	width: 340px;
+	height: 40px;
+}
+.sousuo button{
+	width: 80px;
+	height: 44px;
+	line-height: 44px;
+	background-color: rgb(237, 201, 109);
+	margin-left: -5px;
+}
+.head-list{
+	width: 92%;
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	padding: 10px 0;
+}
+.head-list li{
+	padding: 0 10px;
+}
+.head-list a{
+	font-size: 16px;
+	font-weight: bold;
+	color: black;
 }
