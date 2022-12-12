@@ -7,18 +7,18 @@
     <title>首页</title>
     <!-- 图标引入 -->
     <link rel="icon" href="../images/meituan.ico">
-    <!-- 公共样式引入 -->
-    <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="../css/index.css">
     <!-- 初始化样式 -->
     <link rel="stylesheet" href="../css/reset.css">
+    <!-- 字体图标引入 -->
+    <link rel="stylesheet" href="../fonts/font-awesome.min.css">
 </head>
 <body>
     <div class="head">
         <div class="backcolor">
             <div class="header comment">
                 <div class="header-left">
-                    <span>成都</span>
+                    <span><i class="fa fa-location-arrow"></i> 成都</span>
                     <span>更换城市：</span>
                     <select id="sheng" name='sheng'>
                         <option value="0">省</option>
@@ -34,7 +34,7 @@
                         <a href="">注册</a>
                     </div>
                 </div>
-                <div class="header-right">
+                <div class="header-right" style="z-index: 999;">
                     <ul class="nav">
                         <li>
                             <a href="javascript:void(0);">我的美团</a>
@@ -113,7 +113,7 @@
             </div>
             <div class="sousuo">
                 <input type="text" placeholder="搜索商家或地点">
-                <button><span>搜索</span></button>
+                <button><span><i class="fa fa-search"></i> 搜索</span></button>
             </div>
         </div>
         <div class="head-list">

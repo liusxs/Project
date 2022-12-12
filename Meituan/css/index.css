@@ -99,6 +99,9 @@
 .sousuo input{
 	width: 340px;
 	height: 40px;
+    color: rgb(118, 118, 118);
+    font-size: 14px;
+    padding:  0 5px;
 }
 .sousuo button{
 	width: 80px;
