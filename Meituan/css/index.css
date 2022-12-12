@@ -24,8 +24,17 @@
     padding: 0 5px;
     color: rgb(118, 118, 118);
 }
+.header-left select:hover{
+    color: orange;
+}
 .header-rest{
     float: right;
+}
+.header-rest a:hover{
+    color: orange;
+}
+.header-rest a:nth-child(1){
+    color: orange;
 }
 
 .nav>li {
@@ -69,18 +78,42 @@
 .nav>li>ul>li:hover {
 	color: orange;
 	cursor: pointer;
+    border: 0px 1px 1px 1px  solid rgb(118, 118, 118);
+    box-shadow: 0px 2px 3px rgb(118, 118, 118);
 }
 .submenu{
 	width: 1200px;
-	background-color: aquamarine;
+	background-color: rgb(255, 255, 255);
 	position: fixed;
 	left: 145px;
 	display: flex;
 	justify-content: space-evenly;
-	height: 300px;
+	height: 260px;
+    border: 0px 1px 1px 1px  solid rgb(118, 118, 118);
+    box-shadow: 0px 2px 3px rgb(118, 118, 118);
 }
 .hotel{
-	width: 300px;
+    width: 280px;
+    padding-top: 15px;
+}
+.hotel-list li{
+    width: 85px;
+    float: left;
+}
+.hotel a{
+    color: rgb(118, 118, 118);
+}
+.hotel a:hover{
+    color: orange;
+}
+.hotel-list img{
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+}
+.food-list li{
+    width: 120px;
+    float: left;
 }
 .logo{
 	display: flex;
@@ -110,7 +143,7 @@
 	background-color: rgb(237, 201, 109);
 	margin-left: -5px;
 }
-.head-list{
+/* .head-list{
 	width: 92%;
 	display: flex;
 	justify-content: center;
@@ -124,4 +157,4 @@
 	font-size: 16px;
 	font-weight: bold;
 	color: black;
-}
+} */
