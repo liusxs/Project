@@ -36,4 +36,15 @@ $(function() {
             }
         }
     });
+    $(document).ready(function() {
+        var $nav = $(".nav>li");
+
+        $nav.mouseover(function() {
+            $(this).children("ul").show();
+        });
+
+        $nav.mouseout(function() {
+            $(this).children("ul").hide();
+        });
+    });
 });
