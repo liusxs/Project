@@ -7,8 +7,41 @@
     <title>首页</title>
     <!-- 图标引入 -->
     <link rel="icon" href="../images/meituan.ico">
+    <!-- 公共样式引入 -->
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- 初始化样式 -->
+    <link rel="stylesheet" href="../css/reset.css">
 </head>
 <body>
-    
+    <div class="head">
+        <div class="header">
+            <div class="header-left">
+                <span>成都</span>
+                <span>更换城市：</span>
+                <select id="sheng" name='sheng'>
+                    <option value="0">省</option>
+                </select>
+                <select id='shi'>
+                    <option value="0">市</option>
+                </select>
+                <select id='xian'>
+                    <option value="0">县</option>
+                </select>
+                <a href="">立即登录</a>
+                <a href="">注册</a>
+            </div>
+            <div class="header-right">
+                    <li><a href="">我的美团</a></li>
+                    <li><a href="">手机App</a></li>
+                    <li><a href="">商家中心</a></li>
+                    <li><a href="">美团规则</a></li>
+                    <li><a href="">网站导航</a></li>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script src="../js/index_jq.js"></script>
+<script src="../js/areaData.js"></script>
 </html>
