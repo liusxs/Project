@@ -57,14 +57,6 @@
     color: orange;
 }
 
-.nav>li:first-child {
-	margin-left: 0px;
-}
-
-.nav>li:last-child {
-	margin-right: 0px;
-}
-
 .nav>li>ul {
 	line-height: 30px;
 	display: none;
@@ -152,11 +144,23 @@
 	width: 228px;
 	height: 487px;
 	background-color: aqua;
+	position: relative;
 }
 .banner-left-head{
 	width: 228px;
 	height: 60px;
 	background-color: rgb(82, 160, 228);
+}
+.banner-left-head span{
+	color: #222222;
+    font-size: 16px;
+    font-weight: 700;
+	padding: 15px;
+	line-height: 60px;
+}
+.banner-left-head li{
+	width: 204px;
+	height: 26px;
 }
 .banner-right{
 	width: 950px;
@@ -233,4 +237,12 @@
 }
 .body-right2 span:nth-child(4){
 	color: #3f3f3f;;
+}
+.menubar{
+	width: 400px;
+	height: 427px;
+	background-color: #3f3f3f;
+	position: absolute;
+	left: 228px;
+	top: 60px;
 }
