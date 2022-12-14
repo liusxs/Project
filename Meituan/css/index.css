@@ -204,18 +204,33 @@
 	display: flex;
 	justify-content: space-between;
 }
-.body-left{
+.body-left img{
 	width: 270px;
 	height: 177px;
-	background-color: chocolate;
 }
-.body-right1{
+.body-right1 img{
 	width: 150px;
 	height: 177px;
-	background-color: cyan;
 }
 .body-right2{
 	width: 230px;
 	height: 177px;
 	background-color:rosybrown ;
+	text-align: center;
+}
+.body-right2 img{
+	width: 95px;
+	height: 95px;
+	margin: 10px 0;
+}
+.body-right2 p{
+	font-size: 16px;
+	color: #222222;
+	font-weight: 500;
+}
+.body-right2 span:nth-child(3){
+	color: red;
+}
+.body-right2 span:nth-child(4){
+	color: #3f3f3f;;
 }
