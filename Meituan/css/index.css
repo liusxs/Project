@@ -143,13 +143,13 @@
 .banner-left{
 	width: 228px;
 	height: 487px;
-	background-color: aqua;
 	position: relative;
+	border: 1px solid rgb(201, 201, 201);
+	background-color: #fff;
 }
 .banner-left-head{
 	width: 228px;
 	height: 60px;
-	background-color: rgb(82, 160, 228);
 }
 .banner-left-head span{
 	color: #222222;
@@ -170,13 +170,11 @@
 .banner-right{
 	width: 950px;
 	height: 240px;
-	background-color: aqua;
 	margin-left: 10px;
 }
 .banner-right-head{
 	width: 650px;
 	height: 60px;
-	background-color: rgb(49, 49, 49);
 	display: flex;
 	justify-content: space-around;
 }
@@ -189,12 +187,10 @@
 .banner-right-content{
 	width: 950px;
 	height: 417px;
-	background-color: blueviolet;
 }
 .content-head{
 	width: 950px;
 	height: 240px;
-	background-color: blue;
 	display: flex;
 	justify-content: space-between;
 }
@@ -268,13 +264,13 @@
 .head-regiter{
 	width: 230px;
 	height: 240px;
-	background-color: coral;
+	border: 1px solid rgb(201, 201, 201);
+	background-color: #fff;
 }
 .head-regiter-box{
 	width: 65px;
 	height: 65px;
 	border-radius: 50%;
-	background-color: #a4a4a4;
 	margin: 40px 88px;
 	
 }
@@ -304,7 +300,6 @@
 .content-body{
 	width: 950px;
 	height: 177px;
-	background-color: chartreuse;
 	margin-top: 10px;
 	display: flex;
 	justify-content: space-between;
@@ -320,8 +315,9 @@
 .body-right2{
 	width: 230px;
 	height: 177px;
-	background-color:rosybrown ;
 	text-align: center;
+	border: 1px solid rgb(201, 201, 201);
+	background-color: #fff;
 }
 .body-right2 img{
 	width: 95px;
