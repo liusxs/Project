@@ -174,9 +174,17 @@
 	margin-left: 10px;
 }
 .banner-right-head{
-	width: 950px;
+	width: 650px;
 	height: 60px;
 	background-color: rgb(49, 49, 49);
+	display: flex;
+	justify-content: space-around;
+}
+.banner-right-head li{
+	font-size: 16px;
+	font-weight: bold;
+	list-style: none;
+	padding:20px 15px;
 }
 .banner-right-content{
 	width: 950px;
