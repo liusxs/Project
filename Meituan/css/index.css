@@ -193,7 +193,65 @@
 .head-slide{
 	width: 550px;
 	height: 240px;
-	background-color: aquamarine;
+	position: relative;
+}
+.head-slide img{
+    width: 550px;
+    height: 240px;
+    position: absolute;
+    opacity: 0;
+    transition: all 1.5s;
+	cursor: pointer;
+}
+.head-slide .show{
+    opacity: 1;
+}
+.head-slide span{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+}
+.bannerButton {
+    width: 40px;
+	height: 40px;
+    background-color: rgba(102, 102, 103, 0.3);
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+.bannerButton:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.bannerLeft {
+    left: 0;
+    border-radius: 50px;
+}
+
+.bannerRight {
+    right: 0;
+    border-radius: 50px;
+}
+.bannerNav{
+    position: absolute;
+    left: 180px;
+    bottom: 10px;
+}
+.bannerNav li{
+    width: 15px;
+    height: 5px;
+    background-color: rgba(61, 59, 59, 0.5);
+    float: left;
+    margin: 0px 5px;
+    border: 2.5px solid transparent;
+}
+.bannerNav .active{
+    background-color: rgb(255, 255, 255);
+    border: 2.5px solid rgb(0, 0, 0,0.2);
 }
 .head-content img{
 	width: 150px;
