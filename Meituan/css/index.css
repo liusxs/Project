@@ -160,12 +160,22 @@
 }
 .banner-left-head li{
 	width: 204px;
-	height: 26px;
+	height: 32px;
 	margin-left: 15px;
+	margin-top: -2px;
+	font-size: 13px;
+	line-height: 32px;
+}
+.banner-left-head li:hover{
+	background-color: #f3e9af;
+}
+.banner-left-head a{
+	color: #666666;
 }
 .banner-left-head li a:nth-child(3){
 	color: #a4a4a4;
-	float: right;
+	position: absolute;
+	right: 8px;
 }
 .banner-right{
 	width: 950px;
@@ -272,6 +282,7 @@
 	height: 65px;
 	border-radius: 50%;
 	margin: 40px 88px;
+	background-color: #d7d7d7;
 	
 }
 .head-regiter img{
@@ -342,6 +353,7 @@
 	position: absolute;
 	left: 228px;
 	top: 60px;
+	z-index: 999;
 }
 .menu>li>div {
 	display: none;
