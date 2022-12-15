@@ -195,15 +195,45 @@
 	height: 240px;
 	background-color: aquamarine;
 }
-.head-content{
+.head-content img{
 	width: 150px;
 	height: 240px;
-	background-color: cadetblue;
 }
 .head-regiter{
 	width: 230px;
 	height: 240px;
 	background-color: coral;
+}
+.head-regiter-box{
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	background-color: #a4a4a4;
+	margin: 40px 88px;
+	
+}
+.head-regiter img{
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	margin: 5px;
+}
+.head-regiter p{
+	font-size: 18px;
+	color: #222222;
+	text-align: center;
+	margin-top: -30px;
+}
+.head-regiter button{
+	width: 108px;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	margin: 5px auto;
+	border-radius: 41px;
+}
+.head-regiter button:nth-child(3){
+	background-color: orange;
 }
 .content-body{
 	width: 950px;
