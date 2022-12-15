@@ -161,6 +161,11 @@
 .banner-left-head li{
 	width: 204px;
 	height: 26px;
+	margin-left: 15px;
+}
+.banner-left-head li a:nth-child(3){
+	color: #a4a4a4;
+	float: right;
 }
 .banner-right{
 	width: 950px;
@@ -241,8 +246,11 @@
 .menubar{
 	width: 400px;
 	height: 427px;
-	background-color: #3f3f3f;
+	background-color: #b58e8e;
 	position: absolute;
 	left: 228px;
 	top: 60px;
+}
+.menu>li>div {
+	display: none;
 }

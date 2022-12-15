@@ -47,4 +47,15 @@ $(function() {
             $(this).children("ul").hide();
         });
     });
+    $(document).ready(function() {
+        var $nav = $(".menu>li");
+
+        $nav.mouseover(function() {
+            $(this).children("div").show();
+        });
+
+        $nav.mouseout(function() {
+            $(this).children("div").hide();
+        });
+    });
 });
