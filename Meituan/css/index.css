@@ -374,6 +374,8 @@
 	display: none;
 }
 /* banner结束 */
+
+/* 猫眼开始 */
 .miaoFilm{
     margin: 0 auto;
     width: 1190px;
@@ -463,31 +465,23 @@
     color: #FF8200;
 }
 
-.filmContent .filmLook{
-
-}
-
-.filmContent .filmLook{
-
-}
 
 #film-left{
-        /* 箭头的外观 */
-        width: 40px;
-        height: 40px;
-        background-color: #222;
-        border-radius: 50%;
-        color:#fff;
-        opacity: 0.8;
-        font-size: 30px;
-        text-align: center;
-        /* 箭头的位置，一旦设置定位属性，就可以使用偏移量来定位 */
-        position:absolute;
-        left:15px;
-        top: 170px; 
-        z-index: 5;
-        cursor: pointer;
-        /* display: none; */
+    /* 箭头的外观 */
+    width: 40px;
+    height: 40px;
+    background-color: #222;
+    border-radius: 50%;
+    color:#fff;
+    opacity: 0.8;
+    font-size: 30px;
+    text-align: center;
+    /* 箭头的位置，一旦设置定位属性，就可以使用偏移量来定位 */
+    position:absolute;
+    left:15px;
+    top: 170px; 
+    z-index: 5;
+    cursor: pointer;
 }
 
 /* 轮播图右边按钮 */
@@ -507,8 +501,10 @@
     top: 170px;
     z-index: 5;
     cursor: pointer;
-    /* display: none; */
 }
+/* 猫眼结束 */
+
+/* 名宿开始 */
 .senior{
     margin-top: 30px;
     width: 100%;
@@ -604,3 +600,4 @@
 .tabdisplayNone{
  display: none;
 }
+/* 名宿结束 */

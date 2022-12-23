@@ -88,14 +88,14 @@ for(var n=0;n<=5;n++){
     })
 }
 let seniorTab = document.getElementById("senior-tab");
-    // -找出所有的菜单标题
-    let seniorTabLi = seniorTab.getElementsByTagName("li");
-    let container = document.getElementById("tab-container");
-    // 找出所有的tabList 
-    let tabList = container.getElementsByClassName("tablist");
+// -找出所有的菜单标题
+let seniorTabLi = seniorTab.getElementsByTagName("li");
+let container = document.getElementById("tab-container");
+// 找出所有的tabList 
+let tabList = container.getElementsByClassName("tablist");
 
     //（遍历） 操作内容显示区域
-for(let i = 0; i < seniorTabLi.length; i ++){
+    for(let i = 0; i < seniorTabLi.length; i ++){
     seniorTabLi[i].onmouseover = function(){
         //鼠标移入li时
         //-隐藏所有的tab内容
@@ -109,8 +109,8 @@ for(let i = 0; i < seniorTabLi.length; i ++){
     }
 }
 let filmLeft = document.getElementById("film-left");
-    let filmRight = document.getElementById("film-right");
-    let filmList = document.getElementsByClassName("filmList")[0];
+let filmRight = document.getElementById("film-right");
+let filmList = document.getElementsByClassName("filmList")[0];
 
     filmLeft.onclick = function(){
         filmList.style.left = "0px";
