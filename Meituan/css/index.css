@@ -374,7 +374,141 @@
 	display: none;
 }
 /* banner结束 */
+.miaoFilm{
+    margin: 0 auto;
+    width: 1190px;
+    height: 360px;
+    /* background-color: #00BF96; */
+    overflow: hidden;
+    position: relative;
+}
 
+.filmNav{
+    width: 1190px;
+    height: 45px;
+    background: linear-gradient(to right, rgb(250, 60, 104) 2%, rgb(254, 70, 77) 97%) rgb(250, 60, 104);
+    margin-top: 30px;
+}   
+
+/* 标题 */
+.filmNav div{
+    font-size: 18px;
+    margin-left: 13px;
+    margin-right: 10px;
+    font-family: "MFShangHei-Regular" !important;
+    color: #fff;
+    float: left;
+    margin-top: 10px;
+}
+
+.filmNav ul{
+    float: left;
+    list-style: none;
+    cursor: pointer;
+}
+
+/* 选项卡 */
+.filmNav ul li{
+    float: left;
+    font-size: 14px;
+    color: #fff;
+    line-height: 44px;
+    margin-left: 10px;
+}
+
+.filmNav ul li:hover{
+    background-color: yellowgreen;
+}
+
+.filmNav .filmNav-all{
+    float: right;
+    font-size: 16px;
+    color: #fff;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.filmList{
+    width: 3000px;
+    height: 210px;
+
+    position: relative;
+    left: 0px;
+    transition: left 1s;
+}
+
+.filmContent{
+    margin-top: 1px;
+    margin-left: 10px;
+    width: 210px;
+    height: 300px;
+    position: relative;
+    float: left;
+} 
+
+.filmContent .filmLogo{
+    width: 210px;
+    height: 300px;
+}
+
+.filmContent .filmInfo{
+    position: absolute;
+    bottom: 30px;
+    left: 5px;  
+    color: #fff
+}
+
+.filmContent .filmLook span{
+    color: #FF8200;
+}
+
+.filmContent .filmLook{
+
+}
+
+.filmContent .filmLook{
+
+}
+
+#film-left{
+        /* 箭头的外观 */
+        width: 40px;
+        height: 40px;
+        background-color: #222;
+        border-radius: 50%;
+        color:#fff;
+        opacity: 0.8;
+        font-size: 30px;
+        text-align: center;
+        /* 箭头的位置，一旦设置定位属性，就可以使用偏移量来定位 */
+        position:absolute;
+        left:15px;
+        top: 170px; 
+        z-index: 5;
+        cursor: pointer;
+        /* display: none; */
+}
+
+/* 轮播图右边按钮 */
+#film-right{
+    /* 箭头的外观 */
+    width: 40px;
+    height: 40px;
+    background-color: #222;
+    border-radius: 50%;
+    color:#fff;
+    opacity: 0.8;
+    font-size: 30px;
+    text-align: center;
+    /* 箭头的位置，一旦设置定位属性，就可以使用偏移量来定位 */
+    position:absolute;
+    right:15px;
+    top: 170px;
+    z-index: 5;
+    cursor: pointer;
+    /* display: none; */
+}
 .senior{
     margin-top: 30px;
     width: 100%;

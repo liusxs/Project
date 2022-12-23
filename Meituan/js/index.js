@@ -108,3 +108,38 @@ for(let i = 0; i < seniorTabLi.length; i ++){
         tabList[i].style.display = "block";
     }
 }
+let filmLeft = document.getElementById("film-left");
+    let filmRight = document.getElementById("film-right");
+    let filmList = document.getElementsByClassName("filmList")[0];
+
+    filmLeft.onclick = function(){
+        filmList.style.left = "0px";
+    }
+
+    filmRight.onclick = function(){
+        console.log('click');
+        filmList.style.left = "-1250px";
+    }
+
+    // tab切换
+    // 操作菜单标题
+    // -找到菜单
+    let filmTab = document.getElementById("fileTabTitle");
+    // -找出所有的菜单标题(10个)
+    let filmTabLi = filmTab.getElementsByTagName("li");
+
+    // let filmContainer = document.getElementById("tab-container");
+    // 找出所有的tabList (10个)
+    let filmLists = document.getElementsByClassName("filmList");
+
+    for(let i = 0; i < filmTabLi.length; i ++){
+        filmTabLi[i].onmouseover = function(){
+            //每当一个li被鼠标覆盖的时候
+            //-隐藏所有的tab内容
+            for(let j = 0 ; j < filmTabLi.length; j ++){
+                filmLists[j].style.display = "none";
+            }
+            // -显示与当前li绑定的tab内容
+            filmLists[i].style.display = "block";
+        }
+    }
