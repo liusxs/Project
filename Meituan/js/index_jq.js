@@ -1,10 +1,12 @@
 $(function() {
-
+    // 获取元素
     var sheng = areaData.sheng;
     var $sheng = $('#sheng');
     var $shi = $('#shi');
     var $xian = $('#xian');
+    // 设置全局变量
     var shiIndex = 0;
+    // 遍历数组
     for(var i = 0; i < sheng.length; i++) {
         var $option = $('<option value=' + (i + 1) + '>' + sheng[i] + '</option>');
         $sheng.append($option);

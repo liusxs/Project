@@ -87,3 +87,24 @@ for(var n=0;n<=5;n++){
         bannerlist[index].className='active';
     })
 }
+let seniorTab = document.getElementById("senior-tab");
+    // -找出所有的菜单标题
+    let seniorTabLi = seniorTab.getElementsByTagName("li");
+    let container = document.getElementById("tab-container");
+    // 找出所有的tabList 
+    let tabList = container.getElementsByClassName("tablist");
+
+    //（遍历） 操作内容显示区域
+for(let i = 0; i < seniorTabLi.length; i ++){
+    seniorTabLi[i].onmouseover = function(){
+        //鼠标移入li时
+        //-隐藏所有的tab内容
+        for(let j = 0 ; j < seniorTabLi.length; j ++){
+            // hotelTabLi[j].className = "";
+            tabList[j].style.display = "none";
+        }
+        // -显示与当前li绑定的tab内容
+        // hotelTabLi[i].className = ""
+        tabList[i].style.display = "block";
+    }
+}
