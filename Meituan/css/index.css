@@ -680,3 +680,56 @@
 	margin:5px 0px;
 }
 /* 猜你喜欢结束 */
+.navbar{	
+	width:100%;
+	height:300px;
+	/*background:red;*/
+	margin-top:50px;
+}
+.navbar-center{	
+	width:1190px;
+	height:300px;
+	/*background:green;*/
+	margin:0 auto;
+	border:1px solid #e5e5e5;
+}
+/*导航开始*/
+.navbar-center-top{	
+	width:1190px;
+	height:70px;
+	line-height: 70px;
+	font-size: 18px;
+	font-weight: 500;
+	color:#222;
+	text-indent: 36px;
+}
+.navbar-center-bottom .hotcity{	
+	width:100px;
+	height:70px;
+	font-size:14px;
+	color:#222;
+	text-indent: 36px;
+	/*border:1px solid red;*/
+	float:left;
+}
+.city{
+	width:1000px;
+	height:70px;
+	font-size:14px;
+	color:#222;
+	text-indent: 36px;
+	/*border:1px solid red;*/
+	float:left;
+}	
+.navbar-center-bottom .city ul li{	
+	width:100px;
+	height:35px;
+	display:inline-block;
+	float: left;
+	font-size:14px;
+	color:#222;
+}
+.navbar-center-bottom .city ul li:hover{	
+	color:#FF6600;
+	cursor:pointer;
+}
