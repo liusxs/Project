@@ -759,3 +759,17 @@
 	color:#FF6600;
 	cursor:pointer;
 }
+.info{	
+	width:100%;
+	height:100px;
+	margin-top:50px;
+}
+.info-center{	
+	width:1190px;
+	height:100px;
+	margin:0 auto;
+	line-height: 100px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+}
