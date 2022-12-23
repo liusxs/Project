@@ -362,12 +362,26 @@
 .menubar{
 	width: 400px;
 	height: 427px;
-	background-color: #b58e8e;
+	background: rgb(201, 201, 201);
 	/* 绝对定位 */
 	position: absolute;
-	left: 228px;
+	left: 230px;
 	top: 60px;
 	z-index: 999;
+}
+.menubar .head{
+	height: 60px;
+	border-bottom: 1px solid rgb(201, 201, 201);
+}
+.menubar h2{
+	font-size: 18px;
+	padding: 15px;
+}
+.menubar h2:nth-child(1){
+	float: left;
+}
+.menubar h2:nth-child(2){
+	float: right;
 }
 .menu>li>div {
 	/* 设置轮播图默认隐藏 */
@@ -380,7 +394,6 @@
     margin: 0 auto;
     width: 1190px;
     height: 360px;
-    /* background-color: #00BF96; */
     overflow: hidden;
     position: relative;
 }
