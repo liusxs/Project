@@ -383,6 +383,15 @@
 .menubar h2:nth-child(2){
 	float: right;
 }
+.menubar-body{
+	width: 400px;
+	float: right;
+}
+.menubar-body a{
+	width: 100px;
+	padding: 4px;
+	font-size: 12px;
+}
 .menu>li>div {
 	/* 设置轮播图默认隐藏 */
 	display: none;
