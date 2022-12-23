@@ -724,12 +724,44 @@
 .navbar-center-bottom .city ul li{	
 	width:100px;
 	height:35px;
-	display:inline-block;
+	display:block;
 	float: left;
 	font-size:14px;
 	color:#222;
 }
 .navbar-center-bottom .city ul li:hover{	
+	color:#FF6600;
+	cursor:pointer;
+}
+.footer{	
+	width:100%;
+	height:450px;
+	margin-top:50px;
+}
+.footer-center{	
+	width:1190px;
+	height:450px;
+	margin:0 auto;
+	border:1px solid #e5e5e5;
+}
+/*底部链接详细信息*/
+.footer-center-content{
+	width:150px;
+	height:170px;
+	margin:50px 0px 0px 70px;
+	float:left;
+}
+.footer-center-content ul b{	
+	font-size:14px;
+	color:#222;
+	line-height:22px;
+}
+.footer-center-content ul li{	
+	font-size:12px;
+	color:#222;
+	line-height:20px;
+}
+.footer-center-content  ul li:hover{	
 	color:#FF6600;
 	cursor:pointer;
 }
