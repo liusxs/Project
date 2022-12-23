@@ -206,6 +206,12 @@
 	list-style: none;
 	padding:20px 15px;
 }
+.banner-right-head a{
+	color: #3f3f3f;
+}
+.banner-right-head a:hover{
+	color: orange;
+}
 .banner-right-content{
 	width: 950px;
 	height: 417px;
