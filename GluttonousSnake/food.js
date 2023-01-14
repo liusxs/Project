@@ -23,7 +23,7 @@ class Food{
         // console.log(this.map.clientWidth/20) 
         // console.log(this.map.clientHeight/20) 
         const w_nub=this.map.clientWidth/20
-        const h_nub=this.map.clientWidth/20
+        const h_nub=this.map.clientHeight/20
         // 2 随机生成数字
         let n1 = Math.floor(Math.random()*w_nub) 
         let n2 = Math.floor(Math.random()*h_nub)
