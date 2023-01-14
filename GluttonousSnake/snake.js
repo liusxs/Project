@@ -8,6 +8,7 @@ class Snake{
         this.snakelist=[]
         // 调用创建蛇的方法
         this.createSnake()
+        // this.move()
     }
     // 创建蛇头的函数
     createHead(){
@@ -62,5 +63,28 @@ class Snake{
             this.createHead()
         }
     }
-    // 
+    // 蛇移动的方法
+    move(){
+        // 思路：把原先头部坐标后面增加一个蛇头原本的蛇变成身体，身体末尾的位置删除一个以此来实现一个视觉上的位移
+        // 从数组中移除
+        const body = this.snakelist.pop()
+        // 从页面中删除
+        body.remove()
+        // 新增蛇头
+        this.createHead()
+    }
+    // 判断蛇有没有吃到食物
+    isEat(foodX,foodY){
+        // 判断头跟坐标是否重合
+        const head = this.snakelist[0]
+        const headX=head.offsetLeft
+        const headY=head.offsettop
+
+        if(foodX===headX && foodY===headY){
+            return true
+        }
+        return false
+    }
+    // 判断蛇死没死
+    // 是否撞墙
 }
