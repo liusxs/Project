@@ -1,0 +1,61 @@
+/* 初始化 */
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+body{
+    background-color: rgb(114, 117, 116);
+}
+.btnbox{
+    width: 200px;
+    height: 300px;
+    /* 弹性布局 */
+    display: flex;
+    /* 垂直排列 */
+    flex-direction: column;
+    /* 垂直分布均匀 */
+    justify-content: space-evenly;
+    /* 垂直居中 */
+    align-items: center;
+    /* 绝对定位 */
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.btnbox button{
+    width: 100px;
+    height: 50px;
+    font-size: 23px;
+    background: orange;
+    color: white;
+}
+.map{
+    width: 1000px;
+    height: 600px;
+    background-color: rgb(178, 178, 178);
+    /* 绝对定位 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+    /* 盒子阴影 */
+    box-shadow: 0px 0px 100px black inset, 0px 0px 30px white;
+}
+.map>div{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px yellow;
+}
+div.head{
+    background:radial-gradient(#ffc000,#ff4e00);
+}
+div.body{
+    background:radial-gradient(#fff369,#fa791a);
+}
