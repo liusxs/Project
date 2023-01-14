@@ -27,14 +27,41 @@
     const pause = document.querySelector("#pause")
     const restart = document.querySelector("#restart")
 
-    start.onclcik = function(){
+    start.onclick = function(){
         game.start()
     }
-    pause.onclcik = function(){
+    pause.onclick = function(){
         game.pause()
     }
-    restart.onclcik = function(){
+    restart.onclick = function(){
         game.restart()
+    }
+
+    // 键盘监听 上  38 下  40 左 37 右 39
+    document.onkeydown = function(e){
+        switch(e.keyCode){
+            case 37:
+            game.change("left")
+            break;
+            case 38:
+            game.change("top")
+            break;
+            case 39:
+            game.change("right")
+            break;
+            case 40:
+            game.change("bottom")
+            break;
+            case 13:
+            game.start()
+            break;
+            case 32:
+            game.pause()
+            break;
+
+            default:
+            break;
+        }
     }
 </script>
 </html>
