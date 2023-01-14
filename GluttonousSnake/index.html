@@ -9,9 +9,9 @@
 </head>
 <body>
     <div class="btnbox">
-        <button>开始</button>
-        <button>暂停</button> 
-        <button>结束</button>
+        <button id="start">开始</button>
+        <button id="pause">暂停</button> 
+        <button id="restart">结束</button>
     </div>
     <div class="map">
     </div>
@@ -19,8 +19,22 @@
 <script src="./index.js"></script>
 <script src="./food.js"></script>
 <script src="./snake.js"></script>
+<script src="./game.js"></script>
 <script>
-    const food = new Food(".map")
-    const snake = new Snake(".map")
+    const game = new Game(".map")
+    // 拿到按钮
+    const start = document.querySelector("#start")
+    const pause = document.querySelector("#pause")
+    const restart = document.querySelector("#restart")
+
+    start.onclcik = function(){
+        game.start()
+    }
+    pause.onclcik = function(){
+        game.pause()
+    }
+    restart.onclcik = function(){
+        game.restart()
+    }
 </script>
 </html>
