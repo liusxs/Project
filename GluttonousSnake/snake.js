@@ -87,4 +87,15 @@ class Snake{
     }
     // 判断蛇死没死
     // 是否撞墙
+    isDie(){
+        // 判断蛇头是否到边界
+        const head = this.snakelist[0]
+        const headX=head.offsetLeft
+        const headY=head.offsettop
+
+        if(headX<0||headY<0||headX>=this.map.clientWidth||headY>=this.map.clientHeight){
+            return true
+        }
+        return false
+    }
 }
