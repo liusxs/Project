@@ -24,19 +24,19 @@ class Snake{
             switch(this.direction){
                 case "left":
                     pos.x = head.offsetLeft-20
-                    pos.y = head.offsettop
+                    pos.y = head.offsetTop
                 break;
                 case "right":
                     pos.x = head.offsetLeft+20
-                    pos.y = head.offsettop
+                    pos.y = head.offsetTop
                 break;
                 case "top":
                     pos.x = head.offsetLeft
-                    pos.y = head.offsettop-20
+                    pos.y = head.offsetTop-20
                 break;
                 case "bottom":
                     pos.x = head.offsetLeft
-                    pos.y = head.offsettop+20
+                    pos.y = head.offsetTop+20
                 break;
                 default:
                 break;
@@ -78,7 +78,7 @@ class Snake{
         // 判断头跟坐标是否重合
         const head = this.snakelist[0]
         const headX=head.offsetLeft
-        const headY=head.offsettop
+        const headY=head.offsetTop
 
         if(foodX===headX && foodY===headY){
             return true
@@ -91,7 +91,7 @@ class Snake{
         // 判断蛇头是否到边界
         const head = this.snakelist[0]
         const headX=head.offsetLeft
-        const headY=head.offsettop
+        const headY=head.offsetTop
 
         if(headX<0||headY<0||headX>=this.map.clientWidth||headY>=this.map.clientHeight){
             return true
