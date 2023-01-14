@@ -44,7 +44,7 @@ body{
     bottom: 0;
     margin:auto;
     /* 盒子阴影 */
-    box-shadow: 0px 0px 100px black inset, 0px 0px 30px white;
+    box-shadow: 0px 0px 10px black inset, 0px 0px 3px white;
 }
 .map>div{
     width: 20px;
@@ -58,4 +58,22 @@ div.head{
 }
 div.body{
     background:radial-gradient(#fff369,#fa791a);
+}
+div.food{
+    background:radial-gradient(#a7fa64,#4f8524);
+    /* 动画 */
+    animation: foodAmate 1s linear infinite;
+    /* left: 400px;
+    top: 40px; */
+}
+@keyframes foodAmate{
+    0%{
+        box-shadow: 0px 0px 10px white;
+    }
+    50%{
+        box-shadow: 0px 0px 100px green;
+    }
+    100%{
+        box-shadow: 0px 0px 10px white;
+    }
 }
