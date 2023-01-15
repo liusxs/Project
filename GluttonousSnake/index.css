@@ -36,7 +36,7 @@ body{
     width: 1000px;
     height: 600px;
     background-color: rgb(178, 178, 178);
-    /* 绝对定位 */
+    /* 固定定位 */ 
     position: fixed;
     top: 0;
     left: 0;
@@ -76,4 +76,13 @@ div.food{
     100%{
         box-shadow: 0px 0px 10px white;
     }
+}
+.scroe{
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+.scroe span{
+    color: red;
+    font-weight: bold;
 }
