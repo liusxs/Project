@@ -34,7 +34,7 @@ class Game{
                 clearInterval(this.timer)
                 this.gameover()
             }
-        }, 50);
+        }, 100);
     }
     // 暂停
     pause(){

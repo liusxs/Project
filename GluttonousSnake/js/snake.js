@@ -59,7 +59,7 @@ class Snake{
     }
     // 创建一条蛇
     createSnake(){
-        for(let i=0;i<4;i++){
+        for(let i=0;i<3;i++){
             this.createHead()
         }
     }
