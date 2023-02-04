@@ -4,6 +4,7 @@ import ElementUI from 'element-ui';
 // import {Row, Button} from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import router from './router';
+import store from './store';
 
 // 全局引入
 Vue.use(ElementUI)
@@ -15,5 +16,6 @@ Vue.use(ElementUI)
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })
