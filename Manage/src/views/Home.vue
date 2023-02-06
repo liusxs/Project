@@ -43,6 +43,7 @@
     </el-row>
 </template>
 <script>
+import { getData } from '../api';
 export default {
     data() {
         return {
@@ -129,6 +130,12 @@ export default {
                 },
             ],
         }
+    },
+    mounted(){
+        getData().then(({data}) =>{
+            const {tableData} = data.data.data
+            console.log(tableData)
+        })
     }
 }
 </script>

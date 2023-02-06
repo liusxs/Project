@@ -15,7 +15,8 @@ const routes = [
     {
         path:'/',
         component:Main,
-        redirect:'/home', //重定向
+        //重定向
+        redirect:'/home', 
         children:[
             // 子路由
             { path: 'home', component: Home },  //首页

@@ -5,6 +5,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import router from './router';
 import store from './store';
+import './api/mock'
 
 // 全局引入
 Vue.use(ElementUI)
