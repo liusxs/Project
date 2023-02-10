@@ -25,27 +25,27 @@ export default{
                 // 饼图
                 videoData:[
                     {
-                        namm:'小米',
+                        name:'小米',
                         value:2999
                     },
                     {
-                        namm:'苹果',
+                        name:'苹果',
                         value:5999
                     },
                     {
-                        namm:'vivo',
+                        name:'vivo',
                         value:1500
                     },
                     {
-                        namm:'oppo',
+                        name:'oppo',
                         value:1999
                     },
                     {
-                        namm:'魅族',
+                        name:'魅族',
                         value:2200
                     },
                     {
-                        namm:'三星',
+                        name:'三星',
                         value:4500
                     },
                 ],
