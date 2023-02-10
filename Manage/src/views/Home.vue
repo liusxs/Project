@@ -1,6 +1,6 @@
 <template>
     <el-row>
-        <el-col :span="8">
+        <el-col :span="8" style="padding-right:10px">
             <el-card class="box-card">
                 <div class="headimg">
                     <img src="../assets/logo.png" alt="">
@@ -15,7 +15,7 @@
                 </div>
             </el-card>
             <el-card style="margin-top: 10px;height: 350px;">
-                <el-table :data="tableData" style="width: 100%">
+                <el-table :data="dableData" style="width: 100%">
                     <!-- <el-table-column prop="name" label="课程">
                     </el-table-column>
                     <el-table-column prop="todayBuy" label="今日购买">
@@ -29,7 +29,7 @@
                 </el-table>
             </el-card>
         </el-col>
-        <el-col :span="16">
+        <el-col :span="16" style="padding-left;:10px">
             <div class="num">
                 <el-card v-for="item in countData" :key="item.name" :body-style="{display:'flex', padding:0}">
                     <i class="icon" :class="`el-icon-${item.icon}`" :style="{background: item.color}"></i>
@@ -39,6 +39,13 @@
                     </div>
                 </el-card>
             </div>
+            <el-card style="height:280px">
+            <!-- 折线图 -->
+        </el-card>
+        <div class="graph">
+            <el-card style="height:260px"></el-card>
+            <el-card style="height:260px"></el-card>
+        </div>
         </el-col>
     </el-row>
 </template>
@@ -47,48 +54,48 @@ import { getData } from '../api';
 export default {
     data() {
         return {
-            tableData:[
-                {
-                    name:'oppo',
-                    todayBuy:'100',
-                    monthBuy:'300',
-                    totalBuy:'800'
-                },
-                {
-                    name:'vivo',
-                    todayBuy:'100',
-                    monthBuy:'300',
-                    totalBuy:'800'
-                },
-                {
-                    name:'魅族',
-                    todayBuy:'100',
-                    monthBuy:'300',
-                    totalBuy:'800'
-                },
-                {
-                    name:'华为',
-                    todayBuy:'100',
-                    monthBuy:'300',
-                    totalBuy:'800'
-                },
-                {
-                    name:'小米',
-                    todayBuy:'100',
-                    monthBuy:'300',
-                    totalBuy:'800'
-                },
-                {
-                    name:'菠萝',
-                    todayBuy:'100',
-                    monthBuy:'300',
-                    totalBuy:'800'
-                },
+            dableData:[
+                // {
+                //     name:'oppo',
+                //     todayBuy:'100',
+                //     monthBuy:'300',
+                //     totalBuy:'800'
+                // },
+                // {
+                //     name:'vivo',
+                //     todayBuy:'100',
+                //     monthBuy:'300',
+                //     totalBuy:'800'
+                // },
+                // {
+                //     name:'魅族',
+                //     todayBuy:'100',
+                //     monthBuy:'300',
+                //     totalBuy:'800'
+                // },
+                // {
+                //     name:'华为',
+                //     todayBuy:'100',
+                //     monthBuy:'300',
+                //     totalBuy:'800'
+                // },
+                // {
+                //     name:'小米',
+                //     todayBuy:'100',
+                //     monthBuy:'300',
+                //     totalBuy:'800'
+                // },
+                // {
+                //     name:'菠萝',
+                //     todayBuy:'100',
+                //     monthBuy:'300',
+                //     totalBuy:'800'
+                // },
             ],
             tableLabel:{
                 name :'课程',
-                todayBuy:'今日购买',
-                monthBuy:'本月购买',
+                todyBuy:'今日购买',
+                mothBuy:'本月购买',
                 totalBuy:'总购买'
             },
             countData:[
@@ -133,8 +140,9 @@ export default {
     },
     mounted(){
         getData().then(({data}) =>{
-            const {tableData} = data.data.data
-            console.log(tableData)
+            const {dableData} = data.data
+            console.log(dableData)
+            this.dableData = dableData
         })
     }
 }
@@ -210,6 +218,14 @@ export default {
     .el-card{
         width: 30%;
         margin-bottom: 20px;
+    }
+}
+.graph{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    .el-card{
+        width: 48%;
     }
 }
 </style>
