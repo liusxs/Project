@@ -334,7 +334,7 @@ export default {
 
     .el-card {
         width: 30%;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 }
 

@@ -4,6 +4,10 @@
             <el-button @click="handleMenu" icon="el-icon-menu" size="mini"></el-button>
             <!-- 面包屑 -->
             <span class="text">首页</span>
+            <el-breadcrumb separator="/">
+                <el-breadcrumb-item v-for="item in tags" :key="item.path" :to="{ path: item.path }">{{item.label
+                }}</el-breadcrumb-item>
+            </el-breadcrumb>
         </div>
         <div class="r-content">
             <el-dropdown>
@@ -19,14 +23,23 @@
     </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
     data() {
         return {}
     },
-    methods:{
-        handleMenu(){
+    methods: {
+        handleMenu() {
             this.$store.commit('collapseMenu')
         }
+    },
+    computed:{
+        ...mapState({
+            tags: state => state.tab.tabsList
+        })
+    },
+    mounted(){
+        console.log(this.tags,'tags')
     }
 }
 </script>
@@ -44,8 +57,9 @@ export default {
         font-size: 14px;
         margin-left: 10px;
     }
-    .r-content{
-        .imglogo{
+
+    .r-content {
+        .imglogo {
             width: 40px;
             height: 40px;
             border-radius: 50%;
