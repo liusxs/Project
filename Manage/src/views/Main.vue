@@ -8,6 +8,7 @@
                 <el-header>
                     <commoan-header></commoan-header>
                 </el-header>
+                <commoan-tag></commoan-tag>
                 <el-main>
                     <!-- 路由出口 -->
                     <!-- 路由匹配到的组件将渲染在这里 -->
@@ -20,6 +21,7 @@
 <script>
 import CommoanAside from '../components/CommoanAside.vue';
 import CommoanHeader from '../components/CommoanHeader.vue';
+import CommoanTag from '../components/CommoanTag.vue';
 export default {
     data() {
         return {};
@@ -27,6 +29,7 @@ export default {
     components: { 
         CommoanAside,
         CommoanHeader,
+        CommoanTag,
     }
 }
 </script>
