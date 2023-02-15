@@ -32,7 +32,18 @@
             <el-button @click="handleAdd" type="primary">
                 + 新增
             </el-button>
-            <el-table :data="tableData" style="width: 100%">
+            <!-- form搜索区 -->
+            <el-form :inline="true" :model="userForm">
+                <el-form-item>
+                    <el-input placeholder="搜索内容" v-model="userForm.name"></el-input>
+                </el-form-item>
+                <el-form-item>
+                    <el-button type="primary" @click="onSubmit">查询</el-button>
+                </el-form-item>
+            </el-form>
+        </div>
+        <div class="common-tab">
+            <el-table stripe height="90%" :data="tableData" style="width: 100% ">
                 <el-table-column prop="name" label="姓名" width="180">
                 </el-table-column>
                 <el-table-column prop="sex" label="性别" width="180">
@@ -50,11 +61,15 @@
                     </template>
                 </el-table-column>
             </el-table>
+            <div class="pager">
+                <el-pagination layout="prev, pager, next" :total="total" @current-change="hanlepaeg">
+                </el-pagination>
+            </div>
         </div>
     </div>
 </template>
 <script>
-import { getUSer, addUser, editUser , delUser} from '../api'
+import { getUSer, addUser, editUser, delUser } from '../api'
 export default {
     data() {
         return {
@@ -99,7 +114,15 @@ export default {
                 ],
             },
             tableData: [],
-            modalType: 0 //0 表示新增的弹窗， 1表示编辑
+            modalType: 0,//0 表示新增的弹窗， 1表示编辑
+            total: 0,//当前总数据条数
+            pageData: {
+                page: 1,
+                limit: 10
+            },
+            userForm: {
+                name: ''
+            }
         }
     },
     methods: {
@@ -145,13 +168,13 @@ export default {
                 cancelButtonText: '取消',
                 type: 'warning'
             }).then(() => {
-                delUser({ id: row.id}).then(() => {
+                delUser({ id: row.id }).then(() => {
                     this.$message({
-                    type: 'success',
-                    message: '删除成功!'
-                });
-                 //重新获取列表的接口
-                 this.getList()
+                        type: 'success',
+                        message: '删除成功!'
+                    });
+                    //重新获取列表的接口
+                    this.getList()
                 })
             }).catch(() => {
                 this.$message({
@@ -167,10 +190,21 @@ export default {
         //获取列表的数据
         getList() {
             //获取的列表的数据
-            getUSer().then(({ data }) => {
+            getUSer({ params: { ...this.userForm, ...this.pageData } }).then(({ data }) => {
                 console.log(data)
                 this.tableData = data.list
+                this.total = data.count || 0
             })
+        },
+        //选择页码的回调函数
+        hanlepaeg(val) {
+            // console.log(val,'val')
+            this.pageData.page = val
+            this.getList()
+        },
+        //列表的查询
+        onSubmit(){
+            this.getList()
         }
     },
     mounted() {
@@ -178,3 +212,23 @@ export default {
     }
 }
 </script>
+<style lang="less" scoped>
+.manages {
+    height: 90%;
+    .manage-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .common-tab {
+        height: calc(100% - 62px);
+        position: relative;
+
+        .pager {
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+        }
+    }
+}
+</style>
