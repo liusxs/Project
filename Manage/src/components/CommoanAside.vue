@@ -36,52 +36,53 @@
 </style>
 
 <script>
+import Cookie from 'js-cookie'
 export default {
     data() {
         return {
-            menuData: [
-                {
-                    path: '/',
-                    name: 'home',
-                    label: '首页',
-                    icon: 's-home',
-                    url: 'Home/Home'
-                },
-                {
-                    path: '/mall',
-                    name: 'mall',
-                    label: '商品管理',
-                    icon: 'video-play',
-                    url: 'MallManage/MallManage'
-                },
-                {
-                    path: '/user',
-                    name: 'user',
-                    label: '用户管理',
-                    icon: 'user',
-                    url: 'UserManage/UserManage'
-                },
-                {
-                    label: '其他',
-                    icon: 'location',
-                    children: [
-                        {
-                            path: '/page1',
-                            name: 'page1',
-                            label: '页面1',
-                            icon: 'setting',
-                            url: 'Other/PageOne'
-                        },
-                        {
-                            path: '/page2',
-                            name: 'page2',
-                            label: '页面2',
-                            icon: 'setting',
-                            url: 'Other/PageTwo'
-                        },
-                    ],
-                },
-            ]
+            // menuData: [
+            //     {
+            //         path: '/',
+            //         name: 'home',
+            //         label: '首页',
+            //         icon: 's-home',
+            //         url: 'Home/Home'
+            //     },
+            //     {
+            //         path: '/mall',
+            //         name: 'mall',
+            //         label: '商品管理',
+            //         icon: 'video-play',
+            //         url: 'MallManage/MallManage'
+            //     },
+            //     {
+            //         path: '/user',
+            //         name: 'user',
+            //         label: '用户管理',
+            //         icon: 'user',
+            //         url: 'UserManage/UserManage'
+            //     },
+            //     {
+            //         label: '其他',
+            //         icon: 'location',
+            //         children: [
+            //             {
+            //                 path: '/page1',
+            //                 name: 'page1',
+            //                 label: '页面1',
+            //                 icon: 'setting',
+            //                 url: 'Other/PageOne'
+            //             },
+            //             {
+            //                 path: '/page2',
+            //                 name: 'page2',
+            //                 label: '页面2',
+            //                 icon: 'setting',
+            //                 url: 'Other/PageTwo'
+            //             },
+            //         ],
+            //     },
+            // ]
         };
     },
     methods: {
@@ -109,6 +110,10 @@ export default {
         // 有子菜单
         hasChildren(){
             return this.menuData.filter(item => item.children)
+        },
+        menuData(){
+            // 判断当前数据，如果缓存中没有，当前store中获取
+            return JSON.parse(localStorage.getItem("menu")) || this.$store.state.tab.menu
         },
         isCollapse(){
             return this.$store.state.tab.isCollapse
