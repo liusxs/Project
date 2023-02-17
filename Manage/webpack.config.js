@@ -28,6 +28,10 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        options: {
+          presets: ['es2015'],
+          plugins:['syntax-dynamic-import']
+        },
         exclude: /node_modules/
       },
       {

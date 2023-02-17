@@ -37,6 +37,9 @@ export default {
             if (command === 'cancel') {
                 //清除cookie中的token
                 Cookie.remove('token')
+                                        // 目前有错误!!!!!! //
+                //清除cookie中的menu
+                // Cookie.remove('menu')
                 //跳转到登录页面
                 this.$router.push('/login')
             }
@@ -48,7 +51,7 @@ export default {
         })
     },
     mounted() {
-        console.log(this.tags, 'tags')
+        // console.log(this.tags, 'tags')
     }
 }
 </script>

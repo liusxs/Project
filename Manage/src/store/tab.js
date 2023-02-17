@@ -53,16 +53,24 @@ export default {
             menu.forEach(item => {
                 if(item.children){
                     item.children = item.children.map(item => {
-                        item.component = () => Import(`../views/${item.url}`)
+                        item.component = () => import(`../views/${item.url}`)
                         return item
                     })
                     menuArray.push(...item.children)
                 }else{
-                    item.component = () => Import(`../views/${item.url}`)
+                    item.component = () => import(`../views/${item.url}`)
                     menuArray.push(item)
                 }
-            });
-            // console.log(menuArray,'menuArray')
+            })
+            console.log(menuArray,'menuArray')
+            
+            
+            
+            // 目前有错误!!!!!!
+            //路由的动态添加
+            // menuArray.forEach(item => {
+            //     router.addRoute('Main',item)
+            // })
         }
     }
 }

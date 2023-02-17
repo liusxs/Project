@@ -33,5 +33,11 @@ new Vue({
   el: '#app',
   router,
   store,
-  render: h => h(App)
+  render: h => h(App),
+  
+  
+  // 目前有错误!!!!!!
+  // created(){
+  //   store.commit('addMenu',router)
+  // }
 })
