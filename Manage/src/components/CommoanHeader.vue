@@ -37,7 +37,7 @@ export default {
             if (command === 'cancel') {
                 //清除cookie中的token
                 Cookie.remove('token')
-                                        // 目前有错误!!!!!! //
+                                        // 目前获取数据失败，暂时停止更新 //
                 //清除cookie中的menu
                 // Cookie.remove('menu')
                 //跳转到登录页面

@@ -66,7 +66,7 @@ export default {
             
             
             
-            // 目前有错误!!!!!!
+            // 目前获取数据失败，暂时停止更新
             //路由的动态添加
             // menuArray.forEach(item => {
             //     router.addRoute('Main',item)
