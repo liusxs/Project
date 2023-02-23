@@ -118,7 +118,7 @@ export default{
      * @return {{code:number ,data :{message:string}}}
      */
     updateUser:config =>{
-        const {id, name , age , birth , sex} = JSON.parse(config.body)
+        const {id, name , addr ,age , birth , sex} = JSON.parse(config.body)
         const sex_num = parseInt(sex)
         List.some(u => {
             if(u.id === id){
