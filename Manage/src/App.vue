@@ -16,6 +16,7 @@
 </template>
 
 <script>
+Vue.config.productionTip = false;  //屏蔽提示信息
 export default {
   name: 'app',
 
