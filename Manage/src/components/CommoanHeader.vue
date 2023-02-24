@@ -39,7 +39,7 @@ export default {
                 Cookie.remove('token')
                                         // 目前获取数据失败，暂时停止更新 //
                 //清除cookie中的menu
-                // Cookie.remove('menu')
+                Cookie.remove('menu')
                 //跳转到登录页面
                 this.$router.push('/login')
             }
@@ -51,7 +51,7 @@ export default {
         })
     },
     mounted() {
-        // console.log(this.tags, 'tags')
+        console.log(this.tags, 'tags')
     }
 }
 </script>

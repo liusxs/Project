@@ -15,6 +15,9 @@ Vue.use(ElementUI)
 // Vue.use(Row)
 // Vue.use(Button)
 
+Vue.config.productionTip = false;  //屏蔽提示信息
+
+
 //添加全局前置导航
 router.beforeEach((to, from, next) => {
   // 判断token存不存在
@@ -37,7 +40,7 @@ new Vue({
   
   
   // 目前有错误!!!!!!
-  // created(){
-  //   store.commit('addMenu',router)
-  // }
+  created(){
+    store.commit('addMenu',router)
+  }
 })

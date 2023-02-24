@@ -10,7 +10,7 @@ export default{
                 data:{
                     menu:[
                         {
-                            path: '/', //暂时不改为'/home'
+                            path: '/home', //暂时不改为'/home'   暂时性修复 未遇见bug 请关注此代码段
                             name: 'home',
                             label: '首页',
                             icon: 's-home',

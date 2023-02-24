@@ -16,7 +16,7 @@ const routes = [
     {
         path:'/',
         component:Main,
-        // name:'Main',   出现bug暂时不增加
+        name:'Main',   //出现bug暂时不增加
         //重定向
         redirect:'/home', 
         children:[
