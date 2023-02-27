@@ -1,10 +1,82 @@
 <template>
-    <h1>我是one</h1>
+  <div class="boutique">
+    <div class="butique-headr">
+      <i class="icon">字</i>
+      <span>精品</span>
+    </div>
+    <div class="butique-content">
+      <div class="content-box">
+        <div class="content-img">
+          <img src="../assets/img/d_sp_03.png" alt="" />
+        </div>
+        <span>iPhone6 4.7英寸 64G</span>
+        <div class="content-text">
+          <span>￥200</span>
+          <span>购买</span>
+        </div>
+      </div>
+      <div class="content-box">
+        <div class="content-img">
+          <img src="../assets/img/d_sp_03.png" alt="" />
+        </div>
+        <span>iPhone6 4.7英寸 64G</span>
+        <div class="content-text">
+          <span>￥200</span>
+          <span>购买</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
-export default{
-    data(){
-        return{}
-    }
-}
+export default {
+  data() {
+    return {};
+  },
+};
 </script>
+<style lang="less" scoped>
+.boutique {
+  width: 100%;
+  margin-top: 5px;
+  background-color: rgb(241, 217, 217);
+  .butique-headr {
+    padding: 30px;
+    .icon {
+      font-size: 32px;
+    }
+    span {
+      font-size: 32px;
+      font-weight: bold;
+    }
+  }
+  .butique-content {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    .content-box {
+      width: 470px;
+      background-color: rgb(231, 231, 231);
+      .content-img {
+        img {
+          width: 300px;
+          height: 300px;
+          margin: 20px;
+        }
+      }
+      span {
+        font-size: 26px;
+        font-weight: bold;
+      }
+      .content-text {
+        display: flex;
+        justify-content: space-evenly;
+        span {
+          font-size: 32px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+</style>
