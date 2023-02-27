@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Head></Head>
+    <Carousel></Carousel>
     <Footer></Footer>
     <Recommend></Recommend>
     <boutique></boutique>
@@ -13,6 +14,7 @@
 
 <script>
 import Head from './components/Head.vue'
+import Carousel from './views/Carousel .vue'
 import Footer from './components/Footer.vue'
 import Recommend from './views/Recommend.vue'
 import Boutique from './views/Boutique.vue'
@@ -20,6 +22,7 @@ export default {
   name: "app",
   components:{
     Head,
+    Carousel,
     Footer,
     Recommend,
     Boutique
