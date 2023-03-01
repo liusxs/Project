@@ -25,8 +25,6 @@
           <span>购买</span>
         </div>
       </div>
-    </div>
-    <div class="butique-content">
       <div class="content-box">
         <div class="content-img">
           <img src="../assets/img/d_sp_03.png" alt="" />
@@ -47,8 +45,6 @@
           <span>购买</span>
         </div>
       </div>
-    </div>
-    <div class="butique-content">
       <div class="content-box">
         <div class="content-img">
           <img src="../assets/img/d_sp_03.png" alt="" />
@@ -65,12 +61,10 @@
         </div>
         <span>iPhone6 4.7英寸 64G</span>
         <div class="content-text">
-          <span>￥200</span> 
+          <span>￥200</span>
           <span>购买</span>
         </div>
       </div>
-    </div>
-    <div class="butique-content">
       <div class="content-box">
         <div class="content-img">
           <img src="../assets/img/d_sp_03.png" alt="" />
@@ -104,8 +98,8 @@ export default {
 <style lang="less" scoped>
 .boutique {
   width: 100%;
-  margin-top: 5px;
-  background-color: rgb(241, 217, 217);
+  margin-top: 10px;
+  background-color: rgb(242, 242, 242);
   .butique-headr {
     padding: 30px;
     .icon {
@@ -120,14 +114,15 @@ export default {
     text-align: center;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     .content-box {
-        margin-top: 20px;
+      margin-top: 20px;
       width: 470px;
-      background-color: rgb(231, 231, 231);
+      background-color: rgb(255, 255, 255);
       .content-img {
         img {
-          width: 300px;
-          height: 300px;
+          width: 415px;
+          height: 400px;
           margin: 20px;
         }
       }

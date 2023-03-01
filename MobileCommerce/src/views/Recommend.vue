@@ -37,8 +37,8 @@ export default {
 </script>
 <style lang="less" scoped>
 .recommend {
-  margin-top: 5px;
-  background-color: rgb(232, 231, 231);
+  margin-top: 10px;
+  background-color: rgb(255, 255, 255);
   .recomHeadr {
     padding: 30px;
     .icon {

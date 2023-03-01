@@ -1,25 +1,26 @@
 <template>
-    <div class="load-text">
+  <div class="load-text">
     <span>下拉加载更多...</span>
-    </div>
+  </div>
 </template>
 <script>
-export default{
-    data(){
-        return{}
-    }
-}
+export default {
+  data() {
+    return {};
+  },
+};
 </script>
 <style lang="less" scoped>
-.load-text{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: 60px;
-    line-height: 60px;
-    background-color: rgb(90, 90, 90);
-    span{
-        font-size: 32px;
-    }
+.load-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  line-height: 60px;
+  margin-top: 20px;
+  background-color: rgb(238, 238, 238);
+  span {
+    font-size: 32px;
+  }
 }
 </style>
