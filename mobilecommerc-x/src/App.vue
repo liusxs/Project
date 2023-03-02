@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import Head from "./components/Head.vue";
-import Carousel from "./views/Carousel .vue";
-import Recommend from "./views/Recommend.vue";
-import Boutique from "./views/Boutique.vue";
-import Footer from "./components/Footer.vue";
-import Load from "./views/Load.vue"
+import Head from "./components/Head";
+import Carousel from "./views/Carousel";
+import Recommend from "./views/Recommend";
+import Boutique from "./views/BoutiQue";
+import Footer from "./components/Footer";
+import Load from "./views/Load"
 export default {
   name: "app",
   components: {
