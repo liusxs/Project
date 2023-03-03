@@ -37,15 +37,15 @@ export default {
 </script>
 <style lang="less" scoped>
 .recommend {
-  margin-top: 10px;
+  margin-top: 5px;
   background-color: rgb(255, 255, 255);
   .recomHeadr {
-    padding: 30px;
+    padding: 10px;
     .icon {
-      font-size: 32px;
+      font-size: 16px;
     }
     span {
-      font-size: 32px;
+      font-size: 16px;
       font-weight: bold;
     }
   }
@@ -53,15 +53,14 @@ export default {
     display: flex;
     justify-content: space-around;
     .content-img {
-      width: 180px;
       text-align: center;
+      width: 120;
       img {
-        width: 180px;
-        height: 220px;
+        width: 80px;
+        height: 90px;
       }
       span {
-        font-size: 32px;
-        padding: 10px;
+        font-size: 12px;
       }
     }
   }

@@ -98,15 +98,15 @@ export default {
 <style lang="less" scoped>
 .boutique {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 5px;
   background-color: rgb(242, 242, 242);
   .butique-headr {
-    padding: 30px;
+    padding: 10px;
     .icon {
-      font-size: 32px;
+      font-size: 16px;
     }
     span {
-      font-size: 32px;
+      font-size: 16px;
       font-weight: bold;
     }
   }
@@ -116,26 +116,23 @@ export default {
     justify-content: space-around;
     flex-wrap: wrap;
     .content-box {
-      margin-top: 20px;
-      width: 470px;
+      margin-top: 5px;
       background-color: rgb(255, 255, 255);
       .content-img {
+        margin: 15px;
         img {
-          width: 415px;
-          height: 400px;
-          margin: 20px;
+          width: 126px;
+          height: 136px;
         }
       }
       span {
-        font-size: 26px;
-        font-weight: bold;
+        font-size: 12px;
       }
       .content-text {
         display: flex;
         justify-content: space-evenly;
         span {
-          font-size: 32px;
-          font-weight: 500;
+          font-size: 12px;
         }
       }
     }

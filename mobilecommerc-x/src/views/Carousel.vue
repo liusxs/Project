@@ -112,7 +112,6 @@ li {
 .showImg {
   position: relative;
   width: 100%;
-  height: 350px;
   margin: 0 auto;
   overflow: hidden;
   /* 轮播图片 */
@@ -125,12 +124,12 @@ li {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     border: 1px solid #666;
     border-radius: 20px;
     background-color: rgba(125, 125, 125, 0.2);
-    line-height: 40px;
+    line-height: 20px;
     text-align: center;
     font-size: 25px;
     cursor: pointer;
@@ -159,8 +158,8 @@ li {
   }
   .banner-circle ul li {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     margin: 0 5px;
     border-radius: 10px;
     background-color: rgba(125, 125, 125, 0.8);

@@ -15,12 +15,12 @@ export default {
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 60px;
-  line-height: 60px;
-  margin-top: 20px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 5px;
   background-color: rgb(238, 238, 238);
   span {
-    font-size: 32px;
+    font-size: 16px;
   }
 }
 </style>

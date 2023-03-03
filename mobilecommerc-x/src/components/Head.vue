@@ -13,7 +13,6 @@ export default {
 </script>
 <style lang="less" scoped>
 .head {
-  height: 96px;
   background-color: rgb(246, 86, 86);
   /** 弹性布局 **/
   display: flex;
@@ -22,12 +21,11 @@ export default {
   align-items: center;
 }
 input {
-  height: 60px;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: bold;
   padding: 10px;
   border: 0;
-  border-radius: 10px;
+  border-radius: 5px;
   &:focus {
     outline: none;
   }
