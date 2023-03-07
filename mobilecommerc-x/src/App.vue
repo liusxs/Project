@@ -34,11 +34,5 @@ export default {
 </script>
 
 <style lang="less" scoped>
-* {
-  margin: 0;
-  padding: 0;
-}
-#app{
-  background-color: rgb(243, 243, 243);
-}
+
 </style>

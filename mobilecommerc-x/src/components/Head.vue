@@ -1,7 +1,7 @@
 <template>
   <div class="head">
     <input type="text" placeholder="搜索商品/店铺" />
-    <div class="icon"></div>
+    <i class="iconfont  icon-wodefangjian"></i>
   </div>
 </template>
 <script>
@@ -19,22 +19,20 @@ export default {
   justify-content: center;
   /** 垂直居中      使用align-items或align-content的属性，就可以做到垂直居中的效果 **/
   align-items: center;
-}
-input {
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px;
-  border: 0;
-  border-radius: 5px;
-  &:focus {
-    outline: none;
+
+  input {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px;
+    border: 0;
+    border-radius: 3px;
+
+    &:focus {
+      outline: none;
+    }
   }
-}
-.icon {
-  height: 60px;
-  width: 60px;
-  background-color: rgb(12, 52, 227);
-  z-index: 666;
-  margin-left: 15px;
+  .iconfont{
+    font-size: 30px;
+  }
 }
 </style>

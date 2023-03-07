@@ -1,7 +1,7 @@
 <template>
   <div class="recommend">
     <div class="recomHeadr">
-      <i class="icon">字</i>
+      <i class="iconfont icon-shijian"></i>
       <span>精品推荐</span>
     </div>
     <div class="recomContent">
@@ -37,12 +37,11 @@ export default {
 </script>
 <style lang="less" scoped>
 .recommend {
-  margin-top: 5px;
   background-color: rgb(255, 255, 255);
   .recomHeadr {
-    padding: 10px;
-    .icon {
-      font-size: 16px;
+    padding: 6px;
+    .iconfont {
+      font-size: 22px;
     }
     span {
       font-size: 16px;
@@ -54,7 +53,7 @@ export default {
     justify-content: space-around;
     .content-img {
       text-align: center;
-      width: 120;
+      width: 90px;
       img {
         width: 80px;
         height: 90px;

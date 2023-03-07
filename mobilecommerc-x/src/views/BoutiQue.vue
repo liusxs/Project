@@ -1,7 +1,7 @@
 <template>
   <div class="boutique">
     <div class="butique-headr">
-      <i class="icon">字</i>
+      <i class="iconfont icon-gongneng_xingxing-"></i>
       <span>精品</span>
     </div>
     <div class="butique-content">
@@ -102,8 +102,8 @@ export default {
   background-color: rgb(242, 242, 242);
   .butique-headr {
     padding: 10px;
-    .icon {
-      font-size: 16px;
+    .iconfont {
+      font-size: 28px;
     }
     span {
       font-size: 16px;
@@ -121,8 +121,8 @@ export default {
       .content-img {
         margin: 15px;
         img {
-          width: 126px;
-          height: 136px;
+          width: 150px;
+          height: 150px;
         }
       }
       span {
