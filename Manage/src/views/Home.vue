@@ -48,8 +48,8 @@
                     <div ref="echarts2" style="height: 220px;"></div>
                 </el-card>
                 <el-card style="height:240px">
-                <div ref="echarts3" style="height: 220px;"></div>
-            </el-card>
+                    <div ref="echarts3" style="height: 220px;"></div>
+                </el-card>
             </div>
         </el-col>
     </el-row>
@@ -155,21 +155,21 @@ export default {
             // 指定图表的配置项和数据
             var echartsiOption = {}
             //处理数据xAxis
-            const { orderData , userData , videoData} = data.data
+            const { orderData, userData, videoData } = data.data
             const xAxis = Object.keys(orderData.data[0])
             const xAxisData = {
                 data: xAxis
             }
-            echartsiOption.xAxis = {data:orderData.date}
+            echartsiOption.xAxis = { data: orderData.date }
             echartsiOption.yAxis = {}
             echartsiOption.legend = xAxisData
             echartsiOption.series = []
-            xAxis.forEach( key=>{
+            xAxis.forEach(key => {
                 echartsiOption.series.push({
-                    name:key,
+                    name: key,
                     //map()方法创建一个新数组 这个新数组由原数组中的每个元素都调用一次提供的函数后的返回值组成
-                    data:orderData.data.map(item => item[key]),
-                    type:'line'  
+                    data: orderData.data.map(item => item[key]),
+                    type: 'line'
                 })
             })
             console.log(echartsiOption)
@@ -179,53 +179,53 @@ export default {
             // 柱状图
             const echarts2 = echarts.init(this.$refs.echarts2)
             const echarts2Otion = {
-                legend:{
+                legend: {
                     // 图例文字颜色
-                    textStyle:{
-                        color:"#333",
+                    textStyle: {
+                        color: "#333",
                     },
                 },
-                grid:{
-                    left:"20%",
+                grid: {
+                    left: "20%",
                 },
                 // 提示框
-                tooltip:{
-                    trigger:"axis",
+                tooltip: {
+                    trigger: "axis",
                 },
-                xAxis:{
-                    type:"category", //类目轴
-                    data:userData.map(item => item.date),
-                    axisLine:{
-                        lineStyle:{
-                            color:"#17b3a3",
+                xAxis: {
+                    type: "category", //类目轴
+                    data: userData.map(item => item.date),
+                    axisLine: {
+                        lineStyle: {
+                            color: "#17b3a3",
                         },
                     },
-                    axisLabel:{
-                        interval:0,
-                        color:"#333",
+                    axisLabel: {
+                        interval: 0,
+                        color: "#333",
                     },
                 },
-                yAxis:[
+                yAxis: [
                     {
-                        type:"value",
-                        axisLine:{
-                            lineStyle:{
-                                color:"#17b3a3",
+                        type: "value",
+                        axisLine: {
+                            lineStyle: {
+                                color: "#17b3a3",
                             },
                         },
                     },
                 ],
-                color:["#2ec7c9","#b6a2de"],
-                series:[
+                color: ["#2ec7c9", "#b6a2de"],
+                series: [
                     {
-                        name:'新增用户',
-                        data:userData.map(item => item.new),
-                        type:'bar'
+                        name: '新增用户',
+                        data: userData.map(item => item.new),
+                        type: 'bar'
                     },
                     {
-                        name:'活跃用户',
-                        data:userData.map(item => item.active),
-                        type:'bar'
+                        name: '活跃用户',
+                        data: userData.map(item => item.active),
+                        type: 'bar'
                     }
                 ],
             }
@@ -234,10 +234,10 @@ export default {
             // 饼状图
             const echarts3 = echarts.init(this.$refs.echarts3)
             const echarts3Otion = {
-                tooltip:{
-                    trigger:"item",
+                tooltip: {
+                    trigger: "item",
                 },
-                color:[
+                color: [
                     "#0f78f4",
                     "#dd536b",
                     "#9462e5",
@@ -246,10 +246,10 @@ export default {
                     "#39c362",
                     "#3ed1cf",
                 ],
-                series:[
+                series: [
                     {
-                        data:videoData,
-                        type:'pie'
+                        data: videoData,
+                        type: 'pie'
                     }
                 ],
             }
