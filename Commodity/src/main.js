@@ -1,10 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
+import '../plugins/element'
+
 //全局引入element-ui组件
+/*
 import ELementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-
 Vue.use(ELementUI);
+*/
 
 //阻止显示生成模式的消息
 Vue.config.productionTip = false
