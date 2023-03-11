@@ -1,7 +1,17 @@
 <template>
   <div class="hello">
     <el-button>hello</el-button>
+    <el-button>hello</el-button>
+    <el-button>hello</el-button>
+    <el-button>hello</el-button>
+    <el-button>hello</el-button>
+    <el-button>hello</el-button>
     <el-tag>666</el-tag>
+    <el-tag>666</el-tag>
+    <el-tag>666</el-tag>
+    <el-tag>666</el-tag>
+    <el-tag>666</el-tag>
+    <i class="fa fa-user"></i>
   </div>
 </template>
 
@@ -11,19 +21,11 @@ export default {
 }
 </script>
 
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+<style lang="less" scoped>
+.hello{
+  background-color: aquamarine;
+  .el-button{
+    color: aqua;
+  }
 }
 </style>
