@@ -15,7 +15,7 @@
                 <el-form-item label="密码" prop="password" :rules="[
                     //简单的校验规则
                     {require:true, message:'请输入用密码',trigger:'blur'},
-                    {min: 6, max: 12,message:'用户名长度在6-12之间',trigger:'blur'},
+                    {min: 7, max: 12,message:'用户名长度在6-12之间',trigger:'blur'},
                     ]">
                     <el-input type="password" v-model="form.password"></el-input>
                 </el-form-item>
