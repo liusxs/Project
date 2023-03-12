@@ -1,16 +1,15 @@
 import Vue from 'vue'
 import App from './App.vue'
-import '../plugins/element'
+//按需引入element-ui组件
+// import '../plugins/element'
 import 'font-awesome/css/font-awesome.min.css'
 import axios from 'axios'
 import router from './router'
 
 //全局引入element-ui组件
-/*
 import ELementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ELementUI);
-*/
 
 //挂载到原型，可以在全局使用
 Vue.prototype.axios = axios

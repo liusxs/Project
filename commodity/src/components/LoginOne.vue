@@ -42,13 +42,9 @@ export default {
         login(from){
             this.$refs[from].validate((valid) => {
                 if(valid){
-                    console.log(this.form);
-                    this.axios.post('https://rapserver.sunmi.com/app/mock/340/login',this.form)
-                    .then(res => {
-                        console.log(res);
-                    })
+                    console.log(this.form)
                 }else{
-                    console.log(this.form);
+                    console.log(this.form)
                 }
             })
         }
