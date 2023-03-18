@@ -8,8 +8,7 @@ module.exports = defineConfig({
     host: 'localhost',
     proxy: {
       '/api': { // 请求的代称，写在Axios里的BaseUrl
-        target: 'http://localhost:8080', // 真实请求URl
-        ws: true,
+        target: 'http://47.115.224.4:8080', // 真实请求URl
         changeOrigin: true, // 允许跨域
         pathRewrite: {
           '^/api': ''

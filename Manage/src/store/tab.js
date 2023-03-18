@@ -12,7 +12,7 @@ export default {
                 url: 'Home/Home',
             }
         ],
-        menu:[]
+        menu: []
     },
     mutations: {
         // 修改菜单的展开与收起
@@ -20,56 +20,58 @@ export default {
             state.isCollapse = !state.isCollapse
         },
         // 更新面包屑数据
-        selectMenu(state, val){
+        selectMenu(state, val) {
             // 判断添加的数据是否为首页
-            if(val.name !== 'home'){
-                const index =  state.tabsList.findIndex(item => item.name === val.name)
+            if (val.name !== 'home') {
+                const index = state.tabsList.findIndex(item => item.name === val.name)
                 // 如果不存在
-                if(index === -1){
+                if (index === -1) {
                     state.tabsList.push(val)
                 }
             }
         },
         //删除指定的tag数据
-        closeTag(state ,item){
+        closeTag(state, item) {
             // console.log(item,'item')
             const index = state.tabsList.findIndex(val => val.name === item.name)
             //splice(索引，删除的个数)
-            state.tabsList.splice(index,1)
+            state.tabsList.splice(index, 1)
         },
         //设置menu的数据
-        setMenu(state,val){
+        setMenu(state, val) {
             state.menu = val
             localStorage.setItem("menu", JSON.stringify(val))
         },
+        
         //动态注册
-        addMenu(state,router){
+        addMenu(state, router) {
             //判断缓存中是否有数据
-            if(!Cookie.get('menu')) return
+            if (!Cookie.get('menu')) return
             const menu = JSON.parse(Cookie.get('menu'))
-            state.menu =menu
+            state.menu = menu
+        
             //组装动态路由的数据
             const menuArray = []
             menu.forEach(item => {
-                if(item.children){
+                if (item.children) {
                     item.children = item.children.map(item => {
                         item.component = () => import(`../views/${item.url}`)
                         return item
                     })
                     menuArray.push(...item.children)
-                }else{
+                } else {
                     item.component = () => import(`../views/${item.url}`)
                     menuArray.push(item)
                 }
             })
-            console.log(menuArray,'menuArray')
-            
-            
-            
+            console.log(menuArray,"menuArray")
+
+
+
             // 目前获取数据失败，暂时停止更新
             //路由的动态添加
             menuArray.forEach(item => {
-                router.addRoute('Main',item)
+                router.addRoute('Main', item)
             })
         }
     }

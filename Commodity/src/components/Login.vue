@@ -7,16 +7,16 @@
             <el-form label-width="80px" :model="form" ref="form">
                 <el-form-item label="用户名" prop="username" :rules="[
                     //简单的校验规则
-                    {require:true, message:'请输入用户名',trigger:'blur'},
-                    {min: 4, max: 10,message:'用户名长度在4-10之间',trigger:'blur'},
-                    ]">
+                    { require: true, message: '请输入用户名', trigger: 'blur' },
+                    { min: 5, max: 10, message: '用户名长度在4-10之间', trigger: 'blur' },
+                ]">
                     <el-input v-model="form.username"></el-input>
                 </el-form-item>
                 <el-form-item label="密码" prop="password" :rules="[
                     //简单的校验规则
-                    {require:true, message:'请输入用密码',trigger:'blur'},
-                    {min: 7, max: 12,message:'用户名长度在6-12之间',trigger:'blur'},
-                    ]">
+                    { require: true, message: '请输入用密码', trigger: 'blur' },
+                    { min: 6, max: 12, message: '用户名长度在6-12之间', trigger: 'blur' },
+                ]">
                     <el-input type="password" v-model="form.password"></el-input>
                 </el-form-item>
                 <el-form-item>
@@ -33,8 +33,8 @@ export default {
     data() {
         return {
             form: {
-                username: '',
-                password: '',
+                username: 'admin',
+                password: '123456',
             }
         };
     },
@@ -43,7 +43,7 @@ export default {
             this.$refs[from].validate((valid) => {
                 if(valid){
                     console.log(this.form);
-                    this.axios.post(this.HOST + 'https://rapserver.sunmi.com/app/mock/340/login',this.form)
+                    this.axios.post('http://47.115.224.4:8080/user/login',this.form)
                     .then(res => {
                         console.log(res)
                         if(res.data.status === 200){
@@ -53,7 +53,7 @@ export default {
                         }
                     })
                     .catch(err =>{
-                        console.error(err)
+                        console.log(err)
                     })
                 }else{
                     console.log(this.form);
@@ -90,4 +90,5 @@ export default {
             text-align: center;
         }
     }
-}</style>
+}
+</style>

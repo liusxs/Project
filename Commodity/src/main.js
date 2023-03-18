@@ -19,6 +19,7 @@ Vue.config.productionTip = false
 
 //统一Host路径，方便各组件进行调用
 Vue.prototype.HOST = '/api';
+// axios.defaults.baseURL = '/api'
 
 new Vue({
   router,
