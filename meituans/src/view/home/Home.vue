@@ -69,6 +69,11 @@
                 top: 1px;
                 background-color: #ffc400;
                 border-radius: 14px;
+                width: 50px;
+                height: 32px;
+                line-height: 32px;
+                font-size: 14px;
+                text-align: center;
             }
         }
     }
