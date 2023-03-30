@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <div>5555</div>
-        <van-button type="primary">登录</van-button>
+        <van-button type="primary">点击</van-button>
     </div>
 </template>
     
