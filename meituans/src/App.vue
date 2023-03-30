@@ -1,10 +1,10 @@
 <template>
   <!-- 路由出口 -->
   <router-view />
-  <aiv class="app">
+  <div class="app">
     <div class="content"></div>
     <Footer />
-  </aiv>
+  </div>
 </template>
 
 <script>
