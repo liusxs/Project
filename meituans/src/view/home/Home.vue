@@ -1,17 +1,21 @@
 <template>
     <div class="home">
-        <div>5555</div>
-        <van-button type="primary">点击</van-button>
+        <Footer/>
     </div>
 </template>
     
 <script>
-
+import Footer from '@/components/Footer.vue';
+export default {
+    components: {
+        Footer,
+    }
+}
 </script>
     
 <style lang="less" scoped>
-.home{
-    div{
+.home {
+    div {
         color: red;
     }
 }

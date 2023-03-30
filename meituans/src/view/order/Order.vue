@@ -1,6 +1,6 @@
 <template>
     <div>
-        <span>8888</span>
+        <span>订单</span>
     </div>
 </template>
     

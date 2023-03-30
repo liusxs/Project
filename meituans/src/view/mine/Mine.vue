@@ -1,6 +1,6 @@
 <template>
     <div>
-        <span>7777</span>
+        <span>我的</span>
     </div>
 </template>
     

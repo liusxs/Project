@@ -1,6 +1,6 @@
 <template>
     <div>
-        <span>6666</span>
+        <span>购物车</span>
     </div>
 </template>
     
