@@ -1,10 +1,8 @@
 <template>
-<div class="app">6666
-  <svg class="icon" aria-hidden="true">
-    <use xlink:href="#icon-ancient-gate-fill"></use>
-</svg>
-</div>
-
+  <div>
+    <!-- 路由出口 -->
+    <router-view />
+  </div>
 </template>
 
 <script>
@@ -15,10 +13,4 @@ export default {
 }
 </script>
 
-<style>
-.app{
-  width: 160px;
-  height: 160px;
-  background-color: red;
-}
-</style>
+<style></style>
