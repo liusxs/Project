@@ -36,15 +36,25 @@
                         </div>
                     </div>
                 </div>
+                <van-tabs v-model:active="active" class="vant_tabs">
+                    <van-tab v-for="(item,index) in centent_nav_list" :title="item.tab" :key="index">
+                        <NavList :navList="item.data"/>
+                    </van-tab>
+                </van-tabs>
             </div>
         </div>
     </div>
 </template>
     
 <script>
-import { reactive, toRefs } from 'vue'
+import { reactive, toRefs, ref } from 'vue'
+import NavList from './components/NavList.vue'
 export default {
+    components:{
+        NavList
+    },
     setup() {
+        const active = ref(0);
         let data = reactive({
             big_sort: [
                 {
@@ -126,7 +136,7 @@ export default {
                             title: "饭",
                             sales: "2888",
                             price: "20",
-                            label: ["门店上新", "很下饭"],
+                            label: ["门店上新", "下饭"],
                         },
                         {
                             pic: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2062a5b3-a52f-4b38-aaa4-1f94eb74238d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682816689&t=b19f5ca6b297b0e5c8400037b4462db4",
@@ -190,14 +200,15 @@ export default {
                             title: "酸菜鱼",
                             sales: "2888",
                             price: "20",
-                            label: ["门店上新", "很下饭"],
+                            label: ["门店上新", "下饭"],
                         },
                     ],
                 },
             ],
         })
         return {
-            ...toRefs(data)
+            ...toRefs(data),
+            active,
         }
     }
 }
@@ -206,6 +217,7 @@ export default {
 <style lang="less" scoped>
 .home {
     font-size: 12px;
+
     .header {
         background-image: linear-gradient(#ffc400, #fff);
         display: flex;
@@ -279,18 +291,21 @@ export default {
                         margin-bottom: 5px;
                     }
                 }
-                .small_sort{
+
+                .small_sort {
                     display: flex;
                     flex-wrap: wrap;
                     margin-top: 20px;
-                    div{
+
+                    div {
                         display: flex;
                         justify-content: center;
                         flex-flow: column;
                         align-items: center;
                         width: 20%;
                     }
-                    .icon{
+
+                    .icon {
                         width: 30px;
                         height: 30px;
                         margin: 10px;
@@ -298,6 +313,14 @@ export default {
                 }
             }
         }
+
+        .vant_tabs {
+            padding: 0 20px 10px;
+        }
     }
+}
+
+/deep/.van-tabs__wrap {
+    border-radius: 20px;
 }
 </style>    
