@@ -17,7 +17,7 @@
         </div>
         <van-action-bar>
             <van-action-bar-icon icon="chat-o" text="客服" />
-            <van-action-bar-icon icon="cart-o" text="购物车" :badge="store.state.cartList.length" />
+            <van-action-bar-icon icon="cart-o" text="购物车" :badge="store.state.cartList.length" @click="goCart" />
             <van-action-bar-button type="warning" text="加入购物车" @click="handleAddCart" />
             <van-action-bar-button type="danger" text="立即购买" />
         </van-action-bar>
@@ -28,13 +28,15 @@ import { reactive, toRefs } from 'vue'
 import Header from '../../components/Header.vue';
 import FoodList from './components/FoodList.vue';
 import { useStore } from "vuex";
+import { useRouter } from 'vue-router';
 export default {
     components: {
         Header,
         FoodList,
     },
     setup() {
-        let store = useStore()
+        let store = useStore();
+        let router = useRouter();
         //定义data
         let data = reactive({
             title: "晚霞",
@@ -117,10 +119,14 @@ export default {
             });
             store.commit('addcart', newList)
         };
+        const goCart = () => {
+            router.push('/cart')
+        }
         return {
             handleAddCart,
             ...toRefs(data),
             store,
+            goCart,
         }
     },
 };
