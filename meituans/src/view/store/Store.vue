@@ -19,7 +19,7 @@
             <van-action-bar-icon icon="chat-o" text="客服" />
             <van-action-bar-icon icon="cart-o" text="购物车" :badge="store.state.cartList.length" @click="goCart" />
             <van-action-bar-button type="warning" text="加入购物车" @click="handleAddCart" />
-            <van-action-bar-button type="danger" text="立即购买" />
+            <van-action-bar-button type="danger" text="立即购买" @click="goBuy"/>
         </van-action-bar>
     </div>
 </template>
@@ -29,6 +29,7 @@ import Header from '../../components/Header.vue';
 import FoodList from './components/FoodList.vue';
 import { useStore } from "vuex";
 import { useRouter } from 'vue-router';
+import { showToast } from "vant";
 export default {
     components: {
         Header,
@@ -53,7 +54,7 @@ export default {
                                     {
                                         pic: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2062a5b3-a52f-4b38-aaa4-1f94eb74238d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682816689&t=b19f5ca6b297b0e5c8400037b4462db4",
                                         title: "5564",
-                                        num: 12,
+                                        num: 0,
                                         price: 25.0,
                                         id: 0,
                                         add: true,
@@ -106,7 +107,7 @@ export default {
                 },
             ],
         });
-        const handleAddCart = () => {
+        const handleAddCart = (type) => {
             const newList = []
             data.storeData.forEach(item => {
                 item.data.items?.forEach(item => {
@@ -117,16 +118,25 @@ export default {
                     });
                 });
             });
-            store.commit('addcart', newList)
+            if(newList.length === 0){
+                showToast("请选择商品");
+                return;
+            }
+            store.commit('addcart', newList);
+            type === 'buy' ? goCart() : "";
         };
         const goCart = () => {
             router.push('/cart')
+        };
+        const goBuy =() => {
+            handleAddCart('buy')
         }
         return {
             handleAddCart,
             ...toRefs(data),
             store,
             goCart,
+            goBuy,
         }
     },
 };

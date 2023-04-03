@@ -1,12 +1,23 @@
 <template>
     <div class="header">
-        <van-icon name="arrow-left" class="icon" />
+        <van-icon name="arrow-left" class="icon" @click="toBack" />
         <div class="edit">{{ title }}</div>
     </div>
 </template>
 <script>
+import { useRouter } from 'vue-router';
+
 export default {
     props: ["title"],
+    setup() {
+        const router = useRouter();
+        const toBack = () => {
+            router.back();
+        };
+        return {
+            toBack,
+        };
+    },
 };
 
 
