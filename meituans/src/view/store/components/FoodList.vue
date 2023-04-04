@@ -3,7 +3,7 @@
         <van-tree-select v-model:main-active-index="activeIndex" height="88vw" :items="items" @click-nav="navClick">
             <template #content>
                 <div v-for="(item, index) in subItem" class="item_bg">
-                    <FoodListItem :item="item" :handleAdd="handleAdd" :handleChange="handleChange" />
+                    <ListItem :item="item" :handleAdd="handleAdd" :handleChange="handleChange" />
                 </div>
             </template>
         </van-tree-select>
@@ -15,10 +15,12 @@
 <script>
 import { reactive, toRefs } from 'vue';
 import FoodListItem from './FoodListItem.vue';
+import ListItem from '@/components/ListItem.vue';
 export default {
     props: ["index", "foodData"],
     components: {
         FoodListItem,
+        ListItem,
     },
     setup(props) {
         let data = reactive({
