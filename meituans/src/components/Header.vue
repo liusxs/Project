@@ -35,8 +35,6 @@ export default {
 
     .edit {
         font-size: 16px;
-        position: absolute;
-        right: 15px;
         font-weight: normal;
     }
 

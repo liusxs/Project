@@ -1,7 +1,7 @@
 <template>
     <div class="content_item">
         <div class="left">
-            <van-checkbox :name="item.id" v-if="showCheckBox"/>
+            <van-checkbox :name="item.id" v-if="showCheckBox" checked-color="#ffc400"/>
             <img :src="item.pic">
             <div class="text">
                 <div class="title">

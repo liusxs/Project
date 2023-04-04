@@ -1,17 +1,20 @@
 <template>
     <div class="cartDetail">
         <div class="content">
-            <van-checkbox-group v-model="checked" ref="checkboxGroup">
+            <van-checkbox-group v-model="checked" @change="groupChange">
                 <div v-for="(item, index) in store.state.cartList">
-                    <ListItem :item="item" :handleAdd="handleAdd" :showCheckBox="true"/>
+                    <ListItem :item="item" :handleAdd="handleChange" :showCheckBox="true" />
                 </div>
             </van-checkbox-group>
         </div>
+        <van-submit-bar :price="allPrice" button-text="结算" @submit="onSubmit" class="submit_all" buttonColor="#ffc400">
+            <van-checkbox v-model="submitChecked" checked-color="#ffc400" @click="choseAll">全选</van-checkbox>
+        </van-submit-bar>
     </div>
 </template>
 
 <script>
-import { reactive, toRefs } from 'vue';
+import { reactive, toRefs, onMounted, computed } from 'vue';
 import { useStore } from 'vuex';
 import ListItem from '@/components/ListItem.vue';
 export default {
@@ -21,13 +24,58 @@ export default {
     setup() {
         const store = useStore()
         const data = reactive({
-            checked: []
+            checked: [],
+            submitChecked: true
         });
-        const handleAdd = () => { }
+        const handleChange = (value, detail) => {
+            store.state.cartList.map(item => {
+                if (item.id === detail.name) {
+                    item.num = value;
+                }
+            })
+        };
+        const init = () => {
+            data.checked = store.state.cartList.map(item => item.id)
+        }
+        onMounted(() => {
+            init()
+        })
+        const onSubmit = () => {
+
+        }
+        const choseAll = () => {
+            if (data.checked.length !== store.state.cartList.length) {
+                init()
+            } else {
+                data.checked = []
+            }
+        }
+        const groupChange = (result) => {
+            if (result.length === store.state.cartList.length) {
+                data.submitChecked = true;
+            } else {
+                data.submitChecked = false;
+            }
+            data.checked = result;
+        }
+        const allPrice = computed(() => {
+            let countList = store.state.cartList.filter(item => {
+                return data.checked.includes(item.id)
+            })
+            let sum = 0
+            countList.forEach(item => {
+                sum += item.num * item.price
+            });
+            return sum * 100;
+        })
         return {
             ...toRefs(data),
             store,
-            handleAdd
+            handleChange,
+            onSubmit,
+            choseAll,
+            groupChange,
+            allPrice,
         }
     }
 }
@@ -43,7 +91,7 @@ export default {
 
     .submit_all {
         position: fixed;
-        bottom: 48px;
+        bottom: 46px;
     }
 
     .buy {

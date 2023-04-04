@@ -32,6 +32,7 @@
     display: flex;
     background: #fff;
     border-top: 0.5px solid #eee;
+    font-size: 12px;
     .item {
         flex: 1;
         .nav-color{

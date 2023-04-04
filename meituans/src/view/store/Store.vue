@@ -19,7 +19,7 @@
             <van-action-bar-icon icon="chat-o" text="客服" />
             <van-action-bar-icon icon="cart-o" text="购物车" :badge="store.state.cartList.length" @click="goCart" />
             <van-action-bar-button type="warning" text="加入购物车" @click="handleAddCart" />
-            <van-action-bar-button type="danger" text="立即购买" @click="goBuy"/>
+            <van-action-bar-button type="danger" text="立即购买" @click="goBuy" />
         </van-action-bar>
     </div>
 </template>
@@ -108,7 +108,7 @@ export default {
             ],
         });
         const handleAddCart = (type) => {
-            const newList = []
+            const newList = store.state.cartList || []
             data.storeData.forEach(item => {
                 item.data.items?.forEach(item => {
                     item.children.forEach(item => {
@@ -118,7 +118,7 @@ export default {
                     });
                 });
             });
-            if(newList.length === 0){
+            if (newList.length === 0) {
                 showToast("请选择商品");
                 return;
             }
@@ -128,7 +128,7 @@ export default {
         const goCart = () => {
             router.push('/cart')
         };
-        const goBuy =() => {
+        const goBuy = () => {
             handleAddCart('buy')
         }
         return {
