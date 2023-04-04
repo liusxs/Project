@@ -41,7 +41,7 @@ export default {
         //定义data
         let data = reactive({
             title: "精品服装",
-            img: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+            img: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_06.png?raw=true",
             storeData: [
                 {
                     name: "男装",
@@ -60,7 +60,7 @@ export default {
                                         add: true,
                                     },
                                     {
-                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_04.png?raw=true",
                                         title: "皮衣",
                                         num: 0,
                                         price: 22.0,
@@ -73,7 +73,7 @@ export default {
                                 text: "裤子",
                                 children: [
                                     {
-                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_05.png?raw=true",
                                         title: "牛仔裤",
                                         num: 0,
                                         price: 12.0,
@@ -81,7 +81,7 @@ export default {
                                         add: true,
                                     },
                                     {
-                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_06.png?raw=true",
                                         title: "短裤",
                                         num: 0,
                                         price: 12.0,
