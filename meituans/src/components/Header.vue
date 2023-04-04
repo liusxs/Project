@@ -1,14 +1,17 @@
 <template>
     <div class="header">
         <van-icon name="arrow-left" class="icon" @click="toBack" />
-        <div class="edit">{{ title }}</div>
+        <div>{{ title }}</div>
+        <div class="edit" v-if="edit">
+            编辑
+        </div>
     </div>
 </template>
 <script>
 import { useRouter } from 'vue-router';
 
 export default {
-    props: ["title"],
+    props: ["title","edit"],
     setup() {
         const router = useRouter();
         const toBack = () => {
@@ -36,6 +39,8 @@ export default {
     .edit {
         font-size: 16px;
         font-weight: normal;
+        position: absolute;
+        right: 15px;
     }
 
     .icon {

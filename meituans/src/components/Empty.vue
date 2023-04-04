@@ -1,7 +1,7 @@
 <template>
     <div class="empty">
         <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-wucan"></use>
+            <use xlink:href="#icon-tuijian"></use>
         </svg>
         一件宝贝都没有哦！
     </div>

@@ -10,6 +10,12 @@
         <van-submit-bar :price="allPrice" button-text="结算" @submit="onSubmit" class="submit_all" buttonColor="#ffc400">
             <van-checkbox v-model="submitChecked" checked-color="#ffc400" @click="choseAll">全选</van-checkbox>
         </van-submit-bar>
+        <div class="buy">
+            <div class="left">
+                <van-checkbox v-model="submitChecked" checked-color="#ffc400" @click="choseAll">全选</van-checkbox>
+            </div>
+            <div class="delete">删除</div>
+        </div>
     </div>
 </template>
 
@@ -22,6 +28,7 @@ export default {
         ListItem,
     },
     setup() {
+        //购物车选中实现
         const store = useStore()
         const data = reactive({
             checked: [],
@@ -58,6 +65,7 @@ export default {
             }
             data.checked = result;
         }
+        //购物车价格实现
         const allPrice = computed(() => {
             let countList = store.state.cartList.filter(item => {
                 return data.checked.includes(item.id)

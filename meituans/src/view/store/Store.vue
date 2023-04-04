@@ -40,52 +40,52 @@ export default {
         let router = useRouter();
         //定义data
         let data = reactive({
-            title: "晚霞",
-            img: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2062a5b3-a52f-4b38-aaa4-1f94eb74238d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682816689&t=b19f5ca6b297b0e5c8400037b4462db4",
+            title: "精品服装",
+            img: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
             storeData: [
                 {
-                    name: "点菜",
+                    name: "男装",
                     data: {
-                        content: "66",
+                        content: "男装",
                         items: [
                             {
-                                text: "7894",
+                                text: "上衣",
                                 children: [
                                     {
-                                        pic: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2062a5b3-a52f-4b38-aaa4-1f94eb74238d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682816689&t=b19f5ca6b297b0e5c8400037b4462db4",
-                                        title: "5564",
+                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                                        title: "卫衣",
                                         num: 0,
                                         price: 25.0,
-                                        id: 0,
+                                        id: 1001,
                                         add: true,
                                     },
                                     {
-                                        pic: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2062a5b3-a52f-4b38-aaa4-1f94eb74238d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682816689&t=b19f5ca6b297b0e5c8400037b4462db4",
-                                        title: "8161",
+                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                                        title: "皮衣",
                                         num: 0,
                                         price: 22.0,
-                                        id: 0,
+                                        id: 1002,
                                         add: true,
                                     },
                                 ],
                             },
                             {
-                                text: "4444",
+                                text: "裤子",
                                 children: [
                                     {
-                                        pic: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2062a5b3-a52f-4b38-aaa4-1f94eb74238d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682816689&t=b19f5ca6b297b0e5c8400037b4462db4",
-                                        title: "2326",
+                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                                        title: "牛仔裤",
                                         num: 0,
                                         price: 12.0,
-                                        id: 9,
+                                        id: 1003,
                                         add: true,
                                     },
                                     {
-                                        pic: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2062a5b3-a52f-4b38-aaa4-1f94eb74238d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682816689&t=b19f5ca6b297b0e5c8400037b4462db4",
-                                        title: "2326",
+                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                                        title: "短裤",
                                         num: 0,
                                         price: 12.0,
-                                        id: 9,
+                                        id: 1004,
                                         add: true,
                                     },
                                 ],
@@ -94,15 +94,15 @@ export default {
                     },
                 },
                 {
-                    name: "2222",
+                    name: "女装",
                     data: {
-                        content: "6644",
+                        content: "女装",
                     },
                 },
                 {
-                    name: "0000",
+                    name: "套装",
                     data: {
-                        content: "6644",
+                        content: "套装",
                     },
                 },
             ],
@@ -152,7 +152,7 @@ export default {
         overflow-y: auto;
 
         .img {
-            background: url("../../assets/img/背景.jpg") no-repeat center/cover;
+            background: url("@/assets/img/背景.jpg") no-repeat center/cover;
             width: 100%;
             height: 150px;
         }

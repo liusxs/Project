@@ -3,7 +3,7 @@
         <div class="content">
             <!--头部  -->
             <div class="header">
-                <div class="text">外卖</div>
+                <div class="text">商城</div>
                 <div class="location">
                     <van-icon name="location-o" />
                     <span>定位</span>
@@ -21,6 +21,7 @@
                         <div class="big_sort">
                             <div v-for="(item, index) in big_sort" :key="index">
                                 <svg class="icon" aria-hidden="true">
+                                    <!-- `#${item.icon}` 这是模板字符串 -->
                                     <use :xlink:href="`#${item.icon}`"></use>
                                 </svg>
                                 {{ item.name }}
@@ -61,149 +62,149 @@ export default {
         let data = reactive({
             big_sort: [
                 {
-                    name: "00",
-                    icon: "icon-wucan",
+                    name: "男装",
+                    icon: "icon-tuijian",
                 },
                 {
-                    name: "01",
-                    icon: "icon-wucan",
+                    name: "女装",
+                    icon: "icon-tuijian",
                 },
                 {
-                    name: "02",
-                    icon: "icon-wucan",
+                    name: "衣服",
+                    icon: "icon-tuijian",
                 },
                 {
-                    name: "03",
-                    icon: "icon-wucan",
+                    name: "裤子",
+                    icon: "icon-tuijian",
                 },
                 {
-                    name: "04",
-                    icon: "icon-wucan",
+                    name: "外套",
+                    icon: "icon-tuijian",
                 },
             ],
             small_sort: [
                 {
-                    name: "05",
-                    icon: "icon-wucan",
+                    name: "衣服",
+                    icon: "icon-tuijian",
                 },
                 {
-                    name: "06",
-                    icon: "icon-wucan",
+                    name: "裤子",
+                    icon: "icon-tuijian",
                 },
                 {
-                    name: "07",
-                    icon: "icon-wucan",
+                    name: "衬衫",
+                    icon: "icon-tuijian",
                 },
                 {
-                    name: "08",
-                    icon: "icon-wucan",
+                    name: "短裤",
+                    icon: "icon-tuijian",
                 },
                 {
-                    name: "09",
-                    icon: "icon-wucan",
+                    name: "风衣",
+                    icon: "icon-tuijian",
                 },
                 {
-                    name: "10",
-                    icon: "icon-wucan",
+                    name: "卫衣",
+                    icon: "icon-tuijian",
                 },
                 {
-                    name: "11",
-                    icon: "icon-wucan",
+                    name: "上衣",
+                    icon: "icon-tuijian",
                 },
                 {
-                    name: "12",
-                    icon: "icon-wucan",
+                    name: "鞋子",
+                    icon: "icon-tuijian",
                 },
                 {
-                    name: "13",
-                    icon: "icon-wucan",
+                    name: "帽子",
+                    icon: "icon-tuijian",
                 },
                 {
-                    name: "14",
-                    icon: "icon-wucan",
+                    name: "手套",
+                    icon: "icon-tuijian",
                 },
             ],
             centent_nav_list: [
                 {
-                    tab: "4399",
+                    tab: "精品推荐",
                     data: [
                         {
-                            pic: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2062a5b3-a52f-4b38-aaa4-1f94eb74238d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682816689&t=b19f5ca6b297b0e5c8400037b4462db4",
-                            title: "酸菜鱼",
+                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                            title: "卫龙衣物",
                             sales: "2888",
                             price: "20",
-                            label: ["门店上新", "很下饭"],
+                            label: ["门店上新", "促销"],
                         },
                         {
-                            pic: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2062a5b3-a52f-4b38-aaa4-1f94eb74238d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682816689&t=b19f5ca6b297b0e5c8400037b4462db4",
-                            title: "饭",
+                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                            title: "卫龙衣物",
                             sales: "2888",
                             price: "20",
-                            label: ["门店上新", "下饭"],
+                            label: ["门店上新", "促销"],
                         },
                         {
-                            pic: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2062a5b3-a52f-4b38-aaa4-1f94eb74238d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682816689&t=b19f5ca6b297b0e5c8400037b4462db4",
-                            title: "酸菜鱼",
+                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                            title: "卫龙衣物",
                             sales: "2888",
                             price: "20",
-                            label: ["门店上新", "很下饭"],
+                            label: ["门店上新", "促销"],
                         },
                         {
-                            pic: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2062a5b3-a52f-4b38-aaa4-1f94eb74238d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682816689&t=b19f5ca6b297b0e5c8400037b4462db4",
-                            title: "酸菜鱼",
+                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                            title: "卫龙衣物",
                             sales: "2888",
                             price: "20",
-                            label: ["门店上新", "很下饭"],
+                            label: ["门店上新", "促销"],
                         },
                     ],
                 },
                 {
-                    tab: "7k7k",
+                    tab: "热销产品",
                     data: [
                         {
-                            pic: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2062a5b3-a52f-4b38-aaa4-1f94eb74238d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682816689&t=b19f5ca6b297b0e5c8400037b4462db4",
-                            title: "酸菜鱼",
+                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                            title: "卫龙衣物",
                             sales: "2888",
                             price: "20",
-                            label: ["门店上新", "很下饭"],
+                            label: ["门店上新", "促销"],
                         },
                     ],
                 },
                 {
-                    tab: "5555",
+                    tab: "打折促销",
                     data: [
                         {
-                            pic: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2062a5b3-a52f-4b38-aaa4-1f94eb74238d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682816689&t=b19f5ca6b297b0e5c8400037b4462db4",
-                            title: "酸菜鱼",
+                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                            title: "卫龙衣物",
                             sales: "2888",
                             price: "20",
-                            label: ["门店上新", "很下饭"],
+                            label: ["门店上新", "促销"],
                         },
                         {
-                            pic: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2062a5b3-a52f-4b38-aaa4-1f94eb74238d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682816689&t=b19f5ca6b297b0e5c8400037b4462db4",
-                            title: "酸菜鱼",
+                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                            title: "卫龙衣物",
                             sales: "2888",
                             price: "20",
-                            label: ["门店上新", "很下饭"],
+                            label: ["门店上新", "促销"],
                         },
                     ],
                 },
                 {
-                    tab: "6666",
+                    tab: "限时出售",
                     data: [
                         {
-                            pic: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2062a5b3-a52f-4b38-aaa4-1f94eb74238d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682816689&t=b19f5ca6b297b0e5c8400037b4462db4",
-                            title: "酸菜鱼",
+                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                            title: "卫龙衣物",
                             sales: "2888",
                             price: "20",
-                            label: ["门店上新", "很下饭"],
+                            label: ["门店上新", "促销"],
                         },
                         {
-                            pic: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2062a5b3-a52f-4b38-aaa4-1f94eb74238d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1682816689&t=b19f5ca6b297b0e5c8400037b4462db4",
-                            title: "酸菜鱼",
+                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                            title: "卫龙衣物",
                             sales: "2888",
                             price: "20",
-                            label: ["门店上新", "下饭"],
+                            label: ["门店上新", "促销"],
                         },
                     ],
                 },
