@@ -7,14 +7,15 @@
                 </div>
             </van-checkbox-group>
         </div>
-        <van-submit-bar :price="allPrice" button-text="结算" @submit="onSubmit" class="submit_all" buttonColor="#ffc400">
+        <van-submit-bar :price="allPrice" button-text="结算" @submit="onSubmit" class="submit_all" buttonColor="#ffc400"
+            v-if="store.state.isDelete">
             <van-checkbox v-model="submitChecked" checked-color="#ffc400" @click="choseAll">全选</van-checkbox>
         </van-submit-bar>
-        <div class="buy">
+        <div class="buy" v-else>
             <div class="left">
-                <van-checkbox v-model="submitChecked" checked-color="#ffc400" @click="choseAll">全选</van-checkbox>
+                <van-checkbox v-model="submitChecked" checked-color="#ffc400" @click="choseAll">完成</van-checkbox>
             </div>
-            <div class="delete">删除</div>
+            <div class="delete" @click="hanldeDelete">删除</div>
         </div>
     </div>
 </template>
@@ -22,12 +23,14 @@
 <script>
 import { reactive, toRefs, onMounted, computed } from 'vue';
 import { useStore } from 'vuex';
+import { showToast } from 'vant';
 import ListItem from '@/components/ListItem.vue';
 export default {
+    props: ['changeshow'],
     components: {
         ListItem,
     },
-    setup() {
+    setup(props) {
         //购物车选中实现
         const store = useStore()
         const data = reactive({
@@ -67,15 +70,34 @@ export default {
         }
         //购物车价格实现
         const allPrice = computed(() => {
-            let countList = store.state.cartList.filter(item => {
-                return data.checked.includes(item.id)
-            })
+            let countList = updateDalete();
             let sum = 0
             countList.forEach(item => {
                 sum += item.num * item.price
             });
             return sum * 100;
         })
+        const updateDalete = (type) => {
+            return store.state.cartList.filter((item) => {
+                return type === 'delete' ? !data.checked.includes(item.id) : data.checked.includes(item.id)
+            })
+        }
+        const hanldeDelete = () => {
+            //判断data的checked是否有值
+            if (data.checked.length) {
+                store.commit('delete', updateDalete('delete'));
+                data.checked = []
+                //购物车没有数据的时候
+                if (!store.state.cartList.length) {
+                    props.changeshow();
+                    store.commit('edit','delete')
+                }
+            } else {
+                showToast('请选择要删除的商品!')
+            }
+            //部分删除
+            //全部删除
+        }
         return {
             ...toRefs(data),
             store,
@@ -84,6 +106,7 @@ export default {
             choseAll,
             groupChange,
             allPrice,
+            hanldeDelete,
         }
     }
 }
@@ -104,7 +127,7 @@ export default {
 
     .buy {
         position: fixed;
-        bottom: 48px;
+        bottom: 46px;
         right: 0;
         display: flex;
         justify-content: space-between;
