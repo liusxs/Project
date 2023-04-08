@@ -34,6 +34,11 @@ const router = createRouter({
             //路由懒加载
             component:()=>import('../view/store/Store.vue')
         },
+        {
+            path:'/createorder',
+            //路由懒加载
+            component:()=>import('../view/createOrder/CreateOrder.vue')
+        },
     ]
 })
 

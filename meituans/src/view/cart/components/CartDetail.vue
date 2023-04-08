@@ -23,6 +23,7 @@
 <script>
 import { reactive, toRefs, onMounted, computed } from 'vue';
 import { useStore } from 'vuex';
+import { useRouter } from 'vue-router';
 import { showToast } from 'vant';
 import ListItem from '@/components/ListItem.vue';
 export default {
@@ -33,6 +34,7 @@ export default {
     setup(props) {
         //购物车选中实现
         const store = useStore()
+        const router = useRouter()
         const data = reactive({
             checked: [],
             submitChecked: true
@@ -50,9 +52,16 @@ export default {
         onMounted(() => {
             init()
         })
+        //结算
         const onSubmit = () => {
-
+            if (data.checked.length) {
+                store.commit('pay', updateDalete())
+                router.push('/createorder')
+            }else{
+                showToast('请选择!')
+            }
         }
+        //购物车勾选功能
         const choseAll = () => {
             if (data.checked.length !== store.state.cartList.length) {
                 init()
@@ -90,7 +99,7 @@ export default {
                 //购物车没有数据的时候
                 if (!store.state.cartList.length) {
                     props.changeshow();
-                    store.commit('edit','delete')
+                    store.commit('edit', 'delete')
                 }
             } else {
                 showToast('请选择要删除的商品!')

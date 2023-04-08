@@ -7,7 +7,8 @@ export default createStore({
         //确认header组件 点击编辑的时候 底部组件的展示
         isDelete: true,
         //默认展示编辑的状态
-        edit: true
+        edit: true,
+        orderList: []
     },
     mutations: {
         addcart(state, value) {
@@ -25,6 +26,9 @@ export default createStore({
             } else {
                 state.edit = !state.edit
             }
+        },
+        pay(state, value) {
+            state.orderList = value
         }
     },
     actions: {}
