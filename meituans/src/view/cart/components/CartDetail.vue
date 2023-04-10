@@ -56,7 +56,12 @@ export default {
         const onSubmit = () => {
             if (data.checked.length) {
                 store.commit('pay', updateDalete())
-                router.push('/createorder')
+                router.push({
+                    path:'/createorder',
+                    query:{
+                        list:data.checked,
+                    }
+                })
             }else{
                 showToast('请选择!')
             }

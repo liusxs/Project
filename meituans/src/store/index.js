@@ -8,7 +8,31 @@ export default createStore({
         isDelete: true,
         //默认展示编辑的状态
         edit: true,
-        orderList: []
+        orderList: [],
+        userAddress: [
+            {
+                id: '2001',
+                name: 'liuliu',
+                tel: '16666645445',
+                province: '银河系',
+                city: '地球',
+                conuty: '亚洲',
+                addressDetail: '小城',
+                isDefault: true ,
+                areaCode:'110101'
+            },
+            {
+                id: '2002',
+                name: 'xiaoliu',
+                tel: '16669998955',
+                province: '太阳系',
+                city: '地球',
+                conuty: '东欧',
+                addressDetail: '城中村',
+                isDefault: false ,
+                areaCode:'110101'
+            },
+        ],
     },
     mutations: {
         addcart(state, value) {
