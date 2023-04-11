@@ -33,6 +33,9 @@ export default createStore({
                 areaCode:'110101'
             },
         ],
+        orderListEnd:[
+
+        ],
     },
     mutations: {
         addcart(state, value) {
@@ -53,6 +56,9 @@ export default createStore({
         },
         pay(state, value) {
             state.orderList = value
+        },
+        orderListEd(state){
+            state.orderListEnd = state.orderListEnd.concat(state.orderList)
         }
     },
     actions: {}
