@@ -38,7 +38,8 @@ export default {
         const route = useRoute()
 
         const onEdit = () => {
-
+            //跳转地址管理
+            router.push('/address')
         }
         const initPrice = () => {
             let price = 0
