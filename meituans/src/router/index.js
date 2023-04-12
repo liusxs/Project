@@ -51,6 +51,12 @@ const router = createRouter({
             //路由懒加载
             component:()=>import('../view/address/Address.vue')
         },
+        {
+            //地址编辑
+            path:'/addressEdit',
+            //路由懒加载
+            component:()=>import('../view/addressEdit/AddressEdit.vue')
+        },
     ]
 })
 
