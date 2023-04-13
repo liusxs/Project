@@ -1,2 +1,2 @@
 # Project
-Some of the previous projects and the VUE project
+Some basic web projects and vue projects
