@@ -18,8 +18,8 @@ export default createStore({
                 city: '地球',
                 conuty: '亚洲',
                 addressDetail: '小城',
-                isDefault: true ,
-                areaCode:'110101'
+                isDefault: true,
+                areaCode: '110101'
             },
             {
                 id: '2002',
@@ -29,11 +29,11 @@ export default createStore({
                 city: '地球',
                 conuty: '东欧',
                 addressDetail: '城中村',
-                isDefault: false ,
-                areaCode:'110101'
+                isDefault: false,
+                areaCode: '110101'
             },
         ],
-        orderListEnd:[
+        orderListEnd: [
 
         ],
     },
@@ -57,8 +57,38 @@ export default createStore({
         pay(state, value) {
             state.orderList = value
         },
-        orderListEd(state){
+        orderListEd(state) {
             state.orderListEnd = state.orderListEnd.concat(state.orderList)
+        },
+        addaddress(state, value) {
+            state.userAddress.map(item => {
+                if (value.isDefault) {
+                    item.isDefault = false
+                }
+            })
+            state.userAddress.push(value)
+        },
+        editaddress(state, value) {
+            state.userAddress = state.userAddress.map(item => {
+                if (value.isDefault) {
+                    item.isDefault = false
+                }
+                // if (item.id === value.id) {
+                //     return value
+                // } else {
+                //     return item
+                // }
+                return item.id === value.id ? value : item
+            })
+        },
+        deleteaddress(state, value) {
+            //过滤
+            state.userAddress = state.userAddress.filter(item => {
+                return !(item.id === value.id)
+            })
+            if (value.isDefault) {
+                state.userAddress[0].isDefault = true
+            }
         }
     },
     actions: {}

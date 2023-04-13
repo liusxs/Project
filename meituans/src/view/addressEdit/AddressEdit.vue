@@ -1,18 +1,24 @@
 <template>
     <div class="addressEdit">
-        <Header title="编辑地址" />
-        <van-address-edit :area-list="areaList" show-delete show-set-default show-search-result
+        <Header :title="address" />
+        <van-address-edit :area-list="areaList" show-delete show-set-default show-search-result :address-info="addressInfo"
             :area-columns-placeholder="['请选择', '请选择', '请选择']" @save="onSave" @delete="onDelete" />
     </div>
 </template>
 <script>
 import Header from '@/components/Header.vue';
-import { reactive, toRefs, } from 'vue'
+import { useStore } from 'vuex';
+import { reactive, toRefs, onMounted, computed } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { showToast } from 'vant'
 export default {
     components: {
         Header,
     },
     setup() {
+        const route = useRoute();
+        const router = useRouter();
+        const store = useStore();
         const data = reactive({
             areaList: {
                 province_list: {
@@ -31,14 +37,49 @@ export default {
                     120101: '岁在甲子',
                     120202: '天下大吉'
                 },
+            },
+            addressInfo: {
+
             }
         })
-        const onSave = () => {}
-        const onDelete = () => {}
-        return{
+        const onSave = (content) => {
+            //新增或编辑
+            if (route.query.type === 'add') {
+                store.commit('addaddress', content)
+            } else {
+                store.commit('editaddress', content)
+            }
+            showToast('保存成功')
+            setTimeout(() => {
+                router.back();
+            }, 1000)
+        }
+        const onDelete = (content) => {
+            store.commit("deleteaddress", content)
+            showToast('删除成功')
+            setTimeout(() => {
+                router.back();
+            }, 1000)
+        }
+        const init = () => {
+            store.state.userAddress.forEach((item) => {
+                if (item.id === route.query.id) {
+                    data.addressInfo = item;
+                }
+            })
+        }
+        const address = computed(() => {
+            return route.query.type === 'add' ? '地址新增' : '地址编辑'
+        })
+        onMounted(() => {
+            init();
+        })
+        return {
             ...toRefs(data),
             onSave,
             onDelete,
+            route,
+            address,
         }
     }
 }

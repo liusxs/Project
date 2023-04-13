@@ -17,13 +17,26 @@ export default {
         const store = useStore();
         const router = useRouter();
         const onAdd = () => {
-            router.push('/addressEdit')
+            router.push({
+                path: '/addressEdit',
+                query: {
+                    type: 'add'
+                }
+            })
         }
-        const onEdit = () => {
-            router.push('/addressEdit')
+        const onEdit = (item) => {
+            router.push({
+                path: '/addressEdit',
+                query: {
+                    id: item.id,
+                    type: 'edit'
+                }
+            })
         }
         const data = reactive({
-            list: [],
+            list: [
+
+            ],
         })
         const init = () => {
             data.list = store.state.userAddress.map(item => {
