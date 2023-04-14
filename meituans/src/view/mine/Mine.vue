@@ -1,10 +1,10 @@
 <template>
     <div class="mine">
-        <Header />
+        <Header title="个人中心"/>
         <div class="content">
             <div class="user-info">
                 <div class="info">
-                    <img src="../../assets/logo.png">
+                    <img src="../../assets/header.jpg">
                     <div class="user-desc">
                         <span>名称:{{ name }}</span>
                         <span class="name">个性签名:{{ describe }}</span>
