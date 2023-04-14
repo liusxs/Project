@@ -57,6 +57,12 @@ const router = createRouter({
             //路由懒加载
             component:()=>import('../view/addressEdit/AddressEdit.vue')
         },
+        {
+            //账号管理页面
+            path:'/userinfoedit',
+            //路由懒加载
+            component:()=>import('../view/userinfoedit/Userinfoedit.vue')
+        },
     ]
 })
 
