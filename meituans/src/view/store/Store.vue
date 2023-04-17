@@ -122,7 +122,7 @@ export default {
                 showToast("请选择商品");
                 return;
             }
-            store.commit('addcart', newList);
+            store.commit('ADDCART', newList);
             type === 'buy' ? goCart() : "";
         };
         const goCart = () => {
