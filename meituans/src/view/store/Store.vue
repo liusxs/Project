@@ -30,7 +30,8 @@ import FoodList from './components/FoodList.vue';
 import { useStore } from "vuex";
 import { useRouter } from 'vue-router';
 import { showToast } from "vant";
-import axios from 'axios';
+// import axios from 'axios';
+import { getApiStoreData } from '@/api/api';
 export default {
     components: {
         Header,
@@ -40,20 +41,23 @@ export default {
         let store = useStore();
         let router = useRouter();
         //定义data
-        let data = reactive({
+        let storeDataRes = reactive({
             title: "精品服装",
             img: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_06.png?raw=true",
             storeData: [
             ],
         });
         const getStoreData = () => {
-            axios.get('/home/getStoreData').then((res) => {
-                console.log(res)
-                const { code, storeData } = res.data;
-                if (code == 200) {
-                    data.storeData = storeData;
-                }
+            getApiStoreData().then((res) => {
+                storeDataRes.storeData = res;
             })
+            // axios.get('/home/getStoreData').then((res) => {
+            //     console.log(res)
+            //     const { code, data } = res.data;
+            //     if (code == 200) {
+            //         storeDataRes.storeData = data;
+            //     }
+            // })
         }
         onMounted(() => {
             getStoreData()
@@ -84,7 +88,7 @@ export default {
         }
         return {
             handleAddCart,
-            ...toRefs(data),
+            ...toRefs(storeDataRes),
             store,
             goCart,
             goBuy,

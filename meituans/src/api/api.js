@@ -7,3 +7,11 @@ export const getApiHomeData = (param) => {
         data: param
     })
 }
+//这是商店数据的接口
+export const getApiStoreData = (param) => {
+    return axios.request({
+        url: '/home/getStoreData',
+        method: 'get',
+        data: param
+    })
+}
