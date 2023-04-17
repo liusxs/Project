@@ -24,12 +24,13 @@
     </div>
 </template>
 <script>
-import { reactive, toRefs } from 'vue'
+import { reactive, toRefs, onMounted } from 'vue'
 import Header from '../../components/Header.vue';
 import FoodList from './components/FoodList.vue';
 import { useStore } from "vuex";
 import { useRouter } from 'vue-router';
 import { showToast } from "vant";
+import axios from 'axios';
 export default {
     components: {
         Header,
@@ -43,69 +44,19 @@ export default {
             title: "精品服装",
             img: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_06.png?raw=true",
             storeData: [
-                {
-                    name: "男装",
-                    data: {
-                        content: "男装",
-                        items: [
-                            {
-                                text: "上衣",
-                                children: [
-                                    {
-                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
-                                        title: "卫衣",
-                                        num: 0,
-                                        price: 25.0,
-                                        id: 1001,
-                                        add: true,
-                                    },
-                                    {
-                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_04.png?raw=true",
-                                        title: "皮衣",
-                                        num: 0,
-                                        price: 22.0,
-                                        id: 1002,
-                                        add: true,
-                                    },
-                                ],
-                            },
-                            {
-                                text: "裤子",
-                                children: [
-                                    {
-                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_05.png?raw=true",
-                                        title: "牛仔裤",
-                                        num: 0,
-                                        price: 12.0,
-                                        id: 1003,
-                                        add: true,
-                                    },
-                                    {
-                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_06.png?raw=true",
-                                        title: "短裤",
-                                        num: 0,
-                                        price: 12.0,
-                                        id: 1004,
-                                        add: true,
-                                    },
-                                ],
-                            },
-                        ],
-                    },
-                },
-                {
-                    name: "女装",
-                    data: {
-                        content: "女装",
-                    },
-                },
-                {
-                    name: "套装",
-                    data: {
-                        content: "套装",
-                    },
-                },
             ],
+        });
+        const getStoreData = () => {
+            axios.get('/home/getStoreData').then((res) => {
+                console.log(res)
+                const { code, storeData } = res.data;
+                if (code == 200) {
+                    data.storeData = storeData;
+                }
+            })
+        }
+        onMounted(() => {
+            getStoreData()
         });
         const handleAddCart = (type) => {
             const newList = store.state.cartList || []
