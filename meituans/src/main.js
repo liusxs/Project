@@ -6,6 +6,7 @@ import 'amfe-flexible'
 import router from './router'
 import store from './store'
 import 'vant/es/toast/style'
+import './api/mock'
 
 //目前不需要次引入方法
 // 1. 引入需要的组件

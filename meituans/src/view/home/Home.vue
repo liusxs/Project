@@ -38,8 +38,8 @@
                     </div>
                 </div>
                 <van-tabs v-model:active="active" class="vant_tabs">
-                    <van-tab v-for="(item,index) in centent_nav_list" :title="item.tab" :key="index">
-                        <NavList :navList="item.data"/>
+                    <van-tab v-for="(item, index) in centent_nav_list" :title="item.tab" :key="index">
+                        <NavList :navList="item.data" />
                     </van-tab>
                 </van-tabs>
             </div>
@@ -50,166 +50,35 @@
     
 <script>
 import Footer from '@/components/Footer.vue';
-import { reactive, toRefs, ref } from 'vue'
+import { reactive, toRefs, ref, onMounted } from 'vue'
 import NavList from './components/NavList.vue'
+import axios from 'axios'
 export default {
-    components:{
+    components: {
         Footer,
         NavList
     },
     setup() {
-        const active = ref(0);
         let data = reactive({
-            big_sort: [
-                {
-                    name: "男装",
-                    icon: "icon-tuijian",
-                },
-                {
-                    name: "女装",
-                    icon: "icon-tuijian",
-                },
-                {
-                    name: "衣服",
-                    icon: "icon-tuijian",
-                },
-                {
-                    name: "裤子",
-                    icon: "icon-tuijian",
-                },
-                {
-                    name: "外套",
-                    icon: "icon-tuijian",
-                },
-            ],
-            small_sort: [
-                {
-                    name: "衣服",
-                    icon: "icon-tuijian",
-                },
-                {
-                    name: "裤子",
-                    icon: "icon-tuijian",
-                },
-                {
-                    name: "衬衫",
-                    icon: "icon-tuijian",
-                },
-                {
-                    name: "短裤",
-                    icon: "icon-tuijian",
-                },
-                {
-                    name: "风衣",
-                    icon: "icon-tuijian",
-                },
-                {
-                    name: "卫衣",
-                    icon: "icon-tuijian",
-                },
-                {
-                    name: "上衣",
-                    icon: "icon-tuijian",
-                },
-                {
-                    name: "鞋子",
-                    icon: "icon-tuijian",
-                },
-                {
-                    name: "帽子",
-                    icon: "icon-tuijian",
-                },
-                {
-                    name: "手套",
-                    icon: "icon-tuijian",
-                },
-            ],
-            centent_nav_list: [
-                {
-                    tab: "精品推荐",
-                    data: [
-                        {
-                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
-                            title: "卫龙衣物",
-                            sales: "2888",
-                            price: "20",
-                            label: ["门店上新", "促销"],
-                        },
-                        {
-                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_04.png?raw=true",
-                            title: "卫龙衣物",
-                            sales: "2888",
-                            price: "20",
-                            label: ["门店上新", "促销"],
-                        },
-                        {
-                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_05.png?raw=true",
-                            title: "卫龙衣物",
-                            sales: "2888",
-                            price: "20",
-                            label: ["门店上新", "促销"],
-                        },
-                        {
-                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_06.png?raw=true",
-                            title: "卫龙衣物",
-                            sales: "2888",
-                            price: "20",
-                            label: ["门店上新", "促销"],
-                        },
-                    ],
-                },
-                {
-                    tab: "热销产品",
-                    data: [
-                        {
-                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
-                            title: "卫龙衣物",
-                            sales: "2888",
-                            price: "20",
-                            label: ["门店上新", "促销"],
-                        },
-                    ],
-                },
-                {
-                    tab: "打折促销",
-                    data: [
-                        {
-                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_04.png?raw=true",
-                            title: "卫龙衣物",
-                            sales: "2888",
-                            price: "20",
-                            label: ["门店上新", "促销"],
-                        },
-                        {
-                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_05.png?raw=true",
-                            title: "卫龙衣物",
-                            sales: "2888",
-                            price: "20",
-                            label: ["门店上新", "促销"],
-                        },
-                    ],
-                },
-                {
-                    tab: "限时出售",
-                    data: [
-                        {
-                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_04.png?raw=true",
-                            title: "卫龙衣物",
-                            sales: "2888",
-                            price: "20",
-                            label: ["门店上新", "促销"],
-                        },
-                        {
-                            pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_06.png?raw=true",
-                            title: "卫龙衣物",
-                            sales: "2888",
-                            price: "20",
-                            label: ["门店上新", "促销"],
-                        },
-                    ],
-                },
-            ],
+            big_sort: [],
+            small_sort: [],
+            centent_nav_list: []
         })
+        const active = ref(0);
+        const getHomeData = () => {
+            axios.get('/home/getHomeData').then((res) => {
+                console.log(res)
+                const { code, homeData } = res.data;
+                if (code == 200) {
+                    data.big_sort = homeData.big_sort;
+                    data.small_sort = homeData.small_sort;
+                    data.centent_nav_list = homeData.centent_nav_list;
+                }
+            })
+        };
+        onMounted(() => {
+            getHomeData();
+        });
         return {
             ...toRefs(data),
             active,
@@ -223,6 +92,7 @@ export default {
     display: flex;
     flex-flow: column;
     height: 100%;
+
     .content {
         flex: 1;
         overflow-y: auto;
@@ -231,7 +101,7 @@ export default {
             设置当内容溢出块级元素的上下两侧时所显示的内容
             取决于浏览器本身。当内容发生溢出时，桌面浏览器如 Firefox 会显示滚动条
         */
-      }
+    }
 
     .header {
         background-image: linear-gradient(#ffc400, #fff);
