@@ -12,12 +12,13 @@
 import Header from '@/components/Header.vue';
 import { reactive, toRefs } from 'vue';
 import { showToast } from 'vant';
-import router from '@/router';
+import { useRouter } from 'vue-router';
 export default {
     components: {
         Header,
     },
     setup() {
+        const router = useRouter()
         const data = reactive({
             name: '',
             sign: '战胜自己的才是强者',
