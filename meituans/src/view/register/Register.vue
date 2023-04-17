@@ -39,6 +39,8 @@ export default {
         }
         const register = (value) => {
             localStorage.setItem('userInfo', JSON.stringify(value))
+            showToast('注册成功')
+            router.push('/login')
         }
         const toLogin = () => {
             router.push('/login')
