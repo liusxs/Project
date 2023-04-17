@@ -2,7 +2,7 @@ export default {
     getStoreData: () => {
         return {
             code: 200,
-            storeData: [
+            data: [
                 {
                     name: "男装",
                     data: {

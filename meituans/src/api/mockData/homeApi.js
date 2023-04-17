@@ -2,7 +2,7 @@ export default {
     getHomeData: () => {
         return {
             code: 200,
-            homeData: {
+            data: {
                 big_sort: [
                     {
                         name: "男装",
