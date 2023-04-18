@@ -41,15 +41,14 @@ export default {
         let store = useStore();
         let router = useRouter();
         //定义data
-        let storeDataRes = reactive({
+        let data = reactive({
             title: "精品服装",
             img: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_06.png?raw=true",
-            storeData: [
-            ],
+            storeData: [],
         });
         const getStoreData = () => {
             getApiStoreData().then((res) => {
-                storeDataRes.storeData = res;
+                data.storeData = res;
             })
             // axios.get('/home/getStoreData').then((res) => {
             //     console.log(res)
@@ -88,7 +87,7 @@ export default {
         }
         return {
             handleAddCart,
-            ...toRefs(storeDataRes),
+            ...toRefs(data),
             store,
             goCart,
             goBuy,

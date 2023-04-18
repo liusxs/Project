@@ -40,8 +40,11 @@ class HttpRequest {
     }
     request(options) {
         const instance = axios.create()
+        //首先通过 axios.create() 创建了一个 Axios 实例 instance。然后使用扩展运算符 ... 将默认配置与传入的配置合并成一个新的 options 对象。
         options = { ...this.getInsideConfig(), ...options }
+        //调用 this.interceptors(instance) 方法，该方法会添加请求拦截器和响应拦截器。interceptors 是指 Axios 的拦截器，可以在请求发送前或响应返回后对相关信息进行处理。
         this.interceptors(instance)
+        //将 options 传递给 Axios 实例 instance 并返回用于发起请求的 Promise 对象。
         return instance(options)
     }
 }
