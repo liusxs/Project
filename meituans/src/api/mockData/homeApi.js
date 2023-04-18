@@ -25,48 +25,48 @@ export default {
                         icon: "icon-tuijian",
                     },
                 ],
-                small_sort: [
-                    {
-                        name: "衣服",
-                        icon: "icon-tuijian",
-                    },
-                    {
-                        name: "裤子",
-                        icon: "icon-tuijian",
-                    },
-                    {
-                        name: "衬衫",
-                        icon: "icon-tuijian",
-                    },
-                    {
-                        name: "短裤",
-                        icon: "icon-tuijian",
-                    },
-                    {
-                        name: "风衣",
-                        icon: "icon-tuijian",
-                    },
-                    {
-                        name: "卫衣",
-                        icon: "icon-tuijian",
-                    },
-                    {
-                        name: "上衣",
-                        icon: "icon-tuijian",
-                    },
-                    {
-                        name: "鞋子",
-                        icon: "icon-tuijian",
-                    },
-                    {
-                        name: "帽子",
-                        icon: "icon-tuijian",
-                    },
-                    {
-                        name: "手套",
-                        icon: "icon-tuijian",
-                    },
-                ],
+                // small_sort: [
+                //     {
+                //         name: "衣服",
+                //         icon: "icon-tuijian",
+                //     },
+                //     {
+                //         name: "裤子",
+                //         icon: "icon-tuijian",
+                //     },
+                //     {
+                //         name: "衬衫",
+                //         icon: "icon-tuijian",
+                //     },
+                //     {
+                //         name: "短裤",
+                //         icon: "icon-tuijian",
+                //     },
+                //     {
+                //         name: "风衣",
+                //         icon: "icon-tuijian",
+                //     },
+                //     {
+                //         name: "卫衣",
+                //         icon: "icon-tuijian",
+                //     },
+                //     {
+                //         name: "上衣",
+                //         icon: "icon-tuijian",
+                //     },
+                //     {
+                //         name: "鞋子",
+                //         icon: "icon-tuijian",
+                //     },
+                //     {
+                //         name: "帽子",
+                //         icon: "icon-tuijian",
+                //     },
+                //     {
+                //         name: "手套",
+                //         icon: "icon-tuijian",
+                //     },
+                // ],
                 centent_nav_list: [
                     {
                         tab: "精品推荐",

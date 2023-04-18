@@ -27,16 +27,17 @@
                                 {{ item.name }}
                             </div>
                         </div>
-                        <div class="small_sort">
+                        <!-- <div class="small_sort">
                             <div v-for="(item, index) in small_sort" :key="index">
                                 <svg class="icon" aria-hidden="true">
                                     <use :xlink:href="`#${item.icon}`"></use>
                                 </svg>
                                 {{ item.name }}
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
+                <Carousel />
                 <van-tabs v-model:active="active" class="vant_tabs">
                     <van-tab v-for="(item, index) in centent_nav_list" :title="item.tab" :key="index">
                         <NavList :navList="item.data" />
@@ -50,6 +51,7 @@
     
 <script>
 import Footer from '@/components/Footer.vue';
+import Carousel from '../carousel/Carousel.vue';
 import { reactive, toRefs, ref, onMounted } from 'vue'
 import NavList from './components/NavList.vue'
 // import axios from 'axios'
@@ -57,19 +59,20 @@ import { getApiHomeData } from '@/api/api';
 export default {
     components: {
         Footer,
-        NavList
+        NavList,
+        Carousel
     },
     setup() {
         let data = reactive({
             big_sort: [],
-            small_sort: [],
+            // small_sort: [],
             centent_nav_list: []
         })
         const active = ref(0);
         const getHomeData = () => {
             getApiHomeData().then((res) => {
                 data.big_sort = res.big_sort;
-                data.small_sort = res.small_sort;
+                // data.small_sort = res.small_sort;
                 data.centent_nav_list = res.centent_nav_list;
             })
             // axios.get('/home/getHomeData').then((res) => {
@@ -212,6 +215,7 @@ export default {
 }
 
 /deep/.van-tabs__wrap {
+    margin-top: 10px;
     border-radius: 20px;
 }
 </style>    

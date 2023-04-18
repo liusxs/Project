@@ -16,6 +16,12 @@ const router = createRouter({
             component: () => import('../view/home/Home.vue')
         },
         {
+            //轮播图
+            path: '/carousel',
+            //路由懒加载
+            component: () => import('../view/carousel/Carousel.vue')
+        },
+        {
             //购物车
             path: '/cart',
             //路由懒加载
