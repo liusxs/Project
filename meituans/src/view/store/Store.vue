@@ -43,7 +43,7 @@ export default {
         //定义data
         let data = reactive({
             title: "精品服装",
-            img: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_06.png?raw=true",
+            img: "https://images.pexels.com/photos/15800210/pexels-photo-15800210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             storeData: [],
         });
         const getStoreData = () => {

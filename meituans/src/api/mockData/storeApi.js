@@ -12,7 +12,7 @@ export default {
                                 text: "上衣",
                                 children: [
                                     {
-                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                                        pic: "https://images.pexels.com/photos/16354646/pexels-photo-16354646.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                                         title: "卫衣",
                                         num: 0,
                                         price: 25.0,
@@ -20,7 +20,7 @@ export default {
                                         add: true,
                                     },
                                     {
-                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_04.png?raw=true",
+                                        pic: "https://images.pexels.com/photos/15190048/pexels-photo-15190048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                                         title: "皮衣",
                                         num: 0,
                                         price: 22.0,
@@ -33,7 +33,7 @@ export default {
                                 text: "裤子",
                                 children: [
                                     {
-                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_05.png?raw=true",
+                                        pic: "https://images.pexels.com/photos/16337978/pexels-photo-16337978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                                         title: "牛仔裤",
                                         num: 0,
                                         price: 12.0,
@@ -41,7 +41,7 @@ export default {
                                         add: true,
                                     },
                                     {
-                                        pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_06.png?raw=true",
+                                        pic: "https://images.pexels.com/photos/15800210/pexels-photo-15800210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                                         title: "短裤",
                                         num: 0,
                                         price: 12.0,

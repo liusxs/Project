@@ -72,28 +72,28 @@ export default {
                         tab: "精品推荐",
                         data: [
                             {
-                                pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                                pic: "https://images.pexels.com/photos/16354646/pexels-photo-16354646.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                                 title: "卫龙衣物",
                                 sales: "2888",
                                 price: "20",
                                 label: ["门店上新", "促销"],
                             },
                             {
-                                pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_04.png?raw=true",
+                                pic: "https://images.pexels.com/photos/15983835/pexels-photo-15983835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                                 title: "卫龙衣物",
                                 sales: "2888",
                                 price: "20",
                                 label: ["门店上新", "促销"],
                             },
                             {
-                                pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_05.png?raw=true",
+                                pic: "https://images.pexels.com/photos/15190048/pexels-photo-15190048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                                 title: "卫龙衣物",
                                 sales: "2888",
                                 price: "20",
                                 label: ["门店上新", "促销"],
                             },
                             {
-                                pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_06.png?raw=true",
+                                pic: "https://images.pexels.com/photos/15513808/pexels-photo-15513808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                                 title: "卫龙衣物",
                                 sales: "2888",
                                 price: "20",
@@ -105,7 +105,7 @@ export default {
                         tab: "热销产品",
                         data: [
                             {
-                                pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_03.png?raw=true",
+                                pic: "https://images.pexels.com/photos/16337978/pexels-photo-16337978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                                 title: "卫龙衣物",
                                 sales: "2888",
                                 price: "20",
@@ -117,14 +117,14 @@ export default {
                         tab: "打折促销",
                         data: [
                             {
-                                pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_04.png?raw=true",
+                                pic: "https://images.pexels.com/photos/15762172/pexels-photo-15762172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                                 title: "卫龙衣物",
                                 sales: "2888",
                                 price: "20",
                                 label: ["门店上新", "促销"],
                             },
                             {
-                                pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_05.png?raw=true",
+                                pic: "https://images.pexels.com/photos/15800210/pexels-photo-15800210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                                 title: "卫龙衣物",
                                 sales: "2888",
                                 price: "20",
@@ -136,14 +136,14 @@ export default {
                         tab: "限时出售",
                         data: [
                             {
-                                pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_04.png?raw=true",
+                                pic: "https://images.pexels.com/photos/15895546/pexels-photo-15895546.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                                 title: "卫龙衣物",
                                 sales: "2888",
                                 price: "20",
                                 label: ["门店上新", "促销"],
                             },
                             {
-                                pic: "https://github.com/liusxs/Project/blob/main/mobilecommerc-x/src/assets/img/d_sp_06.png?raw=true",
+                                pic: "https://images.pexels.com/photos/7569818/pexels-photo-7569818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                                 title: "卫龙衣物",
                                 sales: "2888",
                                 price: "20",
